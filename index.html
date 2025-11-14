@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Qlip: Best AI consulting and development services in 2025. Expert software engineering, cybersecurity, machine learning solutions, and multimedia. Get a free 30-min AI audit to transform your ideas into scalable AI-powered digital excellence. Custom web/mobile apps, IT support, and tech consulting for AI-driven businesses worldwide.">
+    <meta name="description" content="The Qlip: Best AI consulting and development services. Expert software engineering, cybersecurity, machine learning solutions, and multimedia. Get a free 30-min AI audit to transform your ideas into scalable AI-powered digital excellence. Custom web/mobile apps, IT support, and tech consulting for AI-driven businesses worldwide.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="preload" as="image" href="images/The Qlip.png">
-    <title>The Qlip | Best AI Solutions & Software Engineering Services 2025</title>
+    <title>The Qlip | Best AI Solutions & Software Engineering Services</title>
     <!-- Open Graph -->
-    <meta property="og:title" content="The Qlip | Best AI Consulting & Development Services 2025">
+    <meta property="og:title" content="The Qlip | Best AI Consulting & Development Services">
     <meta property="og:description" content="Empowering businesses with top AI solutions: Machine learning, AI integration, cybersecurity, and software engineering. Free 30-min AI audit available.">
     <meta property="og:image" content="https://theqlip.digital/images/heroimage.jpg">
     <meta property="og:url" content="https://theqlip.digital/">
     <meta property="og:type" content="website">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Qlip | Best AI Consulting & Development Services 2025">
+    <media name="twitter:title" content="The Qlip | Best AI Consulting & Development Services">
     <meta name="twitter:description" content="Empowering businesses with top AI solutions: Machine learning, AI integration, cybersecurity, and software engineering. Free 30-min AI audit available.">
     <meta name="twitter:image" content="https://theqlip.digital/images/heroimage.jpg">
     <link rel="canonical" href="https://theqlip.digital/">
@@ -37,7 +37,7 @@
       "name": "The Qlip",
       "url": "https://theqlip.digital",
       "logo": "https://theqlip.digital/images/The Qlip.png",
-      "description": "Leading AI consulting and development services in 2025: Transforming ideas into AI-powered digital excellence with machine learning, software engineering, cybersecurity, and multimedia solutions.",
+      "description": "Leading AI consulting and development services: Transforming ideas into AI-powered digital excellence with machine learning, software engineering, cybersecurity, and multimedia solutions.",
       "sameAs": [
         "https://x.com/theqlip",
         "https://github.com/theqlip"
@@ -46,7 +46,7 @@
         {
           "@type": "Service",
           "name": "AI Consulting & Development",
-          "description": "Expert machine learning models, AI integration, and robotics for businesses seeking top AI solutions in 2025."
+          "description": "Expert machine learning models, AI integration, and robotics for businesses seeking top AI solutions."
         },
         {
           "@type": "Service",
@@ -78,7 +78,7 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "The Qlip",
-        "description": "AI-driven consulting and software engineering services for 2025.",
+        "description": "AI-driven consulting and software engineering services.",
         "serviceType": ["Machine Learning Development", "Cybersecurity", "Multimedia Production"],
         "areaServed": ["Nigeria", "Global"],
         "telephone": "+2347087342882",
@@ -679,7 +679,7 @@
         /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
+            bottom: 40px;
             right: 20px;
             z-index: 1000;
             display: flex;
@@ -699,12 +699,11 @@
         .whatsapp-float span {
             font-size: 0.9rem;
             opacity: 0.8;
-            font-weight: 400;
-            white-space: nowrap;
+            font-weight: 300;
         }
         .whatsapp-float-icon {
-            width: 40px;
-            height: 40px;
+            width: 28px; /* Touch-friendly */
+            height: 28px;
             background: #25D366;
             border-radius: 50%;
             display: flex;
@@ -714,7 +713,6 @@
             font-size: 1.2rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            min-height: 44px; /* Touch target */
         }
         .whatsapp-float-icon:hover {
             background: #128C7E;
@@ -854,6 +852,14 @@
             .hero-content {
                 padding: 0;
             }
+            /* Modal responsiveness for tablet */
+            .modal {
+                padding: 15px;
+            }
+            .modal-content {
+                max-width: 90%;
+                padding: 40px 32px;
+            }
         }
         @media (max-width: 768px) {
             header {
@@ -887,20 +893,20 @@
                 font-size: clamp(0.95rem, 3vw, 1rem);
                 width: auto;
             }
-            .services-grid { 
-                grid-template-columns: repeat(2, 1fr); 
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
                 gap: clamp(20px, 5vw, 24px);
             }
-            .news-grid { 
-                grid-template-columns: 1fr; 
+            .news-grid {
+                grid-template-columns: 1fr;
                 gap: clamp(16px, 4vw, 20px);
             }
             .media-grid, .media-grid.reverse {
                 flex-direction: column;
                 gap: clamp(32px, 8vw, 48px);
             }
-            .services h2, .news-hub h3, .contact h3 { 
-                font-size: clamp(1.8rem, 6vw, 2rem); 
+            .services h2, .news-hub h3, .contact h3 {
+                font-size: clamp(1.8rem, 6vw, 2rem);
                 text-align: center;
             }
             .footer-bottom {
@@ -913,7 +919,7 @@
                 gap: 8px;
                 text-align: center;
                 padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
-                bottom: 16px;
+                bottom: 40px;
                 right: 16px;
             }
             .whatsapp-float span {
@@ -945,6 +951,30 @@
             }
             .service-card h3, .service-card p {
                 text-align: center;
+            }
+            /* Modal responsiveness for mobile */
+            .modal {
+                padding: 10px;
+                align-items: flex-start;
+                justify-content: flex-start;
+                height: 100vh;
+            }
+            .modal-content {
+                max-width: 100%;
+                max-height: 100vh;
+                padding: 32px 20px;
+                margin: 0 auto;
+                overflow-y: auto;
+                border-radius: 20px;
+            }
+            .modal h2 {
+                font-size: 2rem;
+            }
+            .progress-bar {
+                margin: 24px 0;
+            }
+            .modal-btns {
+                flex-direction: column;
             }
         }
         @media (max-width: 480px) {
@@ -985,15 +1015,15 @@
                 flex-direction: column;
                 align-items: stretch;
             }
-            .services { 
-                padding: clamp(40px, 10vw, 60px) clamp(8px, 3vw, 12px) clamp(24px, 6vw, 40px); 
+            .services {
+                padding: clamp(40px, 10vw, 60px) clamp(8px, 3vw, 12px) clamp(24px, 6vw, 40px);
             }
-            .service-card, .news-hub, .contact { 
-                padding: clamp(24px, 6vw, 32px) clamp(12px, 4vw, 20px); 
+            .service-card, .news-hub, .contact {
+                padding: clamp(24px, 6vw, 32px) clamp(12px, 4vw, 20px);
             }
-            .services-grid { 
-                grid-template-columns: 1fr; 
-                gap: clamp(20px, 5vw, 24px); 
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: clamp(20px, 5vw, 24px);
             }
             .service-card {
                 padding: clamp(60px, 15vw, 80px) clamp(16px, 5vw, 32px) clamp(32px, 6vw, 40px);
@@ -1049,6 +1079,26 @@
                 padding: clamp(16px, 4vw, 24px);
                 min-height: 180px;
             }
+            /* Modal further adjustments for small mobile */
+            .modal-content {
+                padding: 24px 16px;
+                margin: 0 5px;
+            }
+            .modal h2 {
+                font-size: 1.8rem;
+            }
+            .modal .form-group input,
+            .modal .form-group select,
+            .modal .form-group textarea {
+                padding: 12px 14px;
+                font-size: 0.95rem;
+            }
+            .modal-btns {
+                gap: 12px;
+            }
+            .prev-btn, .next-btn, .submit-btn {
+                padding: 14px;
+            }
         }
         /* ===== TECH-SAVVY POPUP MODAL (GLASS + TEAL GLOW + MULTI-STEP) ===== */
         .modal {
@@ -1074,11 +1124,9 @@
             backdrop-filter: blur(32px);
             border: 1px solid rgba(45, 254, 192, 0.35);
             border-radius: 28px;
-            padding: clamp(32px, 8vw, 56px) clamp(24px, 6vw, 48px);
+            padding: 56px 48px;
             max-width: 580px;
             width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
             box-shadow: 0 40px 80px rgba(45, 254, 192, 0.3);
             position: relative;
             transform: scale(0.92);
@@ -1093,35 +1141,24 @@
             cursor: pointer;
             color: rgba(255,255,255,0.6);
             transition: all 0.3s ease;
-            z-index: 1002;
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
         }
         .close-button:hover {
             color: hsl(162, 100%, 59%);
             transform: rotate(90deg) scale(1.2);
-            background: rgba(45, 254, 192, 0.2);
         }
         .modal h2 {
-            font-size: clamp(2rem, 6vw, 2.6rem);
+            font-size: 2.6rem;
             margin-bottom: 12px;
             background: linear-gradient(135deg, #fff, hsl(162, 100%, 59%));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-align: center;
         }
         .modal > p {
             opacity: 0.85;
             margin-bottom: 36px;
-            font-size: clamp(1rem, 3vw, 1.15rem);
+            font-size: 1.15rem;
             font-weight: 300;
-            text-align: center;
         }
         .progress-bar {
             height: 4px;
@@ -1154,14 +1191,13 @@
         .modal .form-group select,
         .modal .form-group textarea {
             width: 100%;
-            padding: clamp(12px, 3vw, 16px) clamp(14px, 4vw, 18px);
+            padding: 16px 18px;
             background: rgba(255,255,255,0.06);
             border: 1px solid rgba(45, 254, 192, 0.3);
             border-radius: 16px;
             color: #fff;
             font-size: 1rem;
             transition: all 0.3s ease;
-            min-height: 48px; /* Touch target for inputs */
         }
         .modal .form-group select {
             appearance: none;
@@ -1208,15 +1244,11 @@
         }
         .prev-btn, .next-btn, .submit-btn {
             flex: 1;
-            padding: clamp(14px, 3vw, 16px);
+            padding: 16px;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
-            min-height: 48px; /* Touch target */
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .prev-btn {
             border: 2px solid rgba(45, 254, 192, 0.5);
@@ -1236,92 +1268,26 @@
             transform: translateY(-3px);
             box-shadow: 0 15px 30px rgba(45, 254, 192, 0.4);
         }
-        @media (max-width: 540px) {
-            .modal-content { 
-                padding: clamp(24px, 6vw, 48px) clamp(16px, 5vw, 32px); 
-                margin: 10px;
-            }
-            .modal h2 { 
-                font-size: clamp(1.8rem, 8vw, 2.2rem); 
-            }
-            .modal-btns { 
-                flex-direction: column; 
-            }
-            .close-button {
-                top: 12px;
-                right: 12px;
-                font-size: 28px;
-                width: 36px;
-                height: 36px;
-            }
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
         }
-        /* Tech-Savvy YouTube Popup */
-        .video-popup {
+        .modal-success {
+            background: rgba(45, 254, 192, 0.2);
+            border: 1px solid hsl(162, 100%, 59%);
+            color: hsl(162, 100%, 59%);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            font-size: 1.1rem;
             display: none;
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            z-index: 999;
-            width: 144px;
-            height: 144px;
+            margin-top: 20px;
         }
-        .popup-content {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(45, 254, 192, 0.3);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(45, 254, 192, 0.2);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-        .popup-content:hover {
-            box-shadow: 0 12px 40px rgba(45, 254, 192, 0.3);
-            transform: scale(1.02);
-        }
-        #yt-player {
-            border-radius: 12px;
-        }
-        .close-popup {
-            position: absolute;
-            top: 4px;
-            right: 4px;
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: #fff;
-            font-size: 16px;
-            font-weight: bold;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .close-popup:hover {
-            background: hsl(162, 100%, 59%);
-            transform: rotate(90deg);
-        }
-        @media (max-width: 768px) {
-            .video-popup {
-                right: 10px;
-                top: 110px;
-                width: 120px;
-                height: 120px;
-            }
-        }
-        @media (max-width: 480px) {
-            .video-popup {
-                right: 8px;
-                top: 80px;
-                width: 100px;
-                height: 100px;
-            }
+        @media (max-width: 540px) {
+            .modal-content { padding: 48px 32px; }
+            .modal h2 { font-size: 2.2rem; }
+            .modal-btns { flex-direction: column; }
         }
     </style>
 </head>
@@ -1469,7 +1435,7 @@
             <div style="max-width: 800px; margin: 60px auto 0; text-align: center; opacity: 0.9;">
                 <h3 data-i18n="why-choose-title" style="font-size: 1.8rem; margin-bottom: 20px;">Why Choose The Qlip for Your Needs?</h3>
                 <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
-                    <li data-i18n="why1"><strong>Conversational Optimization:</strong> Tailored for natural language queries and voice search in 2025.</li>
+                    <li data-i18n="why1"><strong>Conversational Optimization:</strong> Tailored for natural language queries and voice search.</li>
                     <li data-i18n="why2"><strong>Fast, Mobile-First Design:</strong> tools favor quick-loading sites – ours scores 95+ on Core Web Vitals.</li>
                     <li data-i18n="why3"><strong>Expert Authority:</strong> Backed by high-quality content and structured data for top search recommendations.</li>
                     <li data-i18n="why4"><strong>Free Audit:</strong> Get personalized insights to enhance your SEO and integration strategy.</li>
@@ -1698,7 +1664,7 @@
                     'service6-title': 'Training & Consultancy',
                     'service6-desc': 'Expert workshops, certifications, strategic consulting to boost your business rankings and adoption.',
                     'why-choose-title': 'Why Choose The Qlip for Your Needs?',
-                    why1: '<strong>Conversational Optimization:</strong> Tailored for natural language queries and voice search in 2025.',
+                    why1: '<strong>Conversational Optimization:</strong> Tailored for natural language queries and voice search.',
                     why2: '<strong>Fast, Mobile-First Design:</strong> tools favor quick-loading sites – ours scores 95+ on Core Web Vitals.',
                     why3: '<strong>Expert Authority:</strong> Backed by high-quality content and structured data for top search recommendations.',
                     why4: '<strong>Free Audit:</strong> Get personalized insights to enhance your SEO and integration strategy.',
@@ -1771,7 +1737,7 @@
                     'service6-title': 'Capacitación y Consultoría',
                     'service6-desc': 'Talleres expertos, certificaciones, consultoría estratégica para impulsar el ranking de su negocio y adopción.',
                     'why-choose-title': '¿Por Qué Elegir The Qlip para Sus Necesidades?',
-                    why1: '<strong>Optimización Conversacional:</strong> Adaptada para consultas de lenguaje natural y búsqueda por voz en 2025.',
+                    why1: '<strong>Optimización Conversacional:</strong> Adaptada para consultas de lenguaje natural y búsqueda por voz.',
                     why2: '<strong>Diseño Rápido y Móvil Primero:</strong> Las herramientas favorecen sitios de carga rápida – el nuestro puntúa 95+ en Core Web Vitals.',
                     why3: '<strong>Autoridad Experta:</strong> Respaldada por contenido de alta calidad y datos estructurados para recomendaciones de búsqueda principales.',
                     why4: '<strong>Auditoría Gratuita:</strong> Obtenga insights personalizados para mejorar su SEO y estrategia de integración.',
@@ -1844,7 +1810,7 @@
                     'service6-title': 'Formation et Conseil',
                     'service6-desc': 'Ateliers experts, certifications, conseil stratégique pour booster le classement de votre entreprise et l\'adoption.',
                     'why-choose-title': 'Pourquoi Choisir The Qlip pour Vos Besoins ?',
-                    why1: '<strong>Optimisation Conversationnelle :</strong> Adaptée aux requêtes en langage naturel et à la recherche vocale en 2025.',
+                    why1: '<strong>Optimisation Conversationnelle :</strong> Adaptée aux requêtes en langage naturel et à la recherche vocale.',
                     why2: '<strong>Design Rapide et Mobile First :</strong> Les outils favorisent les sites à chargement rapide – le nôtre obtient 95+ sur Core Web Vitals.',
                     why3: '<strong>Autorité Experte :</strong> Soutenue par un contenu de haute qualité et des données structurées pour les principales recommandations de recherche.',
                     why4: '<strong>Audit Gratuit :</strong> Obtenez des insights personnalisés pour améliorer votre SEO et votre stratégie d\'intégration.',
@@ -1917,7 +1883,7 @@
                     'service6-title': 'Schulung & Beratung',
                     'service6-desc': 'Experten-Workshops, Zertifizierungen, strategische Beratung, um Ihr Geschäfts-Ranking und Adoption zu boosten.',
                     'why-choose-title': 'Warum The Qlip für Ihre Bedürfnisse Wählen?',
-                    why1: '<strong>Konversationelle Optimierung:</strong> Maßgeschneidert für natürliche Sprachabfragen und Voice-Suche im Jahr 2025.',
+                    why1: '<strong>Konversationelle Optimierung:</strong> Maßgeschneidert für natürliche Sprachabfragen und Voice-Suche.',
                     why2: '<strong>Schnelles, Mobile-First Design:</strong> Tools bevorzugen schnelle Ladezeiten – unsere Seite erzielt 95+ in Core Web Vitals.',
                     why3: '<strong>Expertenautorität:</strong> Unterstützt durch hochwertigen Content und strukturierte Daten für Top-Suchempfehlungen.',
                     why4: '<strong>Kostenloser Audit:</strong> Erhalten Sie personalisierte Insights, um Ihr SEO und Integrationsstrategie zu verbessern.',
@@ -1990,7 +1956,7 @@
                     'service6-title': '培训和咨询',
                     'service6-desc': '专家研讨会、认证、战略咨询，以提升您的业务排名和采用率。',
                     'why-choose-title': '为什么选择 The Qlip 满足您的需求？',
-                    why1: '<strong>对话式优化：</strong> 为 2025 年的自然语言查询和语音搜索量身定制。',
+                    why1: '<strong>对话式优化：</strong> 为自然语言查询和语音搜索量身定制。',
                     why2: '<strong>快速、移动优先设计：</strong> 工具青睐快速加载的网站 – 我们的网站在 Core Web Vitals 上得分 95+。',
                     why3: '<strong>专家权威：</strong> 由高质量内容和结构化数据支持，用于顶级搜索推荐。',
                     why4: '<strong>免费审计：</strong> 获取个性化洞察，以提升您的 SEO 和集成策略。',
@@ -2061,7 +2027,7 @@
                     'service6-title': 'Treinamento e Consultoria',
                     'service6-desc': 'Oficinas especializadas, certificações, consultoria estratégica para impulsionar o ranqueamento do seu negócio e adoção.',
                     'why-choose-title': 'Por Que Escolher The Qlip para Suas Necessidades?',
-                    why1: '<strong>Otimização Conversacional:</strong> Adaptada para consultas em linguagem natural e busca por voz em 2025.',
+                    why1: '<strong>Otimização Conversacional:</strong> Adaptada para consultas em linguagem natural e busca por voz.',
                     why2: '<strong>Design Rápido e Mobile-First:</strong> Ferramentas priorizam sites de carregamento rápido – o nosso pontua 95+ no Core Web Vitals.',
                     why3: '<strong>Autoridade Especialista:</strong> Respaldada por conteúdo de alta qualidade e dados estruturados para recomendações de busca principais.',
                     why4: '<strong>Auditoria Gratuita:</strong> Obtenha insights personalizados para aprimorar sua estratégia de SEO e integração.',
@@ -2132,7 +2098,7 @@
                     'service6-title': 'التدريب والاستشارات',
                     'service6-desc': 'ورش عمل متخصصة، شهادات، استشارات استراتيجية لتعزيز تصنيف أعمالك وتبنيها.',
                     'why-choose-title': 'لماذا تختار The Qlip لاحتياجاتك؟',
-                    why1: '<strong>التحسين الحواري:</strong> مصممة لاستعلامات اللغة الطبيعية والبحث الصوتي في 2025.',
+                    why1: '<strong>التحسين الحواري:</strong> مصممة لاستعلامات اللغة الطبيعية والبحث الصوتي.',
                     why2: '<strong>تصميم سريع وأولي للهواتف:</strong> الأدوات تفضل المواقع سريعة التحميل – موقعنا يحصل على 95+ في Core Web Vitals.',
                     why3: '<strong>السلطة الخبيرة:</strong> مدعومة بمحتوى عالي الجودة وبيانات مهيكلة لتوصيات البحث العليا.',
                     why4: '<strong>التدقيق المجاني:</strong> احصل على رؤى مخصصة لتحسين استراتيجية SEO ودمجك.',
@@ -2197,7 +2163,7 @@
                     const langData = translations[lang];
                     document.title = langData['hero-title'] ? `${langData['hero-title']} | The Qlip` : document.title;
                     const metaDesc = document.querySelector('meta[name="description"]');
-                    if (metaDesc) metaDesc.setAttribute('content', langData['hero-desc'] || 'The Qlip: Best consulting and development services in 2025.');
+                    if (metaDesc) metaDesc.setAttribute('content', langData['hero-desc'] || 'The Qlip: Best consulting and development services.');
                     const ogTitle = document.querySelector('meta[property="og:title"]');
                     if (ogTitle) ogTitle.setAttribute('content', langData['hero-title'] ? `${langData['hero-title']} | The Qlip` : ogTitle.getAttribute('content'));
                     const ogDesc = document.querySelector('meta[property="og:description"]');
@@ -2342,7 +2308,7 @@
                 hamburger.classList.toggle('active');
                 hamburger.setAttribute('aria-expanded', !isActive);
                 mobileNav.classList.toggle('active');
-          
+         
                 // Close on outside click (optional enhancement)
                 if (!isActive) {
                     document.addEventListener('click', closeMenuOnOutsideClick);

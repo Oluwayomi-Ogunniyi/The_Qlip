@@ -495,7 +495,7 @@
         /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
+            bottom: 40px;
             right: 20px;
             z-index: 1000;
             display: flex;
@@ -515,11 +515,11 @@
         .whatsapp-float span {
             font-size: 0.9rem;
             opacity: 0.8;
-            font-weight: 400;
+            font-weight: 300;
         }
         .whatsapp-float-icon {
-            width: 40px;
-            height: 40px;
+            width: 28px; /* Touch-friendly */
+            height: 28px;
             background: #25D366;
             border-radius: 50%;
             display: flex;
@@ -706,10 +706,14 @@
                 flex-direction: column;
                 gap: 8px;
                 text-align: center;
-                padding: 8px 12px;
+                padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
+                bottom: 40px;
+                right: 16px;
             }
             .whatsapp-float span {
-                font-size: 0.85rem;
+                font-size: clamp(0.8rem, 3vw, 0.85rem);
+                white-space: normal;
+                text-align: center;
             }
             .mobile-nav ul {
                 gap: 15px;
@@ -720,24 +724,29 @@
         }
         @media (max-width: 480px) {
             header {
-                padding: 0 12px;
+                padding: 0 clamp(8px, 3vw, 12px);
+                height: 60px;
             }
             .logo {
-                font-size: 1.3rem;
+                font-size: clamp(1.1rem, 5vw, 1.3rem);
             }
             .logo img {
-                height: 36px;
+                height: clamp(32px, 6vw, 36px);
+                margin-right: 8px;
             }
             .hero {
-                padding: 140px 12px 60px;
+                padding: clamp(100px, 25vh, 140px) clamp(8px, 3vw, 12px) clamp(40px, 10vh, 60px);
+                min-height: 70vh;
             }
             .hero h1 {
-                font-size: 2.2rem;
-                letter-spacing: 1px;
+                font-size: clamp(1.8rem, 12vw, 2.2rem);
+                letter-spacing: clamp(0.5px, 1vw, 1px);
+                margin-bottom: clamp(16px, 4vw, 24px);
             }
             .hero p {
-                font-size: 1rem;
+                font-size: clamp(0.95rem, 4vw, 1rem);
                 max-width: 100%;
+                margin-bottom: clamp(32px, 6vw, 48px);
             }
             .btn-outline-teal {
                 padding: 10px 20px;

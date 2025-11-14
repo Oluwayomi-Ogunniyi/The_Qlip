@@ -550,13 +550,15 @@
         }
         @media (max-width: 480px) {
             header {
-                padding: 0 12px;
+                padding: 0 clamp(8px, 3vw, 12px);
+                height: 60px;
             }
             .logo {
-                font-size: 1.3rem;
+                font-size: clamp(1.1rem, 5vw, 1.3rem);
             }
             .logo img {
-                height: 36px;
+                height: clamp(32px, 6vw, 36px);
+                margin-right: 8px;
             }
             .policy-hero {
                 padding: 140px 12px 60px;
@@ -679,7 +681,7 @@
             <h2 data-i18n="intro-title">1. Introduction</h2>
             <p data-i18n="intro-p1">At The Qlip ("we," "us," or "our"), we are committed to protecting your privacy and ensuring the security of your personal information. As a leading technology company based in Lagos, Nigeria, specializing in software engineering, AI & robotics, cybersecurity, multimedia solutions, system testing, IT support, and training & consultancy, we process personal data responsibly in line with international standards including the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and Nigeria's Data Protection Act (NDPA) 2023.</p>
             <p data-i18n="intro-p2">This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (theqlip.digital), use our services, or interact with our forms and tools. By using our site or services, you consent to the practices described herein. If you do not agree, please do not use our site.</p>
-            <p data-i18n="intro-controller"><strong>Data Controller:</strong> The Qlip Technologies Ltd., 123 Tech Hub, Victoria Island, Lagos, Nigeria. Email: privacy@theqlip.digital | Phone: +2347087342882.</p>
+            <p data-i18n="intro-controller"><strong>Data Controller:</strong> The Qlip, Lagos, Nigeria. Email: theqlipglobal@gmail.com | Phone: +2347087342882.</p>
         </div>
         <div class="policy-section">
             <h2 data-i18n="collect-title">2. Information We Collect</h2>
@@ -732,7 +734,7 @@
                 <li data-i18n="rights-li6"><strong>Opt-Out:</strong> From data sales/sharing (CCPA) or cookies (via banner).</li>
                 <li data-i18n="rights-li7"><strong>Withdraw Consent:</strong> At any time, without affecting prior processing.</li>
             </ol>
-            <p data-i18n="rights-exercise">To exercise rights, email privacy@theqlip.digital. We respond within 30 days (or 45 for complex requests). Complaints can be filed with the Nigeria Data Protection Commission (NDPC) at ndpc.gov.ng.</p>
+            <p data-i18n="rights-exercise">To exercise rights, email theqlipglobal@gmail.com. We respond within 30 days (or 45 for complex requests). Complaints can be filed with the Nigeria Data Protection Commission (NDPC) at ndpc.gov.ng.</p>
         </div>
         <div class="policy-section">
             <h2 data-i18n="cookies-title">7. Cookies and Tracking Technologies</h2>
@@ -754,7 +756,7 @@
             <h2 data-i18n="contact-title">11. Contact Us</h2>
             <div class="contact-info" data-i18n="contact-info">
                 <p><strong data-i18n="dpo-title">The Qlip Data Protection Officer:</strong> dpo@theqlip.digital</p>
-                <p data-i18n="contact-p1">For questions, rights requests, or complaints: privacy@theqlip.digital</p>
+                <p data-i18n="contact-p1">For questions, rights requests, or complaints: theqlipglobal@gmail.com</p>
                 <p data-i18n="contact-p2">We are registered with the NDPC and adhere to all applicable laws.</p>
             </div>
         </div>
@@ -841,7 +843,7 @@
                 'intro-title': '1. Introduction',
                 'intro-p1': 'At The Qlip ("we," "us," or "our"), we are committed to protecting your privacy and ensuring the security of your personal information. As a leading technology company based in Lagos, Nigeria, specializing in software engineering, AI & robotics, cybersecurity, multimedia solutions, system testing, IT support, and training & consultancy, we process personal data responsibly in line with international standards including the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and Nigeria\'s Data Protection Act (NDPA) 2023.',
                 'intro-p2': 'This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (theqlip.digital), use our services, or interact with our forms and tools. By using our site or services, you consent to the practices described herein. If you do not agree, please do not use our site.',
-                'intro-controller': '<strong>Data Controller:</strong> The Qlip Technologies Ltd., 123 Tech Hub, Victoria Island, Lagos, Nigeria. Email: privacy@theqlip.digital | Phone: +2347087342882.',
+                'intro-controller': '<strong>Data Controller:</strong> The Qlip, Lagos, Nigeria. Email: theqlipglobal@gmail.com | Phone: +2347087342882.',
                 'collect-title': '2. Information We Collect',
                 'collect-p1': 'We collect information to provide and improve our services. This includes:',
                 'collect-li1': '<strong>Personal Information:</strong> Name, email address, phone number, and project details submitted via our contact forms, project modals, or newsletter subscriptions.',
@@ -876,7 +878,7 @@
                 'rights-li5': '<strong>Portability:</strong> Receive data in a structured format.',
                 'rights-li6': '<strong>Opt-Out:</strong> From data sales/sharing (CCPA) or cookies (via banner).',
                 'rights-li7': '<strong>Withdraw Consent:</strong> At any time, without affecting prior processing.',
-                'rights-exercise': 'To exercise rights, email privacy@theqlip.digital. We respond within 30 days (or 45 for complex requests). Complaints can be filed with the Nigeria Data Protection Commission (NDPC) at ndpc.gov.ng.',
+                'rights-exercise': 'To exercise rights, email theqlipglobal@gmail.com. We respond within 30 days (or 45 for complex requests). Complaints can be filed with the Nigeria Data Protection Commission (NDPC) at ndpc.gov.ng.',
                 'cookies-title': '7. Cookies and Tracking Technologies',
                 'cookies-p1': 'We use cookies for functionality, analytics, and personalization. See our ',
                 'cookie-policy-link': 'Cookie Policy',
@@ -889,7 +891,7 @@
                 'changes-p1': 'We may update this policy to reflect legal changes or business needs. Significant updates will be notified via email or site banner. Continued use constitutes acceptance.',
                 'contact-title': '11. Contact Us',
                 'dpo-title': 'The Qlip Data Protection Officer:',
-                'contact-p1': 'For questions, rights requests, or complaints: privacy@theqlip.digital',
+                'contact-p1': 'For questions, rights requests, or complaints: theqlipglobal@gmail.com',
                 'contact-p2': 'We are registered with the NDPC and adhere to all applicable laws.',
                 'contact-info': '',
                 'quick-links': 'Quick Links',
@@ -928,7 +930,7 @@
                 'intro-title': '1. Introducción',
                 'intro-p1': 'En The Qlip ("nosotros", "nuestro" o "nos"), nos comprometemos a proteger tu privacidad y garantizar la seguridad de tu información personal. Como empresa líder en tecnología con sede en Lagos, Nigeria, especializada en ingeniería de software, IA y robótica, ciberseguridad, soluciones multimedia, pruebas de sistemas, soporte TI y capacitación y consultoría, procesamos datos personales de manera responsable en línea con estándares internacionales, incluyendo el Reglamento General de Protección de Datos (GDPR), la Ley de Privacidad del Consumidor de California (CCPA) y la Ley de Protección de Datos de Nigeria (NDPA) 2023.',
                 'intro-p2': 'Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información cuando visitas nuestro sitio web (theqlip.digital), usas nuestros servicios o interactúas con nuestros formularios y herramientas. Al usar nuestro sitio o servicios, consientes con las prácticas descritas aquí. Si no estás de acuerdo, por favor no uses nuestro sitio.',
-                'intro-controller': '<strong>Controlador de Datos:</strong> The Qlip Technologies Ltd., 123 Tech Hub, Victoria Island, Lagos, Nigeria. Email: privacy@theqlip.digital | Teléfono: +2347087342882.',
+                'intro-controller': '<strong>Controlador de Datos:</strong> The Qlip, Lagos, Nigeria. Email: theqlipglobal@gmail.com | Teléfono: +2347087342882.',
                 'collect-title': '2. Información que Recopilamos',
                 'collect-p1': 'Recopilamos información para proporcionar y mejorar nuestros servicios. Esto incluye:',
                 'collect-li1': '<strong>Información Personal:</strong> Nombre, dirección de correo electrónico, número de teléfono y detalles del proyecto enviados a través de nuestros formularios de contacto, modales de proyecto o suscripciones al boletín.',
@@ -963,7 +965,7 @@
                 'rights-li5': '<strong>Portabilidad:</strong> Recibir datos en formato estructurado.',
                 'rights-li6': '<strong>Opt-Out:</strong> De ventas/comparticiones de datos (CCPA) o cookies (vía banner).',
                 'rights-li7': '<strong>Retirar Consentimiento:</strong> En cualquier momento, sin afectar el procesamiento previo.',
-                'rights-exercise': 'Para ejercer derechos, envía email a privacy@theqlip.digital. Respondemos en 30 días (o 45 para solicitudes complejas). Las quejas se pueden presentar ante la Comisión de Protección de Datos de Nigeria (NDPC) en ndpc.gov.ng.',
+                'rights-exercise': 'Para ejercer derechos, envía email a theqlipglobal@gmail.com. Respondemos en 30 días (o 45 para solicitudes complejas). Las quejas se pueden presentar ante la Comisión de Protección de Datos de Nigeria (NDPC) en ndpc.gov.ng.',
                 'cookies-title': '7. Cookies y Tecnologías de Rastreo',
                 'cookies-p1': 'Usamos cookies para funcionalidad, análisis y personalización. Ver nuestra ',
                 'cookie-policy-link': 'Política de Cookies',
@@ -976,7 +978,7 @@
                 'changes-p1': 'Podemos actualizar esta política para reflejar cambios legales o necesidades comerciales. Actualizaciones significativas se notificarán vía email o banner del sitio. El uso continuado constituye aceptación.',
                 'contact-title': '11. Contáctanos',
                 'dpo-title': 'Oficial de Protección de Datos de The Qlip:',
-                'contact-p1': 'Para preguntas, solicitudes de derechos o quejas: privacy@theqlip.digital',
+                'contact-p1': 'Para preguntas, solicitudes de derechos o quejas: theqlipglobal@gmail.com',
                 'contact-p2': 'Estamos registrados con la NDPC y adherimos a todas las leyes aplicables.',
                 'contact-info': '',
                 'quick-links': 'Enlaces Rápidos',
@@ -1015,7 +1017,7 @@
                 'intro-title': '1. Introduction',
                 'intro-p1': 'Chez The Qlip ("nous", "nos" ou "notre"), nous nous engageons à protéger votre vie privée et à assurer la sécurité de vos informations personnelles. En tant qu\'entreprise technologique leader basée à Lagos, au Nigeria, spécialisée en ingénierie logicielle, IA et robotique, cybersécurité, solutions multimédias, tests de systèmes, support IT et formation et conseil, nous traitons les données personnelles de manière responsable en conformité avec les normes internationales, y compris le Règlement Général sur la Protection des Données (GDPR), la California Consumer Privacy Act (CCPA) et la Nigeria Data Protection Act (NDPA) 2023.',
                 'intro-p2': 'Cette Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous visitez notre site web (theqlip.digital), utilisez nos services ou interagissez avec nos formulaires et outils. En utilisant notre site ou services, vous consentez aux pratiques décrites ici. Si vous n\'êtes pas d\'accord, veuillez ne pas utiliser notre site.',
-                'intro-controller': '<strong>Contrôleur de Données:</strong> The Qlip Technologies Ltd., 123 Tech Hub, Victoria Island, Lagos, Nigeria. Email: privacy@theqlip.digital | Téléphone: +2347087342882.',
+                'intro-controller': '<strong>Contrôleur de Données:</strong> The Qlip, Lagos, Nigeria. Email: theqlipglobal@gmail.com | Téléphone: +2347087342882.',
                 'collect-title': '2. Informations que Nous Collectons',
                 'collect-p1': 'Nous collectons des informations pour fournir et améliorer nos services. Cela inclut:',
                 'collect-li1': '<strong>Informations Personnelles:</strong> Nom, adresse email, numéro de téléphone et détails de projet soumis via nos formulaires de contact, modales de projet ou abonnements à la newsletter.',
@@ -1050,7 +1052,7 @@
                 'rights-li5': '<strong>Portabilité:</strong> Recevoir données en format structuré.',
                 'rights-li6': '<strong>Opt-Out:</strong> De ventes/partages de données (CCPA) ou cookies (via bannière).',
                 'rights-li7': '<strong>Retrait du Consentement:</strong> À tout moment, sans affecter le traitement antérieur.',
-                'rights-exercise': 'Pour exercer droits, email privacy@theqlip.digital. Nous répondons en 30 jours (ou 45 pour demandes complexes). Plaintes peuvent être déposées auprès de la Nigeria Data Protection Commission (NDPC) à ndpc.gov.ng.',
+                'rights-exercise': 'Pour exercer droits, email theqlipglobal@gmail.com. Nous répondons en 30 jours (ou 45 pour demandes complexes). Plaintes peuvent être déposées auprès de la Nigeria Data Protection Commission (NDPC) à ndpc.gov.ng.',
                 'cookies-title': '7. Cookies et Technologies de Suivi',
                 'cookies-p1': 'Nous utilisons des cookies pour fonctionnalité, analyse et personnalisation. Voir notre ',
                 'cookie-policy-link': 'Politique des Cookies',
@@ -1063,7 +1065,7 @@
                 'changes-p1': 'Nous pouvons mettre à jour cette politique pour refléter changements légaux ou besoins commerciaux. Mises à jour significatives seront notifiées via email ou bannière site. Utilisation continuée constitue acceptation.',
                 'contact-title': '11. Contactez-Nous',
                 'dpo-title': 'Officier de Protection des Données de The Qlip:',
-                'contact-p1': 'Pour questions, demandes de droits ou plaintes: privacy@theqlip.digital',
+                'contact-p1': 'Pour questions, demandes de droits ou plaintes: theqlipglobal@gmail.com',
                 'contact-p2': 'Nous sommes enregistrés auprès de NDPC et adhérons à toutes lois applicables.',
                 'contact-info': '',
                 'quick-links': 'Liens Rapides',
@@ -1102,7 +1104,7 @@
                 'intro-title': '1. Einführung',
                 'intro-p1': 'Bei The Qlip ("wir", "uns" oder "unser") sind wir bestrebt, Ihre Privatsphäre zu schützen und die Sicherheit Ihrer persönlichen Informationen zu gewährleisten. Als führendes Technologieunternehmen mit Sitz in Lagos, Nigeria, spezialisiert auf Software-Engineering, KI & Robotik, Cybersicherheit, Multimedia-Lösungen, Systemtests, IT-Support und Schulung & Beratung, verarbeiten wir personenbezogene Daten verantwortungsvoll im Einklang mit internationalen Standards, einschließlich der Datenschutz-Grundverordnung (GDPR), des California Consumer Privacy Act (CCPA) und des Nigeria Data Protection Act (NDPA) 2023.',
                 'intro-p2': 'Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden, offenlegen und schützen, wenn Sie unsere Website (theqlip.digital) besuchen, unsere Dienste nutzen oder mit unseren Formularen und Tools interagieren. Durch die Nutzung unserer Website oder Dienste stimmen Sie den hier beschriebenen Praktiken zu. Wenn Sie nicht einverstanden sind, verwenden Sie unsere Website bitte nicht.',
-                'intro-controller': '<strong>Datenschutzbeauftragter:</strong> The Qlip Technologies Ltd., 123 Tech Hub, Victoria Island, Lagos, Nigeria. E-Mail: privacy@theqlip.digital | Telefon: +2347087342882.',
+                'intro-controller': '<strong>Datenschutzbeauftragter:</strong> The Qlip, Lagos, Nigeria. Email: theqlipglobal@gmail.com | Telefon: +2347087342882.',
                 'collect-title': '2. Informationen, die wir sammeln',
                 'collect-p1': 'Wir sammeln Informationen, um unsere Dienste bereitzustellen und zu verbessern. Dies umfasst:',
                 'collect-li1': '<strong>Persönliche Informationen:</strong> Name, E-Mail-Adresse, Telefonnummer und Projektdetails, die über unsere Kontaktformulare, Projektmodale oder Newsletter-Anmeldungen eingereicht werden.',
@@ -1137,7 +1139,7 @@
                 'rights-li5': '<strong>Portabilität:</strong> Daten in strukturiertem Format erhalten.',
                 'rights-li6': '<strong>Opt-Out:</strong> Von Datensales/Teilen (CCPA) oder Cookies (via Banner).',
                 'rights-li7': '<strong>Zustimmung zurückziehen:</strong> Jederzeit, ohne Beeinträchtigung früherer Verarbeitung.',
-                'rights-exercise': 'Um Rechte auszuüben, e-mailen Sie privacy@theqlip.digital. Wir antworten innerhalb von 30 Tagen (oder 45 für komplexe Anfragen). Beschwerden können bei der Nigeria Data Protection Commission (NDPC) unter ndpc.gov.ng eingereicht werden.',
+                'rights-exercise': 'Um Rechte auszuüben, e-mailen Sie theqlipglobal@gmail.com. Wir antworten innerhalb von 30 Tagen (oder 45 für komplexe Anfragen). Beschwerden können bei der Nigeria Data Protection Commission (NDPC) unter ndpc.gov.ng eingereicht werden.',
                 'cookies-title': '7. Cookies und Tracking-Technologien',
                 'cookies-p1': 'Wir verwenden Cookies für Funktionalität, Analysen und Personalisierung. Siehe unsere ',
                 'cookie-policy-link': 'Cookie-Richtlinie',
@@ -1150,7 +1152,7 @@
                 'changes-p1': 'Wir können diese Richtlinie aktualisieren, um gesetzliche Änderungen oder Geschäftsbedürfnisse widerzuspiegeln. Bedeutende Updates werden per E-Mail oder Site-Banner benachrichtigt. Fortgesetzte Nutzung stellt Akzeptanz dar.',
                 'contact-title': '11. Kontaktieren Sie uns',
                 'dpo-title': 'Datenschutzbeauftragter von The Qlip:',
-                'contact-p1': 'Für Fragen, Rechtsanfragen oder Beschwerden: privacy@theqlip.digital',
+                'contact-p1': 'Für Fragen, Rechtsanfragen oder Beschwerden: theqlipglobal@gmail.com',
                 'contact-p2': 'Wir sind bei NDPC registriert und halten uns an alle geltenden Gesetze.',
                 'contact-info': '',
                 'quick-links': 'Schnelle Links',
@@ -1189,7 +1191,7 @@
                 'intro-title': '1. 引言',
                 'intro-p1': '在 The Qlip ("我们"、"我们的" 或 "我们")，我们致力于保护您的隐私并确保您的个人信息安全。作为总部位于尼日利亚拉各斯的领先技术公司，专注于软件工程、AI 和机器人技术、网络安全、多媒体解决方案、系统测试、IT 支持以及培训和咨询，我们按照包括通用数据保护条例 (GDPR)、加利福尼亚消费者隐私法 (CCPA) 和尼日利亚数据保护法 (NDPA) 2023 的国际标准负责任地处理个人信息。',
                 'intro-p2': '本隐私政策解释了当您访问我们的网站 (theqlip.digital)、使用我们的服务或与我们的表单和工具互动时，我们如何收集、使用、披露和保护您的信息。通过使用我们的网站或服务，您同意此处描述的做法。如果您不同意，请勿使用我们的网站。',
-                'intro-controller': '<strong>数据控制者:</strong> The Qlip Technologies Ltd., 123 Tech Hub, Victoria Island, Lagos, Nigeria. 电子邮件: privacy@theqlip.digital | 电话: +2347087342882。',
+                'intro-controller': '<strong>数据控制者:</strong> The Qlip, Lagos, Nigeria. Email: theqlipglobal@gmail.com | 电话: +2347087342882。',
                 'collect-title': '2. 我们收集的信息',
                 'collect-p1': '我们收集信息以提供和改进我们的服务。这包括:',
                 'collect-li1': '<strong>个人信息:</strong> 通过联系表单、项目模态框或新闻通讯订阅提交的姓名、电子邮件地址、电话号码和项目详情。',
@@ -1224,7 +1226,7 @@
                 'rights-li5': '<strong>可移植性:</strong> 以结构化格式接收数据。',
                 'rights-li6': '<strong>选择退出:</strong> 从数据销售/分享 (CCPA) 或 cookie (通过横幅)。',
                 'rights-li7': '<strong>撤回同意:</strong> 随时，无影响先前处理。',
-                'rights-exercise': '要行使权利，请发邮件至 privacy@theqlip.digital。我们在 30 天内响应 (复杂请求 45 天)。投诉可向尼日利亚数据保护委员会 (NDPC) 提交，网址 ndpc.gov.ng。',
+                'rights-exercise': '要行使权利，请发邮件至 theqlipglobal@gmail.com。我们在 30 天内响应 (复杂请求 45 天)。投诉可向尼日利亚数据保护委员会 (NDPC) 提交，网址 ndpc.gov.ng。',
                 'cookies-title': '7. Cookie 和跟踪技术',
                 'cookies-p1': '我们使用 cookie 用于功能、分析和个性化。请参阅我们的 ',
                 'cookie-policy-link': 'Cookie 政策',
@@ -1237,7 +1239,7 @@
                 'changes-p1': '我们可能更新本政策以反映法律变更或业务需求。重大更新将通过电子邮件或站点横幅通知。继续使用即构成接受。',
                 'contact-title': '11. 联系我们',
                 'dpo-title': 'The Qlip 数据保护官:',
-                'contact-p1': '问题、权利请求或投诉: privacy@theqlip.digital',
+                'contact-p1': '问题、权利请求或投诉: theqlipglobal@gmail.com',
                 'contact-p2': '我们已在 NDPC 注册，并遵守所有适用法律。',
                 'contact-info': '',
                 'quick-links': '快速链接',
@@ -1276,7 +1278,7 @@
                 'intro-title': '1. Introdução',
                 'intro-p1': 'Na The Qlip ("nós", "nosso" ou "nós"), estamos comprometidos em proteger sua privacidade e garantir a segurança de suas informações pessoais. Como uma empresa líder em tecnologia sediada em Lagos, Nigéria, especializada em engenharia de software, IA e robótica, cibersegurança, soluções multimídia, testes de sistema, suporte TI e treinamento e consultoria, processamos dados pessoais de forma responsável em conformidade com padrões internacionais, incluindo o Regulamento Geral de Proteção de Dados (GDPR), a California Consumer Privacy Act (CCPA) e a Nigeria Data Protection Act (NDPA) 2023.',
                 'intro-p2': 'Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você visita nosso site (theqlip.digital), usa nossos serviços ou interage com nossos formulários e ferramentas. Ao usar nosso site ou serviços, você concorda com as práticas descritas aqui. Se não concordar, por favor, não use nosso site.',
-                'intro-controller': '<strong>Controlador de Dados:</strong> The Qlip Technologies Ltd., 123 Tech Hub, Victoria Island, Lagos, Nigeria. E-mail: privacy@theqlip.digital | Telefone: +2347087342882.',
+                'intro-controller': '<strong>Controlador de Dados:</strong> The Qlip, Lagos, Nigeria. Email: theqlipglobal@gmail.com | Telefone: +2347087342882.',
                 'collect-title': '2. Informações que Coletamos',
                 'collect-p1': 'Coletamos informações para fornecer e melhorar nossos serviços. Isso inclui:',
                 'collect-li1': '<strong>Informações Pessoais:</strong> Nome, endereço de e-mail, número de telefone e detalhes do projeto enviados via formulários de contato, modais de projeto ou inscrições em newsletter.',
@@ -1311,7 +1313,7 @@
                 'rights-li5': '<strong>Portabilidade:</strong> Receber dados em formato estruturado.',
                 'rights-li6': '<strong>Opt-Out:</strong> De vendas/compartilhamentos de dados (CCPA) ou cookies (via banner).',
                 'rights-li7': '<strong>Retirar Consentimento:</strong> A qualquer momento, sem afetar processamento anterior.',
-                'rights-exercise': 'Para exercer direitos, envie e-mail para privacy@theqlip.digital. Respondemos em 30 dias (ou 45 para pedidos complexos). Reclamações podem ser apresentadas à Nigeria Data Protection Commission (NDPC) em ndpc.gov.ng.',
+                'rights-exercise': 'Para exercer direitos, envie e-mail para theqlipglobal@gmail.com. Respondemos em 30 dias (ou 45 para pedidos complexos). Reclamações podem ser apresentadas à Nigeria Data Protection Commission (NDPC) em ndpc.gov.ng.',
                 'cookies-title': '7. Cookies e Tecnologias de Rastreamento',
                 'cookies-p1': 'Usamos cookies para funcionalidade, análise e personalização. Veja nossa ',
                 'cookie-policy-link': 'Política de Cookies',
@@ -1324,7 +1326,7 @@
                 'changes-p1': 'Podemos atualizar esta política para refletir mudanças legais ou necessidades comerciais. Atualizações significativas serão notificadas via e-mail ou banner do site. Uso continuado constitui aceitação.',
                 'contact-title': '11. Contate-Nos',
                 'dpo-title': 'Oficial de Proteção de Dados da The Qlip:',
-                'contact-p1': 'Para perguntas, solicitações de direitos ou reclamações: privacy@theqlip.digital',
+                'contact-p1': 'Para perguntas, solicitações de direitos ou reclamações: theqlipglobal@gmail.com',
                 'contact-p2': 'Estamos registrados na NDPC e aderimos a todas as leis aplicáveis.',
                 'contact-info': '',
                 'quick-links': 'Links Rápidos',
@@ -1363,7 +1365,7 @@
                 'intro-title': '1. المقدمة',
                 'intro-p1': 'في The Qlip ("نحن"، "لنا" أو "نحن")، نحن ملتزمون بحماية خصوصيتك وضمان أمان معلوماتك الشخصية. كشركة تكنولوجيا رائدة مقرها في لاغوس، نيجيريا، متخصصة في هندسة البرمجيات، الذكاء الاصطناعي والروبوتات، الأمن السيبراني، حلول الوسائط المتعددة، اختبار الأنظمة، دعم تكنولوجيا المعلومات، والتدريب والاستشارات، نعالج البيانات الشخصية بمسؤولية وفقًا للمعايير الدولية بما في ذلك اللائحة العامة لحماية البيانات (GDPR)، قانون خصوصية المستهلك في كاليفورنيا (CCPA)، وقانون حماية البيانات في نيجيريا (NDPA) 2023.',
                 'intro-p2': 'توضح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وكشفنا وحماية معلوماتك عند زيارة موقعنا الإلكتروني (theqlip.digital)، أو استخدام خدماتنا، أو التفاعل مع نماذجنا وأدواتنا. باستخدام موقعنا أو خدماتنا، توافق على الممارسات الموضحة هنا. إذا كنت لا توافق، يرجى عدم استخدام موقعنا.',
-                'intro-controller': '<strong>مسؤول البيانات:</strong> The Qlip Technologies Ltd., 123 Tech Hub, Victoria Island, Lagos, Nigeria. البريد الإلكتروني: privacy@theqlip.digital | الهاتف: +2347087342882.',
+                'intro-controller': '<strong>مسؤول البيانات:</strong> The Qlip, Lagos, Nigeria. Email: theqlipglobal@gmail.com | الهاتف: +2347087342882.',
                 'collect-title': '2. المعلومات التي نجمعها',
                 'collect-p1': 'نجمع معلومات لتقديم وتحسين خدماتنا. يشمل ذلك:',
                 'collect-li1': '<strong>المعلومات الشخصية:</strong> الاسم، عنوان البريد الإلكتروني، رقم الهاتف، وتفاصيل المشروع المقدمة عبر نماذج الاتصال، أو نوافذ المشروع، أو اشتراكات النشرات الإخبارية.',
@@ -1398,7 +1400,7 @@
                 'rights-li5': '<strong>النقل:</strong> تلقي البيانات بتنسيق منظم.',
                 'rights-li6': '<strong>الانسحاب:</strong> من مبيعات/مشاركة البيانات (CCPA) أو الكوكيز (عبر اللافتة).',
                 'rights-li7': '<strong>سحب الموافقة:</strong> في أي وقت، دون التأثير على المعالجة السابقة.',
-                'rights-exercise': 'لتمرين الحقوق، أرسل بريدًا إلكترونيًا إلى privacy@theqlip.digital. نرد في غضون 30 يومًا (أو 45 للطلبات المعقدة). يمكن تقديم الشكاوى إلى لجنة حماية البيانات في نيجيريا (NDPC) على ndpc.gov.ng.',
+                'rights-exercise': 'لتمرين الحقوق، أرسل بريدًا إلكترونيًا إلى theqlipglobal@gmail.com. نرد في غضون 30 يومًا (أو 45 للطلبات المعقدة). يمكن تقديم الشكاوى إلى لجنة حماية البيانات في نيجيريا (NDPC) على ndpc.gov.ng.',
                 'cookies-title': '7. الكوكيز وتقنيات التتبع',
                 'cookies-p1': 'نستخدم الكوكيز للوظائف، التحليلات، والتخصيص. انظر ',
                 'cookie-policy-link': 'سياسة الكوكيز',
@@ -1411,7 +1413,7 @@
                 'changes-p1': 'قد نحدث هذه السياسة لتعكس التغييرات القانونية أو احتياجات الأعمال. سيتم إخطار التحديثات المهمة عبر البريد الإلكتروني أو لافتة الموقع. الاستخدام المستمر يشكل قبولًا.',
                 'contact-title': '11. اتصل بنا',
                 'dpo-title': 'مسؤول حماية البيانات في The Qlip:',
-                'contact-p1': 'للأسئلة، طلبات الحقوق، أو الشكاوى: privacy@theqlip.digital',
+                'contact-p1': 'للأسئلة، طلبات الحقوق، أو الشكاوى: theqlipglobal@gmail.com',
                 'contact-p2': 'نحن مسجلون لدى NDPC ونلتزم بجميع القوانين المعمول بها.',
                 'contact-info': '',
                 'quick-links': 'روابط سريعة',
@@ -1521,7 +1523,7 @@
             hamburger.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', !isActive);
             mobileNav.classList.toggle('active');
-       
+     
             // Close on outside click (optional enhancement)
             if (!isActive) {
                 document.addEventListener('click', closeMenuOnOutsideClick);
