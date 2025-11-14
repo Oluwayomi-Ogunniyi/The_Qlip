@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="terms-title-seo">Terms of Service | The Qlip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0a0a1a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 0;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(45, 254, 192, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(45, 254, 192, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(45, 254, 192, 0.08) 0%, transparent 50%);
+            z-index: -1;
+        }
+        .waves {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(10, 18, 26, 0.507);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(45, 254, 192, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: hsl(0, 0%, 100%);
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .logo img {
+            height: 44px;
+            margin-right: 12px;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+        nav a:hover {
+            opacity: 1;
+            color: hsl(162, 100%, 59%);
+        }
+        .lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(45, 254, 192, 0.2);
+            border-radius: 20px;
+            padding: 4px 12px;
+        }
+        .lang-selector i {
+            color: hsl(162, 100%, 59%);
+            font-size: 1rem;
+        }
+        .lang-selector select {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 2px 0;
+        }
+        .lang-selector select option {
+            background: #0a0a1a;
+            color: #fff;
+        }
+        .back-btn {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, hsl(162, 100%, 20%) 0%, hsl(162, 100%, 15%) 100%);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-btn:hover {
+            background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
+            transform: translateY(-2px);
+        }
+        .policy-hero {
+            position: relative;
+            padding: 200px 20px 120px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(10, 25, 26, 0.63) 0%, rgba(0, 0, 0, 0.95) 100%),
+                        url('images/heroimage.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll, fixed;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .policy-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .policy-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+        .policy-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        .policy-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        .policy-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(45, 254, 192, 0.15);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+        .policy-section:hover {
+            border-color: rgba(45, 254, 192, 0.3);
+            box-shadow: 0 24px 48px rgba(45, 254, 192, 0.1);
+        }
+        .policy-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: hsl(162, 100%, 59%);
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(45, 254, 192, 0.2);
+            padding-bottom: 12px;
+        }
+        .policy-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 24px 0 16px;
+            color: #ffffff;
+            opacity: 0.95;
+        }
+        .policy-section p, .policy-section li {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+        .policy-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .policy-section ul li {
+            padding-left: 20px;
+            position: relative;
+        }
+        .policy-section ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: hsl(162, 100%, 59%);
+            font-weight: bold;
+        }
+        .policy-section ol {
+            padding-left: 20px;
+        }
+        .last-updated {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(45, 254, 192, 0.1);
+            border-radius: 12px;
+        }
+        .contact-info {
+            background: rgba(45, 254, 192, 0.1);
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        /* Footer Styles */
+        .footer {
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(45, 254, 192, 0.15);
+            margin-top: 120px;
+            padding: 80px 20px 40px;
+            color: #fff;
+        }
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 48px;
+        }
+        .footer-column h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: hsl(162, 100%, 59%);
+            letter-spacing: 0.5px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-column a:hover {
+            color: hsl(162, 100%, 59%);
+        }
+        .footer-tagline {
+            margin: 16px 0 24px;
+            opacity: 0.8;
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(45, 254, 192, 0.1);
+            border: 1px solid rgba(45, 254, 192, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            background: hsl(162, 100%, 59%);
+            transform: translateY(-4px);
+        }
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        /* Newsletter Styles */
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .newsletter-form input[type="email"] {
+            flex: 1;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(45, 254, 192, 0.3);
+            border-radius: 25px;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .newsletter-form input[type="email"]:focus {
+            border-color: hsl(162, 100%, 59%);
+            box-shadow: 0 0 10px rgba(45, 254, 192, 0.3);
+        }
+        .newsletter-form input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .newsletter-form button {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, hsl(162, 100%, 20%) 0%, hsl(162, 100%, 15%) 100%);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .newsletter-form button:hover {
+            background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
+            transform: translateY(-2px);
+        }
+        .newsletter-form button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 60px auto 0;
+            padding-top: 40px;
+            border-top: 1px solid rgba(45, 254, 192, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        .footer-bottom-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-bottom-links a:hover {
+            color: hsl(162, 100%, 59%);
+        }
+        /* Hamburger Button */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+            transition: opacity 0.3s ease;
+        }
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background: hsl(162, 100%, 59%);
+            border-radius: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: 1px;
+            box-shadow: 0 2px 5px rgba(45, 254, 192, 0.3);
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        .hamburger:hover span {
+            box-shadow: 0 2px 5px rgba(45, 254, 192, 0.5);
+        }
+        /* Mobile Nav Overlay */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(10, 10, 26, 0.98);
+            backdrop-filter: blur(20px);
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+        .mobile-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .mobile-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(45, 254, 192, 0.1);
+            display: block;
+        }
+        .mobile-nav a:hover {
+            opacity: 1;
+            color: hsl(162, 100%, 59%);
+            transform: translateX(10px);
+        }
+        .mobile-nav-extras {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            opacity: 0.9;
+        }
+        .header-btn {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, hsl(162, 100%, 20%) 0%, hsl(162, 100%, 15%) 100%);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .header-btn:hover {
+            background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
+            transform: translateY(-2px);
+        }
+        /* Backdrop overlay for better UX (optional, adds dim on open) */
+        .mobile-nav::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        .mobile-nav.active::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Responsive Media Queries */
+        @media (max-width: 1200px) {
+            .nav-container {
+                gap: 20px;
+            }
+            nav ul {
+                gap: 20px;
+            }
+        }
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: flex;
+            }
+            /* Hide desktop nav on tablet/mobile */
+            .nav-container {
+                display: none;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 0 16px;
+                justify-content: space-between;
+            }
+            .policy-hero {
+                padding: 180px 16px 80px;
+                text-align: center;
+            }
+            .policy-hero-content {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .policy-hero h1 {
+                font-size: 2.8rem;
+                line-height: 1.1;
+            }
+            .policy-hero p {
+                font-size: 1.1rem;
+            }
+            .policy-content {
+                padding: 40px 16px;
+            }
+            .policy-section {
+                padding: 24px;
+                margin-bottom: 40px;
+            }
+            .policy-section h2 {
+                font-size: 1.8rem;
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 40px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: left;
+                gap: 16px;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .mobile-nav ul {
+                gap: 15px;
+            }
+            .mobile-nav a {
+                font-size: 1.3rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 0 12px;
+            }
+            .logo {
+                font-size: 1.3rem;
+            }
+            .logo img {
+                height: 36px;
+            }
+            .policy-hero {
+                padding: 140px 12px 60px;
+            }
+            .policy-hero h1 {
+                font-size: 2.2rem;
+                letter-spacing: 1px;
+            }
+            .policy-hero p {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+            .policy-content {
+                padding: 40px 12px;
+            }
+            .policy-section {
+                padding: 24px 16px;
+            }
+            .policy-section h2 {
+                font-size: 1.8rem;
+            }
+            .newsletter-form input[type="email"] {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+            .newsletter-form button {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+            .mobile-nav a {
+                font-size: 1.2rem;
+                padding: 8px 0;
+            }
+            .header-btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg class="waves" viewBox="0 0 1200 800" preserveAspectRatio="none">
+        <defs>
+            <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:hsl(162, 100%, 59%);stop-opacity:0.3" />
+                <stop offset="100%" style="stop-color:hsl(162, 100%, 59%);stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <path d="M0,256L48,266.7C96,277,192,299,288,277.3C384,256,480,192,576,170.7C672,149,768,171,864,197.3C960,224,1056,256,1144,266.7L1200,277L1200,320L1144,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="url(#waveGrad)" />
+        <path d="M0,192L48,202.7C96,213,192,235,288,213.3C384,192,480,128,576,106.7C672,85,768,107,864,133.3C960,160,1056,192,1144,202.7L1200,213L1200,320L1144,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="url(#waveGrad)" opacity="0.5" />
+    </svg>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/The Qlip.png" alt="The Qlip">
+            <span data-i18n="logo">The Qlip</span>
+        </a>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                    <li><a href="services.html" data-i18n="nav-services">Services</a></li>
+                    <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="lang-selector">
+                <i class="fas fa-globe"></i>
+                <select id="lang-select">
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                    <option value="zh">ZH</option>
+                    <option value="pt">PT</option>
+                    <option value="ar">AR</option>
+                </select>
+            </div>
+            <a href="index.html" class="back-btn header-btn" data-i18n="back-home">Back to Home</a>
+        </div>
+        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <!-- Mobile menu overlay (hidden by default) -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav-services">Services</a></li>
+            <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+        </ul>
+        <!-- Keep your lang-selector and header-btn here for mobile too -->
+        <div class="mobile-nav-extras">
+            <div class="lang-selector">
+                <i class="fas fa-globe"></i>
+                <select id="lang-select-mobile">
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                    <option value="fr">FR</option>
+                    <option value="de">DE</option>
+                    <option value="zh">ZH</option>
+                    <option value="pt">PT</option>
+                    <option value="ar">AR</option>
+                </select>
+            </div>
+            <a href="index.html" class="header-btn" data-i18n="back-home">Back to Home</a>
+        </div>
+    </nav>
+    <section class="policy-hero">
+        <div class="policy-hero-content">
+            <h1 data-i18n="terms-title">Terms of Service</h1>
+            <p data-i18n="terms-subtitle">Empowering your digital journey with clear, fair, and innovative solutions.</p>
+        </div>
+    </section>
+    <div class="policy-content">
+        <div class="last-updated" data-i18n="last-updated">
+            <strong>Last Updated: November 14, 2025</strong>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="intro-title">1. Introduction</h2>
+            <p data-i18n="intro-p1">Welcome to The Qlip ("we," "us," or "our"), a technology company based in Lagos, Nigeria, dedicated to transforming ideas into digital excellence through services including software engineering, AI & robotics, cybersecurity & data protection, multimedia solutions, system testing & IT support, and training & consultancy. These Terms of Service ("Terms") govern your access to and use of our website (theqlip.digital), free tools, and paid services (collectively, the "Services").</p>
+            <p data-i18n="intro-p2">By accessing or using the Services, you agree to be bound by these Terms, our <a href="policy.html" data-i18n="privacy-policy-link">Privacy Policy</a>, and our <a href="cookie.html" data-i18n="cookie-policy-link">Cookie Policy</a>. If you do not agree, you must not use the Services. These Terms form a legally binding contract between you and The Qlip Technologies Ltd.</p>
+            <p data-i18n="intro-eligibility"><strong>Eligibility:</strong> You must be at least 18 years old or the age of majority in your jurisdiction to use our Services. Businesses must be duly registered entities.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="acceptance-title">2. Acceptance of Terms</h2>
+            <p data-i18n="acceptance-p1">By clicking "Accept," submitting a project form, or using any Service, you confirm that you have read, understood, and agree to these Terms. We may require additional agreements for specific services (e.g., project contracts). Continued use after changes constitutes acceptance of updated Terms.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="services-title">3. Description of Services</h2>
+            <p data-i18n="services-p1">Our Services include:</p>
+            <ul>
+                <li data-i18n="services-li1"><strong>Consultancy & Development:</strong> Custom software, web/mobile apps, AI integration, cybersecurity audits, multimedia production, and IT training.</li>
+                <li data-i18n="services-li3"><strong>Project Submissions:</strong> Via modals or forms; we review and respond but are not obligated to accept or deliver.</li>
+            </ul>
+            <p data-i18n="services-p2">Services are subject to availability and may evolve. We reserve the right to modify, suspend, or discontinue any Service with notice.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="accounts-title">4. User Accounts and Responsibilities</h2>
+            <p data-i18n="accounts-p1">To access certain features, you may need to create an account. You agree to:</p>
+            <ul>
+                <li data-i18n="accounts-li1">Provide accurate, complete information and update it as needed.</li>
+                <li data-i18n="accounts-li2">Maintain the confidentiality of your login credentials.</li>
+                <li data-i18n="accounts-li3">Notify us immediately of unauthorized use.</li>
+                <li data-i18n="accounts-li4">Comply with all applicable laws, including Nigeria's Cybercrimes Act 2015 and Data Protection Act 2023.</li>
+            </ul>
+            <p data-i18n="accounts-p2">You are responsible for all activities under your account. We are not liable for losses due to unauthorized access.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="ip-title">5. Intellectual Property</h2>
+            <p data-i18n="ip-our-rights"><strong>Our Rights:</strong> All content, tools, designs, code, and materials on our site (including AI models and software) are owned by us or our licensors. You are granted a limited, non-exclusive, non-transferable license to use the Services for personal/business purposes.</p>
+            <p data-i18n="ip-your-content"><strong>Your Content:</strong> You retain ownership of materials you submit (e.g., project briefs). By submitting, you grant us a worldwide, royalty-free license to use, modify, and display it for providing Services. Remove any confidential info before submission.</p>
+            <p data-i18n="ip-respect">We respect IP rights and expect the same. Report infringements to theqlipglobal@gmail.com.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="payments-title">6. Payments and Fees</h2>
+            <p data-i18n="payments-p1">For paid Services:</p>
+            <ul>
+                <li data-i18n="payments-li1">Quotes are estimates; final fees based on scope, agreed in writing.</li>
+                <li data-i18n="payments-li2">Payments via secure methods (e.g., bank transfer, Stripe). Late payments accrue 1.5% monthly interest.</li>
+                <li data-i18n="payments-li3">Refunds: At our discretion, minus non-refundable deposits (e.g., 20% for projects). No refunds for free tools.</li>
+                <li data-i18n="payments-li4">All fees exclude taxes; you bear applicable VAT/GST.</li>
+            </ul>
+            <p data-i18n="payments-p2">We use third-party processors compliant with PCI DSS.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="prohibited-title">7. Prohibited Conduct</h2>
+            <p data-i18n="prohibited-p1">You agree not to:</p>
+            <ul>
+                <li data-i18n="prohibited-li1">Use Services for illegal activities, spam, or harassment.</li>
+                <li data-i18n="prohibited-li2">Reverse-engineer, hack, or disrupt our systems.</li>
+                <li data-i18n="prohibited-li3">Upload viruses, malware, or infringing content.</li>
+                <li data-i18n="prohibited-li4">Impersonate others or misuse free tools commercially without permission.</li>
+                <li data-i18n="prohibited-li5">Violate export controls or sanctions.</li>
+            </ul>
+            <p data-i18n="prohibited-p2">We may suspend/terminate access for violations without notice.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="disclaimers-title">8. Disclaimers and Limitations of Liability</h2>
+            <p data-i18n="disclaimers-p1"><strong>Disclaimers:</strong> Services are provided "as is" without warranties—express, implied, or statutory (e.g., no merchantability or fitness for purpose). Free tools may have errors; test thoroughly.</p>
+            <p data-i18n="disclaimers-p2"><strong>Limitation of Liability:</strong> To the fullest extent permitted by law (including Nigerian Contract Law), we are not liable for indirect, incidental, or consequential damages (e.g., lost profits). Total liability shall not exceed fees paid in the prior 12 months.</p>
+            <p data-i18n="disclaimers-p3">This does not limit liability for gross negligence, fraud, or death/injury.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="termination-title">9. Termination</h2>
+            <p data-i18n="termination-p1">We may terminate or suspend your access for breach, with or without notice. Upon termination, you must cease using Services and destroy any copies. Sections surviving termination: IP, payments, liability, governing law.</p>
+            <p data-i18n="termination-p2">You may stop using Services anytime; for paid, contact for cancellation.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="governing-title">10. Governing Law and Dispute Resolution</h2>
+            <p data-i18n="governing-p1">These Terms are governed by the laws of the Federal Republic of Nigeria, without regard to conflict of laws principles. Any disputes shall be resolved exclusively in the courts of Lagos State, Nigeria.</p>
+            <p data-i18n="governing-p2">We encourage informal resolution first. For unresolved issues, you agree to binding arbitration under the Arbitration and Mediation Act 2023, unless you opt out within 30 days.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="changes-title">11. Changes to These Terms</h2>
+            <p data-i18n="changes-p1">We may update these Terms to reflect legal or business changes. We will notify you via email or site notice (at least 30 days for material changes). Continued use after updates means acceptance.</p>
+        </div>
+        <div class="policy-section">
+            <h2 data-i18n="contact-title">12. Contact Us</h2>
+            <div class="contact-info" data-i18n="contact-info">
+                <p><strong data-i18n="legal-team">The Qlip Legal Team:</strong> theqlipglobal@gmail.com</p>
+                <p data-i18n="contact-p1">For questions or notices: theqlipglobal@gmail.com | Phone: +2347087342882</p>
+                <p data-i18n="contact-p2">We are committed to fair practices and welcome feedback.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" aria-label="Site footer">
+        <div class="footer-container">
+            <div class="footer-column footer-logo-column">
+                <a href="#" class="logo">
+                    <img src="images/The Qlip.png" alt="The Qlip Logo - Best Solutions Provider 2025">
+                    <span data-i18n="logo">The Qlip</span>
+                </a>
+                <p class="footer-tagline" data-i18n="tagline">Transforming ideas into powered digital excellence.</p>
+                <div class="social-icons">
+                    <a href="https://x.com/the_qlip" aria-label="X (Twitter)" class="social-icon" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/the_qlip" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441c0-.796-.645-1.441-1.441-1.441z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@the_qlip" aria-label="TikTok" class="social-icon" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 448 512"><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="quick-links">Quick Links</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav-about">About</a></li>
+                    <li><a href="services.html" data-i18n="nav-services">Services</a></li>
+                    <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="hire-team">Hire A Team</h4>
+                <ul>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Frontend%20Developer%20Focus" data-i18n="job1">Frontend Developer (Focus)</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Backend%20Developer" data-i18n="job2">Backend Developer</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Full-Stack%20Developer" data-i18n="job3">Full-Stack Developer</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-ML%20Engineer" data-i18n="job4">ML Engineer</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Cybersecurity%20Specialist" data-i18n="job5">Cybersecurity Specialist</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-UI/UX%20Designer" data-i18n="job6">UI/UX Designer</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Video%20Editor" data-i18n="job7">Video Editor</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-DevOps%20Engineer" data-i18n="job8">DevOps Engineer</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Multimedia%20Specialist" data-i18n="job9">Multimedia Specialist</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Project%20Manager%20Projects" data-i18n="job10">Project Manager (Projects)</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Junior%20Engineer" data-i18n="job11">Junior Engineer</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Content%20Strategist" data-i18n="job12">Content Strategist</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="stay-updated">Stay Updated on Trends</h4>
+                <p data-i18n="newsletter-desc">Get free tips, machine learning updates, and SEO recommendations.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" name="email" placeholder="Enter your email for insights" required>
+                    <button type="submit" data-i18n="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="copyright">&copy; 2025 The Qlip. All rights reserved.</p>
+            <ul class="footer-bottom-links">
+                <li><a href="policy.html" data-i18n="privacy">Privacy Policy</a></li>
+                <li><a href="terms.html" data-i18n="terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Multilanguage Support
+        const translations = {
+            en: {
+                // Existing from previous pages
+                logo: 'The Qlip',
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-services': 'Services',
+                'nav-contact': 'Contact',
+                'back-home': 'Back to Home',
+                tagline: 'Transforming ideas into powered digital excellence.',
+                'quick-links': 'Quick Links',
+                'hire-team': 'Hire A Team',
+                job1: 'Frontend Developer (Focus)',
+                job2: 'Backend Developer',
+                job3: 'Full-Stack Developer',
+                job4: 'ML Engineer',
+                job5: 'Cybersecurity Specialist',
+                job6: 'UI/UX Designer',
+                job7: 'Video Editor',
+                job8: 'DevOps Engineer',
+                job9: 'Multimedia Specialist',
+                job10: 'Project Manager (Projects)',
+                job11: 'Junior Engineer',
+                job12: 'Content Strategist',
+                'stay-updated': 'Stay Updated on Trends',
+                'newsletter-desc': 'Get free tips, machine learning updates, and SEO recommendations.',
+                'subscribe-btn': 'Subscribe',
+                copyright: '&copy; 2025 The Qlip. All rights reserved.',
+                privacy: 'Privacy Policy',
+                terms: 'Terms of Service',
+                cookie: 'Cookie Policy',
+                'privacy-policy-link': 'Privacy Policy',
+                'cookie-policy-link': 'Cookie Policy',
+                // Terms specific
+                'terms-title-seo': 'Terms of Service | The Qlip',
+                'terms-title': 'Terms of Service',
+                'terms-subtitle': 'Empowering your digital journey with clear, fair, and innovative solutions.',
+                'last-updated': '<strong>Last Updated: November 14, 2025</strong>',
+                'intro-title': '1. Introduction',
+                'intro-p1': 'Welcome to The Qlip ("we," "us," or "our"), a technology company based in Lagos, Nigeria, dedicated to transforming ideas into digital excellence through services including software engineering, AI & robotics, cybersecurity & data protection, multimedia solutions, system testing & IT support, and training & consultancy. These Terms of Service ("Terms") govern your access to and use of our website (theqlip.digital), free tools, and paid services (collectively, the "Services").',
+                'intro-p2': 'By accessing or using the Services, you agree to be bound by these Terms, our ',
+                'intro-eligibility': '<strong>Eligibility:</strong> You must be at least 18 years old or the age of majority in your jurisdiction to use our Services. Businesses must be duly registered entities.',
+                'acceptance-title': '2. Acceptance of Terms',
+                'acceptance-p1': 'By clicking "Accept," submitting a project form, or using any Service, you confirm that you have read, understood, and agree to these Terms. We may require additional agreements for specific services (e.g., project contracts). Continued use after changes constitutes acceptance of updated Terms.',
+                'services-title': '3. Description of Services',
+                'services-p1': 'Our Services include:',
+                'services-li1': '<strong>Consultancy & Development:</strong> Custom software, web/mobile apps, AI integration, cybersecurity audits, multimedia production, and IT training.',
+                'services-li3': '<strong>Project Submissions:</strong> Via modals or forms; we review and respond but are not obligated to accept or deliver.',
+                'services-p2': 'Services are subject to availability and may evolve. We reserve the right to modify, suspend, or discontinue any Service with notice.',
+                'accounts-title': '4. User Accounts and Responsibilities',
+                'accounts-p1': 'To access certain features, you may need to create an account. You agree to:',
+                'accounts-li1': 'Provide accurate, complete information and update it as needed.',
+                'accounts-li2': 'Maintain the confidentiality of your login credentials.',
+                'accounts-li3': 'Notify us immediately of unauthorized use.',
+                'accounts-li4': 'Comply with all applicable laws, including Nigeria\'s Cybercrimes Act 2015 and Data Protection Act 2023.',
+                'accounts-p2': 'You are responsible for all activities under your account. We are not liable for losses due to unauthorized access.',
+                'ip-title': '5. Intellectual Property',
+                'ip-our-rights': '<strong>Our Rights:</strong> All content, tools, designs, code, and materials on our site (including AI models and software) are owned by us or our licensors. You are granted a limited, non-exclusive, non-transferable license to use the Services for personal/business purposes.',
+                'ip-your-content': '<strong>Your Content:</strong> You retain ownership of materials you submit (e.g., project briefs). By submitting, you grant us a worldwide, royalty-free license to use, modify, and display it for providing Services. Remove any confidential info before submission.',
+                'ip-respect': 'We respect IP rights and expect the same. Report infringements to theqlipglobal@gmail.com.',
+                'payments-title': '6. Payments and Fees',
+                'payments-p1': 'For paid Services:',
+                'payments-li1': 'Quotes are estimates; final fees based on scope, agreed in writing.',
+                'payments-li2': 'Payments via secure methods (e.g., bank transfer, Stripe). Late payments accrue 1.5% monthly interest.',
+                'payments-li3': 'Refunds: At our discretion, minus non-refundable deposits (e.g., 20% for projects). No refunds for free tools.',
+                'payments-li4': 'All fees exclude taxes; you bear applicable VAT/GST.',
+                'payments-p2': 'We use third-party processors compliant with PCI DSS.',
+                'prohibited-title': '7. Prohibited Conduct',
+                'prohibited-p1': 'You agree not to:',
+                'prohibited-li1': 'Use Services for illegal activities, spam, or harassment.',
+                'prohibited-li2': 'Reverse-engineer, hack, or disrupt our systems.',
+                'prohibited-li3': 'Upload viruses, malware, or infringing content.',
+                'prohibited-li4': 'Impersonate others or misuse free tools commercially without permission.',
+                'prohibited-li5': 'Violate export controls or sanctions.',
+                'prohibited-p2': 'We may suspend/terminate access for violations without notice.',
+                'disclaimers-title': '8. Disclaimers and Limitations of Liability',
+                'disclaimers-p1': '<strong>Disclaimers:</strong> Services are provided "as is" without warranties—express, implied, or statutory (e.g., no merchantability or fitness for purpose). Free tools may have errors; test thoroughly.',
+                'disclaimers-p2': '<strong>Limitation of Liability:</strong> To the fullest extent permitted by law (including Nigerian Contract Law), we are not liable for indirect, incidental, or consequential damages (e.g., lost profits). Total liability shall not exceed fees paid in the prior 12 months.',
+                'disclaimers-p3': 'This does not limit liability for gross negligence, fraud, or death/injury.',
+                'termination-title': '9. Termination',
+                'termination-p1': 'We may terminate or suspend your access for breach, with or without notice. Upon termination, you must cease using Services and destroy any copies. Sections surviving termination: IP, payments, liability, governing law.',
+                'termination-p2': 'You may stop using Services anytime; for paid, contact for cancellation.',
+                'governing-title': '10. Governing Law and Dispute Resolution',
+                'governing-p1': 'These Terms are governed by the laws of the Federal Republic of Nigeria, without regard to conflict of laws principles. Any disputes shall be resolved exclusively in the courts of Lagos State, Nigeria.',
+                'governing-p2': 'We encourage informal resolution first. For unresolved issues, you agree to binding arbitration under the Arbitration and Mediation Act 2023, unless you opt out within 30 days.',
+                'changes-title': '11. Changes to These Terms',
+                'changes-p1': 'We may update these Terms to reflect legal or business changes. We will notify you via email or site notice (at least 30 days for material changes). Continued use after updates means acceptance.',
+                'contact-title': '12. Contact Us',
+                'legal-team': 'The Qlip Legal Team:',
+                'contact-p1': 'For questions or notices: theqlipglobal@gmail.com | Phone: +2347087342882',
+                'contact-p2': 'We are committed to fair practices and welcome feedback.',
+                'contact-info': ''
+            },
+            es: {
+                // Existing + Terms
+                'back-home': 'Volver al Inicio',
+                'terms-title-seo': 'Términos de Servicio | The Qlip',
+                'terms-title': 'Términos de Servicio',
+                'terms-subtitle': 'Empoderando su viaje digital con soluciones claras, justas e innovadoras.',
+                'last-updated': '<strong>Última Actualización: 14 de noviembre de 2025</strong>',
+                'intro-title': '1. Introducción',
+                'intro-p1': 'Bienvenido a The Qlip ("nosotros", "nuestro" o "nos"), una empresa de tecnología con sede en Lagos, Nigeria, dedicada a transformar ideas en excelencia digital a través de servicios que incluyen ingeniería de software, IA y robótica, ciberseguridad y protección de datos, soluciones multimedia, pruebas de sistemas y soporte TI, y capacitación y consultoría. Estos Términos de Servicio ("Términos") rigen su acceso y uso de nuestro sitio web (theqlip.digital), herramientas gratuitas y servicios pagados (colectivamente, los "Servicios").',
+                'intro-p2': 'Al acceder o usar los Servicios, usted acepta estar sujeto a estos Términos, nuestra ',
+                'intro-eligibility': '<strong>Elegibilidad:</strong> Debe tener al menos 18 años o la mayoría de edad en su jurisdicción para usar nuestros Servicios. Las empresas deben ser entidades debidamente registradas.',
+                'acceptance-title': '2. Aceptación de Términos',
+                'acceptance-p1': 'Al hacer clic en "Aceptar", enviar un formulario de proyecto o usar cualquier Servicio, confirma que ha leído, entendido y acepta estos Términos. Podemos requerir acuerdos adicionales para servicios específicos (p. ej., contratos de proyecto). El uso continuado después de cambios constituye aceptación de Términos actualizados.',
+                'services-title': '3. Descripción de Servicios',
+                'services-p1': 'Nuestros Servicios incluyen:',
+                'services-li1': '<strong>Consultoría y Desarrollo:</strong> Software personalizado, apps web/móviles, integración de IA, auditorías de ciberseguridad, producción multimedia y capacitación TI.',
+                'services-li3': '<strong>Envíos de Proyectos:</strong> Vía modales o formularios; revisamos y respondemos pero no estamos obligados a aceptar o entregar.',
+                'services-p2': 'Los Servicios están sujetos a disponibilidad y pueden evolucionar. Nos reservamos el derecho de modificar, suspender o discontinuar cualquier Servicio con notificación.',
+                'accounts-title': '4. Cuentas de Usuario y Responsabilidades',
+                'accounts-p1': 'Para acceder a ciertas funciones, puede necesitar crear una cuenta. Usted acepta:',
+                'accounts-li1': 'Proporcionar información precisa y completa y actualizarla según sea necesario.',
+                'accounts-li2': 'Mantener la confidencialidad de sus credenciales de inicio de sesión.',
+                'accounts-li3': 'Notificarnos inmediatamente de uso no autorizado.',
+                'accounts-li4': 'Cumplir con todas las leyes aplicables, incluyendo la Ley de Ciberdelitos de Nigeria 2015 y la Ley de Protección de Datos 2023.',
+                'accounts-p2': 'Usted es responsable de todas las actividades bajo su cuenta. No somos responsables de pérdidas debido a acceso no autorizado.',
+                'ip-title': '5. Propiedad Intelectual',
+                'ip-our-rights': '<strong>Nuestros Derechos:</strong> Todo el contenido, herramientas, diseños, código y materiales en nuestro sitio (incluyendo modelos de IA y software) son propiedad nuestra o de nuestros licenciantes. Se le otorga una licencia limitada, no exclusiva, no transferible para usar los Servicios para fines personales/empresariales.',
+                'ip-your-content': '<strong>Su Contenido:</strong> Usted retiene la propiedad de los materiales que envía (p. ej., resúmenes de proyectos). Al enviar, nos otorga una licencia mundial, libre de regalías para usar, modificar y mostrar para proporcionar Servicios. Elimine cualquier información confidencial antes de enviar.',
+                'ip-respect': 'Respetamos los derechos de IP y esperamos lo mismo. Reporte infracciones a theqlipglobal@gmail.com.',
+                'payments-title': '6. Pagos y Tarifas',
+                'payments-p1': 'Para Servicios pagados:',
+                'payments-li1': 'Las cotizaciones son estimaciones; tarifas finales basadas en alcance, acordadas por escrito.',
+                'payments-li2': 'Pagos vía métodos seguros (p. ej., transferencia bancaria, Stripe). Pagos tardíos acumulan 1.5% de interés mensual.',
+                'payments-li3': 'Reembolsos: A nuestra discreción, menos depósitos no reembolsables (p. ej., 20% para proyectos). Sin reembolsos para herramientas gratuitas.',
+                'payments-li4': 'Todas las tarifas excluyen impuestos; usted asume VAT/GST aplicable.',
+                'payments-p2': 'Usamos procesadores de terceros compliant con PCI DSS.',
+                'prohibited-title': '7. Conducta Prohibida',
+                'prohibited-p1': 'Usted acepta no:',
+                'prohibited-li1': 'Usar Servicios para actividades ilegales, spam o acoso.',
+                'prohibited-li2': 'Ingeniería inversa, hackeo o disrupción de nuestros sistemas.',
+                'prohibited-li3': 'Subir virus, malware o contenido infractor.',
+                'prohibited-li4': 'Suplantar a otros o uso comercial indebido de herramientas gratuitas sin permiso.',
+                'prohibited-li5': 'Violar controles de exportación o sanciones.',
+                'prohibited-p2': 'Podemos suspender/terminar acceso por violaciones sin notificación.',
+                'disclaimers-title': '8. Descargos de Responsabilidad y Limitaciones de Responsabilidad',
+                'disclaimers-p1': '<strong>Descargos:</strong> Servicios proporcionados "tal cual" sin garantías—expresas, implícitas o estatutarias (p. ej., no comerciabilidad o aptitud para el propósito). Herramientas gratuitas pueden tener errores; pruebe exhaustivamente.',
+                'disclaimers-p2': '<strong>Limitación de Responsabilidad:</strong> En la medida máxima permitida por la ley (incluyendo Ley de Contratos de Nigeria), no somos responsables de daños indirectos, incidentales o consecuentes (p. ej., ganancias perdidas). Responsabilidad total no excederá tarifas pagadas en los 12 meses anteriores.',
+                'disclaimers-p3': 'Esto no limita responsabilidad por negligencia grave, fraude o muerte/lesiones.',
+                'termination-title': '9. Terminación',
+                'termination-p1': 'Podemos terminar o suspender su acceso por incumplimiento, con o sin notificación. Al terminar, debe cesar uso de Servicios y destruir copias. Secciones que sobreviven terminación: IP, pagos, responsabilidad, ley aplicable.',
+                'termination-p2': 'Usted puede detener uso de Servicios en cualquier momento; para pagados, contacte para cancelación.',
+                'governing-title': '10. Ley Aplicable y Resolución de Disputas',
+                'governing-p1': 'Estos Términos se rigen por las leyes de la República Federal de Nigeria, sin consideración a principios de conflicto de leyes. Cualquier disputa se resolverá exclusivamente en tribunales del Estado de Lagos, Nigeria.',
+                'governing-p2': 'Fomentamos resolución informal primero. Para problemas no resueltos, usted acepta arbitraje vinculante bajo la Ley de Arbitraje y Mediación 2023, a menos que opte por no participar en 30 días.',
+                'changes-title': '11. Cambios a Estos Términos',
+                'changes-p1': 'Podemos actualizar estos Términos para reflejar cambios legales o necesidades comerciales. Le notificaremos vía email o aviso en sitio (al menos 30 días para cambios materiales). Uso continuado después de actualizaciones significa aceptación.',
+                'contact-title': '12. Contáctanos',
+                'legal-team': 'Equipo Legal de The Qlip:',
+                'contact-p1': 'Para preguntas o notificaciones: theqlipglobal@gmail.com | Teléfono: +2347087342882',
+                'contact-p2': 'Estamos comprometidos con prácticas justas y damos la bienvenida a feedback.',
+                'contact-info': ''
+            },
+            fr: {
+                // Existing + Terms
+                'back-home': 'Retour à l\'Accueil',
+                'terms-title-seo': 'Conditions d\'Utilisation | The Qlip',
+                'terms-title': 'Conditions d\'Utilisation',
+                'terms-subtitle': 'Autonomiser votre voyage numérique avec des solutions claires, équitables et innovantes.',
+                'last-updated': '<strong>Dernière Mise à Jour: 14 novembre 2025</strong>',
+                'intro-title': '1. Introduction',
+                'intro-p1': 'Bienvenue chez The Qlip ("nous", "nos" ou "notre"), une entreprise technologique basée à Lagos, au Nigeria, dédiée à transformer des idées en excellence numérique à travers des services incluant l\'ingénierie logicielle, l\'IA et la robotique, la cybersécurité et la protection des données, les solutions multimédias, les tests de systèmes et le support IT, et la formation et le conseil. Ces Conditions d\'Utilisation ("Conditions") régissent votre accès et votre utilisation de notre site web (theqlip.digital), des outils gratuits et des services payants (collectivement, les "Services").',
+                'intro-p2': 'En accédant ou utilisant les Services, vous acceptez d\'être lié par ces Conditions, notre ',
+                'intro-eligibility': '<strong>Éligibilité:</strong> Vous devez avoir au moins 18 ans ou l\'âge de la majorité dans votre juridiction pour utiliser nos Services. Les entreprises doivent être des entités dûment enregistrées.',
+                'acceptation-title': '2. Acceptation des Conditions',
+                'acceptation-p1': 'En cliquant sur "Accepter", en soumettant un formulaire de projet ou en utilisant un Service, vous confirmez avoir lu, compris et accepté ces Conditions. Nous pouvons exiger des accords supplémentaires pour des services spécifiques (p. ex., contrats de projet). L\'utilisation continue après des changements constitue l\'acceptation des Conditions mises à jour.',
+                'services-title': '3. Description des Services',
+                'services-p1': 'Nos Services incluent:',
+                'services-li1': '<strong>Consultation et Développement:</strong> Logiciels personnalisés, applications web/mobile, intégration IA, audits de cybersécurité, production multimédia et formation IT.',
+                'services-li3': '<strong>Soumissions de Projets:</strong> Via modales ou formulaires ; nous examinons et répondons mais ne sommes pas obligés d\'accepter ou de livrer.',
+                'services-p2': 'Les Services sont soumis à disponibilité et peuvent évoluer. Nous nous réservons le droit de modifier, suspendre ou interrompre tout Service avec préavis.',
+                'accounts-title': '4. Comptes Utilisateur et Responsabilités',
+                'accounts-p1': 'Pour accéder à certaines fonctionnalités, vous devrez peut-être créer un compte. Vous acceptez de:',
+                'accounts-li1': 'Fournir des informations précises et complètes et les mettre à jour si nécessaire.',
+                'accounts-li2': 'Maintenir la confidentialité de vos identifiants de connexion.',
+                'accounts-li3': 'Nous notifier immédiatement d\'un usage non autorisé.',
+                'accounts-li4': 'Respecter toutes les lois applicables, y compris la Cybercrimes Act 2015 et la Data Protection Act 2023 du Nigeria.',
+                'accounts-p2': 'Vous êtes responsable de toutes les activités sous votre compte. Nous ne sommes pas responsables des pertes dues à un accès non autorisé.',
+                'ip-title': '5. Propriété Intellectuelle',
+                'ip-our-rights': '<strong>Nos Droits:</strong> Tout le contenu, les outils, les designs, le code et les matériaux sur notre site (y compris les modèles IA et logiciels) nous appartiennent ou à nos concédants. Vous êtes accordé une licence limitée, non exclusive, non transférable pour utiliser les Services à des fins personnelles/professionnelles.',
+                'ip-your-content': '<strong>Votre Contenu:</strong> Vous conservez la propriété des matériaux que vous soumettez (p. ex., résumés de projets). En soumettant, vous nous accordez une licence mondiale, libre de redevances pour utiliser, modifier et afficher pour fournir les Services. Supprimez toute info confidentielle avant soumission.',
+                'ip-respect': 'Nous respectons les droits IP et attendons la même chose. Signalez les infractions à theqlipglobal@gmail.com.',
+                'payments-title': '6. Paiements et Frais',
+                'payments-p1': 'Pour les Services payants:',
+                'payments-li1': 'Les devis sont des estimations ; frais finaux basés sur portée, convenus par écrit.',
+                'payments-li2': 'Paiements via méthodes sécurisées (p. ex., virement bancaire, Stripe). Paiements en retard accumulent 1.5% d\'intérêt mensuel.',
+                'payments-li3': 'Remboursements: À notre discrétion, moins dépôts non remboursables (p. ex., 20% pour projets). Pas de remboursements pour outils gratuits.',
+                'payments-li4': 'Tous les frais excluent les taxes ; vous supportez VAT/TVA applicable.',
+                'payments-p2': 'Nous utilisons des processeurs tiers conformes à PCI DSS.',
+                'prohibited-title': '7. Conduite Interdite',
+                'prohibited-p1': 'Vous acceptez de ne pas:',
+                'prohibited-li1': 'Utiliser les Services pour activités illégales, spam ou harcèlement.',
+                'prohibited-li2': 'Ingénierie inverse, piratage ou perturbation de nos systèmes.',
+                'prohibited-li3': 'Télécharger virus, malware ou contenu infrayant.',
+                'prohibited-li4': 'Usurper l\'identité d\'autres ou mal utiliser outils gratuits commercialement sans permission.',
+                'prohibited-li5': 'Violer contrôles d\'export ou sanctions.',
+                'prohibited-p2': 'Nous pouvons suspendre/terminer l\'accès pour violations sans préavis.',
+                'disclaimers-title': '8. Déclarations et Limitations de Responsabilité',
+                'disclaimers-p1': '<strong>Déclarations:</strong> Services fournis "tels quels" sans garanties—explicites, implicites ou statutaires (p. ex., pas de marchandabilité ou aptitude à l\'usage). Outils gratuits peuvent avoir erreurs ; testez exhaustivement.',
+                'disclaimers-p2': '<strong>Limitation de Responsabilité:</strong> Dans la mesure maximale permise par la loi (incluant Droit des Contrats nigérian), nous ne sommes pas responsables de dommages indirects, incidentels ou consécutifs (p. ex., profits perdus). Responsabilité totale ne dépassera pas frais payés dans 12 mois précédents.',
+                'disclaimers-p3': 'Cela ne limite pas responsabilité pour négligence grave, fraude ou mort/blessures.',
+                'termination-title': '9. Terminaison',
+                'termination-p1': 'Nous pouvons terminer ou suspendre votre accès pour violation, avec ou sans préavis. À la terminaison, vous devez cesser utilisation des Services et détruire copies. Sections survivant terminaison: IP, paiements, responsabilité, loi applicable.',
+                'termination-p2': 'Vous pouvez arrêter utilisation des Services à tout moment ; pour payants, contactez pour annulation.',
+                'governing-title': '10. Loi Applicable et Résolution des Litiges',
+                'governing-p1': 'Ces Conditions sont régies par les lois de la République Fédérale du Nigeria, sans égard aux principes de conflit de lois. Tout litige sera résolu exclusivement dans les tribunaux de l\'État de Lagos, Nigeria.',
+                'governing-p2': 'Nous encourageons résolution informelle d\'abord. Pour problèmes non résolus, vous acceptez arbitrage contraignant sous l\'Arbitration and Mediation Act 2023, sauf opt-out dans 30 jours.',
+                'changes-title': '11. Changements à Ces Conditions',
+                'changes-p1': 'Nous pouvons mettre à jour ces Conditions pour refléter changements légaux ou besoins commerciaux. Nous vous notifierons via email ou avis site (au moins 30 jours pour changements matériels). Utilisation continue après mises à jour signifie acceptation.',
+                'contact-title': '12. Contactez-Nous',
+                'legal-team': 'Équipe Légale de The Qlip:',
+                'contact-p1': 'Pour questions ou notifications: theqlipglobal@gmail.com | Téléphone: +2347087342882',
+                'contact-p2': 'Nous sommes engagés pour pratiques équitables et accueillons feedback.',
+                'contact-info': ''
+            },
+            de: {
+                // Existing + Terms
+                'back-home': 'Zurück zur Startseite',
+                'terms-title-seo': 'Nutzungsbedingungen | The Qlip',
+                'terms-title': 'Nutzungsbedingungen',
+                'terms-subtitle': 'Ihre digitale Reise mit klaren, fairen und innovativen Lösungen ermächtigen.',
+                'last-updated': '<strong>Zuletzt Aktualisiert: 14. November 2025</strong>',
+                'intro-title': '1. Einführung',
+                'intro-p1': 'Willkommen bei The Qlip ("wir", "uns" oder "unser"), einem Technologieunternehmen mit Sitz in Lagos, Nigeria, das sich der Transformation von Ideen in digitale Exzellenz durch Dienstleistungen wie Software-Engineering, KI & Robotik, Cybersicherheit & Datenschutz, Multimedia-Lösungen, Systemtests & IT-Support und Schulung & Beratung widmet. Diese Nutzungsbedingungen ("Bedingungen") regeln Ihren Zugriff auf und Ihre Nutzung unserer Website (theqlip.digital), kostenlosen Tools und bezahlten Dienste (zusammenfassend die "Dienste").',
+                'intro-p2': 'Durch den Zugriff oder die Nutzung der Dienste stimmen Sie zu, an diese Bedingungen, unsere ',
+                'intro-eligibility': '<strong>Berechtigung:</strong> Sie müssen mindestens 18 Jahre alt oder das Mehrheitsalter in Ihrer Gerichtsbarkeit sein, um unsere Dienste zu nutzen. Unternehmen müssen ordnungsgemäß registrierte Einheiten sein.',
+                'acceptance-title': '2. Annahme der Bedingungen',
+                'acceptance-p1': 'Durch Klicken auf "Akzeptieren", Einreichen eines Projektformulars oder Nutzen eines Dienstes bestätigen Sie, dass Sie diese Bedingungen gelesen, verstanden und akzeptiert haben. Wir können zusätzliche Vereinbarungen für spezifische Dienste erfordern (z. B. Projektverträge). Fortgesetzte Nutzung nach Änderungen stellt Akzeptanz aktualisierter Bedingungen dar.',
+                'services-title': '3. Beschreibung der Dienste',
+                'services-p1': 'Unsere Dienste umfassen:',
+                'services-li1': '<strong>Beratung & Entwicklung:</strong> Benutzerdefinierte Software, Web/Mobile-Apps, KI-Integration, Cybersicherheitsaudits, Multimedia-Produktion und IT-Schulung.',
+                'services-li3': '<strong>Projekt-Einreichungen:</strong> Über Modale oder Formulare; wir prüfen und antworten, sind aber nicht verpflichtet, anzunehmen oder zu liefern.',
+                'services-p2': 'Dienste unterliegen Verfügbarkeit und können sich entwickeln. Wir behalten uns das Recht vor, Dienste mit Mitteilung zu ändern, auszusetzen oder einzustellen.',
+                'accounts-title': '4. Benutzerkonten und Verantwortlichkeiten',
+                'accounts-p1': 'Um bestimmte Funktionen zu nutzen, müssen Sie möglicherweise ein Konto erstellen. Sie stimmen zu:',
+                'accounts-li1': 'Genau und vollständige Informationen bereitzustellen und bei Bedarf zu aktualisieren.',
+                'accounts-li2': 'Die Vertraulichkeit Ihrer Anmeldeinformationen zu wahren.',
+                'accounts-li3': 'Uns sofort über unbefugte Nutzung zu informieren.',
+                'accounts-li4': 'Alle geltenden Gesetze einzuhalten, einschließlich des Cybercrimes Act 2015 und Data Protection Act 2023 Nigerias.',
+                'accounts-p2': 'Sie sind für alle Aktivitäten unter Ihrem Konto verantwortlich. Wir haften nicht für Verluste durch unbefugten Zugriff.',
+                'ip-title': '5. Geistiges Eigentum',
+                'ip-our-rights': '<strong>Unsere Rechte:</strong> Alle Inhalte, Tools, Designs, Code und Materialien auf unserer Site (einschließlich KI-Modelle und Software) gehören uns oder unseren Lizenzgebern. Ihnen wird eine begrenzte, nicht-exklusive, nicht-übertragbare Lizenz zur Nutzung der Dienste für persönliche/geschäftliche Zwecke gewährt.',
+                'ip-your-content': '<strong>Ihr Inhalt:</strong> Sie behalten Eigentum an Materialien, die Sie einreichen (z. B. Projektbeschreibungen). Durch Einreichung gewähren Sie uns eine weltweite, gebührenfreie Lizenz zur Nutzung, Modifikation und Anzeige zur Bereitstellung der Dienste. Entfernen Sie vertrauliche Infos vor Einreichung.',
+                'ip-respect': 'Wir respektieren IP-Rechte und erwarten dasselbe. Melden Sie Verstöße an theqlipglobal@gmail.com.',
+                'payments-title': '6. Zahlungen und Gebühren',
+                'payments-p1': 'Für bezahlte Dienste:',
+                'payments-li1': 'Angebote sind Schätzungen; endgültige Gebühren basierend auf Umfang, schriftlich vereinbart.',
+                'payments-li2': 'Zahlungen über sichere Methoden (z. B. Banküberweisung, Stripe). Verspätete Zahlungen verursachen 1.5% monatlichen Zins.',
+                'payments-li3': 'Rückerstattungen: Nach unserem Ermessen, abzüglich nicht erstattbarer Einlagen (z. B. 20% für Projekte). Keine Rückerstattungen für kostenlose Tools.',
+                'payments-li4': 'Alle Gebühren exkl. Steuern; Sie tragen anwendbare MwSt./GST.',
+                'payments-p2': 'Wir nutzen Drittanbieter-Prozessoren konform mit PCI DSS.',
+                'prohibited-title': '7. Verbotenes Verhalten',
+                'prohibited-p1': 'Sie stimmen zu, nicht zu:',
+                'prohibited-li1': 'Dienste für illegale Aktivitäten, Spam oder Belästigung zu nutzen.',
+                'prohibited-li2': 'Rückwärts-Engineering, Hacking oder Störung unserer Systeme.',
+                'prohibited-li3': 'Viren, Malware oder verletzende Inhalte hochzuladen.',
+                'prohibited-li4': 'Andere zu imitieren oder kostenlose Tools kommerziell ohne Erlaubnis misszuverwenden.',
+                'prohibited-li5': 'Exportkontrollen oder Sanktionen zu verletzen.',
+                'prohibited-p2': 'Wir können Zugriff bei Verstößen ohne Mitteilung sperren/terminieren.',
+                'disclaimers-title': '8. Haftungsausschlüsse und Haftungsbeschränkungen',
+                'disclaimers-p1': '<strong>Haftungsausschlüsse:</strong> Dienste "wie gesehen" ohne Garantien—ausdrücklich, implizit oder gesetzlich (z. B. keine Marktfähigkeit oder Eignung für Zweck). Kostenlose Tools können Fehler haben; testen Sie gründlich.',
+                'disclaimers-p2': '<strong>Haftungsbeschränkung:</strong> Im vollen Umfang des Gesetzes (einschließlich nigerianischem Vertragsrecht) haften wir nicht für indirekte, zufällige oder folgende Schäden (z. B. entgangene Gewinne). Gesamthaftung überschreitet nicht Gebühren der letzten 12 Monate.',
+                'disclaimers-p3': 'Dies beschränkt nicht Haftung für grobe Fahrlässigkeit, Betrug oder Tod/Verletzung.',
+                'termination-title': '9. Kündigung',
+                'termination-p1': 'Wir können Ihren Zugriff bei Verstoß kündigen oder sperren, mit oder ohne Mitteilung. Bei Kündigung müssen Sie Nutzung der Dienste einstellen und Kopien zerstören. Überlebende Abschnitte: IP, Zahlungen, Haftung, anwendbares Recht.',
+                'termination-p2': 'Sie können Dienste jederzeit stoppen; für bezahlte, kontaktieren Sie für Stornierung.',
+                'governing-title': '10. Anwendbares Recht und Streitbeilegung',
+                'governing-p1': 'Diese Bedingungen unterliegen dem Recht der Bundesrepublik Nigeria, ohne Berücksichtigung von Kollisionsrechtsprinzipien. Streitigkeiten werden ausschließlich vor Gerichten des Bundesstaates Lagos, Nigeria, beigelegt.',
+                'governing-p2': 'Wir fördern informelle Beilegung zuerst. Für ungelöste Probleme stimmen Sie verbindlichem Schiedsverfahren unter dem Arbitration and Mediation Act 2023 zu, es sei denn, Sie opten innerhalb 30 Tagen aus.',
+                'changes-title': '11. Änderungen an diesen Bedingungen',
+                'changes-p1': 'Wir können diese Bedingungen aktualisieren, um rechtliche oder geschäftliche Änderungen widerzuspiegeln. Wir benachrichtigen Sie per E-Mail oder Site-Hinweis (mind. 30 Tage für wesentliche Änderungen). Fortgesetzte Nutzung nach Updates bedeutet Akzeptanz.',
+                'contact-title': '12. Kontaktieren Sie uns',
+                'legal-team': 'Rechtsteam von The Qlip:',
+                'contact-p1': 'Für Fragen oder Mitteilungen: theqlipglobal@gmail.com | Telefon: +2347087342882',
+                'contact-p2': 'Wir sind fairen Praktiken verpflichtet und freuen uns über Feedback.',
+                'contact-info': ''
+            },
+            zh: {
+                // Existing + Terms
+                'back-home': '返回首页',
+                'terms-title-seo': '服务条款 | The Qlip',
+                'terms-title': '服务条款',
+                'terms-subtitle': '通过清晰、公平和创新的解决方案赋能您的数字之旅。',
+                'last-updated': '<strong>最后更新: 2025年11月14日</strong>',
+                'intro-title': '1. 引言',
+                'intro-p1': '欢迎来到 The Qlip ("我们"、"我们的" 或 "我们")，一家总部位于尼日利亚拉各斯的科技公司，致力于通过包括软件工程、AI 和机器人技术、网络安全和数据保护、多媒体解决方案、系统测试和 IT 支持以及培训和咨询在内的服务，将想法转化为数字卓越。这些服务条款 ("条款") 管辖您访问和使用我们的网站 (theqlip.digital)、免费工具和付费服务 (统称为 "服务")。',
+                'intro-p2': '通过访问或使用服务，您同意受这些条款、我们的 ',
+                'intro-eligibility': '<strong>资格:</strong> 您必须至少年满 18 岁或您所在司法管辖区的成年年龄才能使用我们的服务。企业必须是正式注册的实体。',
+                'acceptance-title': '2. 条款接受',
+                'acceptance-p1': '通过点击 "接受"、提交项目表单或使用任何服务，您确认已阅读、理解并同意这些条款。我们可能要求特定服务 (例如项目合同) 的额外协议。变更后继续使用构成对更新条款的接受。',
+                'services-title': '3. 服务描述',
+                'services-p1': '我们的服务包括:',
+                'services-li1': '<strong>咨询和发展:</strong> 定制软件、网络/移动应用、AI 集成、网络安全审计、多媒体制作和 IT 培训。',
+                'services-li3': '<strong>项目提交:</strong> 通过模态框或表单；我们审查并响应，但无义务接受或交付。',
+                'services-p2': '服务受可用性限制并可能演变。我们保留修改、暂停或停止任何服务的权利，并提前通知。',
+                'accounts-title': '4. 用户账户和责任',
+                'accounts-p1': '要访问某些功能，您可能需要创建账户。您同意:',
+                'accounts-li1': '提供准确、完整的信息并按需更新。',
+                'accounts-li2': '维护登录凭证的机密性。',
+                'accounts-li3': '立即通知我们未经授权的使用。',
+                'accounts-li4': '遵守所有适用法律，包括尼日利亚 2015 年网络犯罪法和 2023 年数据保护法。',
+                'accounts-p2': '您对账户下的所有活动负责。我们不对未经授权访问造成的损失负责。',
+                'ip-title': '5. 知识产权',
+                'ip-our-rights': '<strong>我们的权利:</strong> 网站上的所有内容、工具、设计、代码和材料 (包括 AI 模型和软件) 归我们或我们的许可方所有。您获得有限、非独占、非可转让许可，用于个人/业务目的使用服务。',
+                'ip-your-content': '<strong>您的内容:</strong> 您保留提交材料 (例如项目简报) 的所有权。通过提交，您授予我们全球、免版税许可，用于提供服务而使用、修改和显示。提交前移除任何机密信息。',
+                'ip-respect': '我们尊重 IP 权利并期望同样对待。报告侵权至 theqlipglobal@gmail.com。',
+                'payments-title': '6. 付款和费用',
+                'payments-p1': '对于付费服务:',
+                'payments-li1': '报价为估算；最终费用基于范围，书面同意。',
+                'payments-li2': '通过安全方法付款 (例如银行转账、Stripe)。逾期付款累积 1.5% 月利息。',
+                'payments-li3': '退款: 酌情处理，扣除不可退还押金 (例如项目 20%)。免费工具无退款。',
+                'payments-li4': '所有费用不含税；您承担适用的 VAT/GST。',
+                'payments-p2': '我们使用符合 PCI DSS 的第三方处理器。',
+                'prohibited-title': '7. 禁止行为',
+                'prohibited-p1': '您同意不:',
+                'prohibited-li1': '将服务用于非法活动、垃圾邮件或骚扰。',
+                'prohibited-li2': '逆向工程、黑客攻击或破坏我们的系统。',
+                'prohibited-li3': '上传病毒、恶意软件或侵权内容。',
+                'prohibited-li4': '冒充他人或未经许可商业滥用免费工具。',
+                'prohibited-li5': '违反出口管制或制裁。',
+                'prohibited-p2': '我们可因违规无通知暂停/终止访问。',
+                'disclaimers-title': '8. 免责声明和责任限制',
+                'disclaimers-p1': '<strong>免责声明:</strong> 服务 "按原样" 提供，无明示、默示或法定保证 (例如无适销性或特定用途保证)。免费工具可能有错误；彻底测试。',
+                'disclaimers-p2': '<strong>责任限制:</strong> 在法律允许的最大范围内 (包括尼日利亚合同法)，我们不对间接、附带或后果损害负责 (例如利润损失)。总责任不超过前 12 个月支付的费用。',
+                'disclaimers-p3': '这不限制对重大过失、欺诈或死亡/伤害的责任。',
+                'termination-title': '9. 终止',
+                'termination-p1': '我们可因违规终止或暂停您的访问，有或无通知。终止后，您必须停止使用服务并销毁任何副本。存续条款: IP、付款、责任、管辖法律。',
+                'termination-p2': '您可随时停止使用服务；对于付费，请联系取消。',
+                'governing-title': '10. 管辖法律和争议解决',
+                'governing-p1': '这些条款受尼日利亚联邦共和国法律管辖，不考虑法律冲突原则。任何争议专属拉各斯州法院解决。',
+                'governing-p2': '我们鼓励先非正式解决。对于未解决的问题，您同意根据 2023 年仲裁和调解法进行约束仲裁，除非 30 天内选择退出。',
+                'changes-title': '11. 这些条款的变更',
+                'changes-p1': '我们可更新这些条款以反映法律或业务变更。我们将通过电子邮件或站点通知 (重大变更至少 30 天)。更新后继续使用即构成接受。',
+                'contact-title': '12. 联系我们',
+                'legal-team': 'The Qlip 法律团队:',
+                'contact-p1': '问题或通知: theqlipglobal@gmail.com | 电话: +2347087342882',
+                'contact-p2': '我们致力于公平实践并欢迎反馈。',
+                'contact-info': ''
+            },
+            pt: {
+                // Existing + Terms
+                'back-home': 'Voltar para Casa',
+                'terms-title-seo': 'Termos de Serviço | The Qlip',
+                'terms-title': 'Termos de Serviço',
+                'terms-subtitle': 'Empoderando sua jornada digital com soluções claras, justas e inovadoras.',
+                'last-updated': '<strong>Última Atualização: 14 de novembro de 2025</strong>',
+                'intro-title': '1. Introdução',
+                'intro-p1': 'Bem-vindo à The Qlip ("nós", "nosso" ou "nós"), uma empresa de tecnologia sediada em Lagos, Nigéria, dedicada a transformar ideias em excelência digital por meio de serviços incluindo engenharia de software, IA e robótica, cibersegurança e proteção de dados, soluções multimídia, testes de sistema e suporte TI, e treinamento e consultoria. Estes Termos de Serviço ("Termos") regem seu acesso e uso de nosso site (theqlip.digital), ferramentas gratuitas e serviços pagos (coletivamente, os "Serviços").',
+                'intro-p2': 'Ao acessar ou usar os Serviços, você concorda em estar vinculado por estes Termos, nossa ',
+                'intro-eligibility': '<strong>Elegibilidade:</strong> Você deve ter pelo menos 18 anos ou a maioridade em sua jurisdição para usar nossos Serviços. Empresas devem ser entidades devidamente registradas.',
+                'acceptance-title': '2. Aceitação dos Termos',
+                'acceptance-p1': 'Ao clicar em "Aceitar", submeter um formulário de projeto ou usar qualquer Serviço, você confirma ter lido, entendido e concordado com estes Termos. Podemos exigir acordos adicionais para serviços específicos (ex.: contratos de projeto). Uso continuado após mudanças constitui aceitação de Termos atualizados.',
+                'services-title': '3. Descrição dos Serviços',
+                'services-p1': 'Nossos Serviços incluem:',
+                'services-li1': '<strong>Consultoria e Desenvolvimento:</strong> Software personalizado, apps web/mobile, integração de IA, auditorias de cibersegurança, produção multimídia e treinamento TI.',
+                'services-li3': '<strong>Submissões de Projetos:</strong> Via modais ou formulários; revisamos e respondemos, mas não somos obrigados a aceitar ou entregar.',
+                'services-p2': 'Serviços sujeitos a disponibilidade e podem evoluir. Reservamo-nos o direito de modificar, suspender ou descontinuar qualquer Serviço com aviso.',
+                'accounts-title': '4. Contas de Usuário e Responsabilidades',
+                'accounts-p1': 'Para acessar certas funcionalidades, você pode precisar criar uma conta. Você concorda em:',
+                'accounts-li1': 'Fornecer informações precisas e completas e atualizá-las conforme necessário.',
+                'accounts-li2': 'Manter a confidencialidade de suas credenciais de login.',
+                'accounts-li3': 'Nos notificar imediatamente de uso não autorizado.',
+                'accounts-li4': 'Cumprir todas as leis aplicáveis, incluindo a Cybercrimes Act 2015 e Data Protection Act 2023 da Nigéria.',
+                'accounts-p2': 'Você é responsável por todas as atividades sob sua conta. Não somos responsáveis por perdas devido a acesso não autorizado.',
+                'ip-title': '5. Propriedade Intelectual',
+                'ip-our-rights': '<strong>Nossos Direitos:</strong> Todo conteúdo, ferramentas, designs, código e materiais em nosso site (incluindo modelos de IA e software) pertencem a nós ou nossos licenciadores. Você é concedida uma licença limitada, não exclusiva, intransferível para usar os Serviços para fins pessoais/empresariais.',
+                'ip-your-content': '<strong>Seu Conteúdo:</strong> Você retém a propriedade de materiais que submete (ex.: resumos de projetos). Ao submeter, concede-nos uma licença mundial, isenta de royalties para usar, modificar e exibir para fornecer Serviços. Remova qualquer info confidencial antes de submeter.',
+                'ip-respect': 'Respeitamos direitos de IP e esperamos o mesmo. Relate infrações para theqlipglobal@gmail.com.',
+                'payments-title': '6. Pagamentos e Taxas',
+                'payments-p1': 'Para Serviços pagos:',
+                'payments-li1': 'Cotações são estimativas; taxas finais baseadas em escopo, acordadas por escrito.',
+                'payments-li2': 'Pagamentos via métodos seguros (ex.: transferência bancária, Stripe). Pagamentos atrasados acumulam 1.5% de juros mensais.',
+                'payments-li3': 'Reembolsos: À nossa discrição, menos depósitos não reembolsáveis (ex.: 20% para projetos). Sem reembolsos para ferramentas gratuitas.',
+                'payments-li4': 'Todas as taxas excluem impostos; você arca com VAT/GST aplicável.',
+                'payments-p2': 'Usamos processadores de terceiros em conformidade com PCI DSS.',
+                'prohibited-title': '7. Conduta Proibida',
+                'prohibited-p1': 'Você concorda em não:',
+                'prohibited-li1': 'Usar Serviços para atividades ilegais, spam ou assédio.',
+                'prohibited-li2': 'Engenharia reversa, hacking ou disrupção de nossos sistemas.',
+                'prohibited-li3': 'Fazer upload de vírus, malware ou conteúdo infrator.',
+                'prohibited-li4': 'Impersonar outros ou uso indevido comercial de ferramentas gratuitas sem permissão.',
+                'prohibited-li5': 'Violar controles de exportação ou sanções.',
+                'prohibited-p2': 'Podemos suspender/terminar acesso por violações sem aviso.',
+                'disclaimers-title': '8. Isenções de Responsabilidade e Limitações de Responsabilidade',
+                'disclaimers-p1': '<strong>Isenções:</strong> Serviços fornecidos "como estão" sem garantias—expressas, implícitas ou estatutárias (ex.: sem negociabilidade ou adequação ao propósito). Ferramentas gratuitas podem ter erros; teste exaustivamente.',
+                'disclaimers-p2': '<strong>Limitação de Responsabilidade:</strong> Na extensão máxima permitida pela lei (incluindo Direito Contratual Nigeriano), não somos responsáveis por danos indiretos, incidentais ou consequenciais (ex.: lucros perdidos). Responsabilidade total não excederá taxas pagas nos 12 meses anteriores.',
+                'disclaimers-p3': 'Isso não limita responsabilidade por negligência grave, fraude ou morte/lesões.',
+                'termination-title': '9. Término',
+                'termination-p1': 'Podemos terminar ou suspender seu acesso por violação, com ou sem aviso. Ao término, você deve cessar uso dos Serviços e destruir cópias. Seções sobreviventes: IP, pagamentos, responsabilidade, lei aplicável.',
+                'termination-p2': 'Você pode parar de usar Serviços a qualquer momento; para pagos, contate para cancelamento.',
+                'governing-title': '10. Lei Aplicável e Resolução de Disputas',
+                'governing-p1': 'Estes Termos são regidos pelas leis da República Federal da Nigéria, sem consideração a princípios de conflito de leis. Quaisquer disputas serão resolvidas exclusivamente nos tribunais do Estado de Lagos, Nigéria.',
+                'governing-p2': 'Encorajamos resolução informal primeiro. Para questões não resolvidas, você concorda com arbitragem vinculante sob a Arbitration and Mediation Act 2023, a menos que opte por sair em 30 dias.',
+                'changes-title': '11. Alterações a Estes Termos',
+                'changes-p1': 'Podemos atualizar estes Termos para refletir mudanças legais ou comerciais. Notificaremos você via e-mail ou aviso no site (pelo menos 30 dias para mudanças materiais). Uso continuado após atualizações significa aceitação.',
+                'contact-title': '12. Contate-Nos',
+                'legal-team': 'Equipe Legal da The Qlip:',
+                'contact-p1': 'Para perguntas ou notificações: theqlipglobal@gmail.com | Telefone: +2347087342882',
+                'contact-p2': 'Estamos comprometidos com práticas justas e damos as boas-vindas a feedback.',
+                'contact-info': ''
+            },
+            ar: {
+                // Existing + Terms
+                'back-home': 'العودة إلى الصفحة الرئيسية',
+                'terms-title-seo': 'شروط الخدمة | The Qlip',
+                'terms-title': 'شروط الخدمة',
+                'terms-subtitle': 'تمكين رحلتك الرقمية بحلول واضحة، عادلة ومبتكرة.',
+                'last-updated': '<strong>آخر تحديث: 14 نوفمبر 2025</strong>',
+                'intro-title': '1. المقدمة',
+                'intro-p1': 'مرحبا بك في The Qlip ("نحن"، "لنا" أو "نحن")، شركة تكنولوجيا مقرها في لاغوس، نيجيريا، مخصصة لتحويل الأفكار إلى التميز الرقمي من خلال خدمات تشمل هندسة البرمجيات، الذكاء الاصطناعي والروبوتات، الأمن السيبراني وحماية البيانات، حلول الوسائط المتعددة، اختبار الأنظمة ودعم تكنولوجيا المعلومات، والتدريب والاستشارات. هذه شروط الخدمة ("الشروط") تحكم وصولك واستخدامك لموقعنا (theqlip.digital)، الأدوات المجانية، والخدمات المدفوعة (جماعيًا، "الخدمات").',
+                'intro-p2': 'بتوفر الوصول أو استخدام الخدمات، توافق على الالتزام بهذه الشروط، ',
+                'intro-eligibility': '<strong>الأهلية:</strong> يجب أن تكون على الأقل 18 عامًا أو سن الرشد في اختصاصك لاستخدام خدماتنا. يجب أن تكون الشركات كيانات مسجلة بشكل صحيح.',
+                'acceptance-title': '2. قبول الشروط',
+                'acceptance-p1': 'بالنقر على "قبول"، تقديم نموذج مشروع، أو استخدام أي خدمة، تؤكد أنك قرأت، فهمت، وتوافق على هذه الشروط. قد نطلب اتفاقيات إضافية لخدمات محددة (مثل عقود المشاريع). الاستخدام المستمر بعد التغييرات يشكل قبول الشروط المحدثة.',
+                'services-title': '3. وصف الخدمات',
+                'services-p1': 'خدماتنا تشمل:',
+                'services-li1': '<strong>الاستشارات والتطوير:</strong> برمجيات مخصصة، تطبيقات الويب/الهواتف، دمج الذكاء الاصطناعي، مراجعات الأمن السيبراني، إنتاج الوسائط المتعددة، وتدريب تكنولوجيا المعلومات.',
+                'services-li3': '<strong>تقديم المشاريع:</strong> عبر النوافذ أو النماذج؛ نراجع ونرد لكننا غير ملزمين بالقبول أو التسليم.',
+                'services-p2': 'الخدمات خاضعة للتوافر وقد تتطور. نحتفظ بالحق في تعديل، تعليق، أو إيقاف أي خدمة مع إشعار.',
+                'accounts-title': '4. حسابات المستخدم والمسؤوليات',
+                'accounts-p1': 'للوصول إلى ميزات معينة، قد تحتاج إلى إنشاء حساب. توافق على:',
+                'accounts-li1': 'تقديم معلومات دقيقة وكاملة وتحديثها عند الحاجة.',
+                'accounts-li2': 'الحفاظ على سرية بيانات تسجيل الدخول الخاصة بك.',
+                'accounts-li3': 'إخطارنا فورًا بأي استخدام غير مصرح به.',
+                'accounts-li4': 'الامتثال لجميع القوانين المعمول بها، بما في ذلك قانون جرائم الإنترنت لنيجيريا 2015 وقانون حماية البيانات 2023.',
+                'accounts-p2': 'أنت مسؤول عن جميع الأنشطة تحت حسابك. نحن غير مسؤولين عن الخسائر الناتجة عن الوصول غير المصرح به.',
+                'ip-title': '5. الملكية الفكرية',
+                'ip-our-rights': '<strong>حقوقنا:</strong> جميع المحتويات، الأدوات، التصاميم، الكود، والمواد على موقعنا (بما في ذلك نماذج الذكاء الاصطناعي والبرمجيات) ملكنا أو لمرخصينا. يُمنح لك ترخيص محدود، غير حصري، غير قابل للنقل لاستخدام الخدمات لأغراض شخصية/تجارية.',
+                'ip-your-content': '<strong>محتواك:</strong> تحتفظ بملكية المواد التي تقدمها (مثل ملخصات المشاريع). بالتقديم، تمنحنا ترخيصًا عالميًا، خاليًا من الرسوم للاستخدام، التعديل، والعرض لتقديم الخدمات. أزل أي معلومات سرية قبل التقديم.',
+                'ip-respect': 'نحترم حقوق الملكية الفكرية ونتوقع الشيء نفسه. أبلغ عن الانتهاكات إلى theqlipglobal@gmail.com.',
+                'payments-title': '6. المدفوعات والرسوم',
+                'payments-p1': 'للخدمات المدفوعة:',
+                'payments-li1': 'العروض تقديرية؛ الرسوم النهائية بناءً على النطاق، متفق عليها كتابيًا.',
+                'payments-li2': 'المدفوعات عبر طرق آمنة (مثل التحويل البنكي، Stripe). المدفوعات المتأخرة تتراكم فائدة 1.5% شهرية.',
+                'payments-li3': 'الاستردادات: حسب تقديرنا، ناقص الودائع غير القابلة للاسترداد (مثل 20% للمشاريع). لا استردادات للأدوات المجانية.',
+                'payments-li4': 'جميع الرسوم مستثناة من الضرائب؛ أنت تتحمل VAT/GST المطبق.',
+                'payments-p2': 'نستخدم معالجات طرف ثالث متوافقة مع PCI DSS.',
+                'prohibited-title': '7. السلوك الممنوع',
+                'prohibited-p1': 'توافق على عدم:',
+                'prohibited-li1': 'استخدام الخدمات لأنشطة غير قانونية، البريد المزعج، أو التحرش.',
+                'prohibited-li2': 'هندسة عكسية، اختراق، أو تعطيل أنظمتنا.',
+                'prohibited-li3': 'تحميل فيروسات، برمجيات ضارة، أو محتوى مخالف.',
+                'prohibited-li4': 'انتحال شخصية الآخرين أو إساءة استخدام الأدوات المجانية تجاريًا بدون إذن.',
+                'prohibited-li5': 'انتهاك ضوابط التصدير أو العقوبات.',
+                'prohibited-p2': 'قد نعلق/ننهي الوصول للانتهاكات بدون إشعار.',
+                'disclaimers-title': '8. الإخلاء من المسؤولية وحدود المسؤولية',
+                'disclaimers-p1': '<strong>الإخلاء:</strong> الخدمات مقدمة "كما هي" بدون ضمانات—صريحة، ضمنية، أو قانونية (مثل عدم التسويقية أو الملاءمة للغرض). الأدوات المجانية قد تحتوي أخطاء؛ اختبر جيدًا.',
+                'disclaimers-p2': '<strong>حد المسؤولية:</strong> في أقصى الحدود المسموح بها قانونيًا (بما في ذلك قانون العقود النيجيري)، نحن غير مسؤولين عن الأضرار غير المباشرة، الحادثية، أو اللاحقة (مثل الأرباح المفقودة). المسؤولية الإجمالية لا تتجاوز الرسوم المدفوعة في 12 شهرًا سابقة.',
+                'disclaimers-p3': 'هذا لا يحد من المسؤولية عن الإهمال الجسيم، الاحتيال، أو الوفاة/الإصابة.',
+                'termination-title': '9. الإنهاء',
+                'termination-p1': 'قد ننهي أو نعلق وصولك للانتهاك، مع أو بدون إشعار. عند الإنهاء، يجب التوقف عن استخدام الخدمات وتدمير النسخ. الأقسام الباقية: IP، المدفوعات، المسؤولية، القانون الحاكم.',
+                'termination-p2': 'يمكنك التوقف عن استخدام الخدمات في أي وقت؛ للمدفوعة، اتصل للإلغاء.',
+                'governing-title': '10. القانون الحاكم وحل النزاعات',
+                'governing-p1': 'هذه الشروط تخضع لقوانين جمهورية نيجيريا الاتحادية، دون النظر إلى مبادئ تعارض القوانين. أي نزاعات تحل حصريًا في محاكم ولاية لاغوس، نيجيريا.',
+                'governing-p2': 'نشجع الحل غير الرسمي أولاً. للمشكلات غير المحلولة، توافق على التحكيم الملزم بموجب قانون التحكيم والوساطة 2023، ما لم تختار الانسحاب في 30 يومًا.',
+                'changes-title': '11. تغييرات على هذه الشروط',
+                'changes-p1': 'قد نحدث هذه الشروط لتعكس التغييرات القانونية أو التجارية. سنخطرك عبر البريد الإلكتروني أو إشعار الموقع (على الأقل 30 يومًا للتغييرات المادية). الاستخدام المستمر بعد التحديثات يشكل قبولًا.',
+                'contact-title': '12. اتصل بنا',
+                'legal-team': 'فريق The Qlip القانوني:',
+                'contact-p1': 'للأسئلة أو الإشعارات: theqlipglobal@gmail.com | الهاتف: +2347087342882',
+                'contact-p2': 'نحن ملتزمون بممارسات عادلة ونرحب بالتعليقات.',
+                'contact-info': ''
+            }
+        };
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr'; // Handle RTL for Arabic
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            // Update placeholders in forms
+            document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
+                const placeholderKey = el.placeholder.match(/^(.*?)[\s\.\.\.]/)?.[1] || el.placeholder;
+                if (translations[lang] && translations[lang][placeholderKey]) {
+                    el.placeholder = translations[lang][placeholderKey] + (el.placeholder.includes('...') ? '...' : '');
+                }
+            });
+            // SEO Boost: Dynamically update title, meta description, OG/Twitter for crawlers (Google supports JS rendering)
+            if (translations[lang]) {
+                const langData = translations[lang];
+                document.title = langData['terms-title-seo'] || document.title;
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) metaDesc.setAttribute('content', langData['terms-subtitle'] || metaDesc.getAttribute('content'));
+                const ogTitle = document.querySelector('meta[property="og:title"]');
+                if (ogTitle) ogTitle.setAttribute('content', langData['terms-title-seo'] || ogTitle.getAttribute('content'));
+                const ogDesc = document.querySelector('meta[property="og:description"]');
+                if (ogDesc) ogDesc.setAttribute('content', langData['terms-subtitle'] || ogDesc.getAttribute('content'));
+                const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+                if (twitterTitle) twitterTitle.setAttribute('content', ogTitle ? ogTitle.getAttribute('content') : twitterTitle.getAttribute('content'));
+                const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+                if (twitterDesc) twitterDesc.setAttribute('content', ogDesc ? ogDesc.getAttribute('content') : twitterDesc.getAttribute('content'));
+            }
+            localStorage.setItem('preferredLang', lang);
+            // Update URL param
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.history.replaceState({}, '', url);
+        }
+        // Initialize language
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const savedLang = localStorage.getItem('preferredLang') || urlParams.get('lang') || navigator.language.split('-')[0] || 'en';
+            document.getElementById('lang-select').value = savedLang;
+            document.getElementById('lang-select-mobile').value = savedLang;
+            setLanguage(savedLang);
+        });
+        document.getElementById('lang-select').addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+            document.getElementById('lang-select-mobile').value = e.target.value;
+        });
+        document.getElementById('lang-select-mobile').addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+            document.getElementById('lang-select').value = e.target.value;
+        });
+        // Initialize EmailJS
+        emailjs.init("DVlpv6WkJuRl2RWLZ");
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletter-form');
+        newsletterForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[name="email"]');
+            if (!emailInput.value.trim()) {
+                emailInput.style.borderColor = '#ff3366';
+                return;
+            }
+            emailInput.style.borderColor = 'rgba(45, 254, 192, 0.3)';
+            // Send via EmailJS - Use the same service ID but a different template ID for newsletters
+            // Replace 'YOUR_NEWSLETTER_TEMPLATE_ID' with your actual newsletter template ID (e.g., template_xyz123)
+            emailjs.sendForm("service_grblnof", "template_vw26jo9", newsletterForm)
+                .then((result) => {
+                    alert('🎉 Subscribed! Thanks for joining our updates.');
+                    newsletterForm.reset();
+                }, (error) => {
+                    alert('Oops! Subscription failed. Please try again.');
+                    console.log('EmailJS Newsletter Error:', error);
+                });
+        });
+        // Hamburger Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        hamburger.addEventListener('click', () => {
+            const isActive = hamburger.classList.contains('active');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', !isActive);
+            mobileNav.classList.toggle('active');
+      
+            // Close on outside click (optional enhancement)
+            if (!isActive) {
+                document.addEventListener('click', closeMenuOnOutsideClick);
+            } else {
+                document.removeEventListener('click', closeMenuOnOutsideClick);
+            }
+        });
+        function closeMenuOnOutsideClick(e) {
+            if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+                hamburger.click();
+            }
+        }
+        // Close menu on link click
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.click();
+            });
+        });
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                hamburger.click();
+            }
+        });
+    </script>
+</body>
+</html>
