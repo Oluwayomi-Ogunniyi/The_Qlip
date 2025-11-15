@@ -953,22 +953,17 @@
                 text-align: center;
             }
             /* Modal responsiveness for mobile */
-            .modal {
-                padding: 10px;
-                align-items: flex-start;
-                justify-content: flex-start;
-                height: 100vh;
+            .mobile-nav ul {
+                gap: clamp(16px, 4vw, 20px);
+            }
+            .mobile-nav a {
+                font-size: clamp(1.3rem, 6vw, 1.5rem);
+                padding: clamp(12px, 3vw, 16px) 0;
             }
             .modal-content {
-                max-width: 100%;
-                max-height: 100vh;
-                padding: 32px 20px;
-                margin: 0 auto;
+                margin: 16px; /* Add margin for small screens */
+                max-height: 90vh;
                 overflow-y: auto;
-                border-radius: 20px;
-            }
-            .modal h2 {
-                font-size: 2rem;
             }
             .progress-bar {
                 margin: 24px 0;
@@ -1793,7 +1788,7 @@
                     'nav-free-audit': 'Audit Gratuit',
                     'start-project': 'Démarrer un Projet',
                     'hero-title': 'AUTONOMISER L\'AVENIR',
-                    'hero-subtitle': 'AVEC DES SOLUCIONS IA ET TECH',
+                    'hero-subtitle': 'AVEC DES SOLUCIONES IA ET TECH',
                     'hero-desc': 'Nous nous spécialisons dans les meilleurs services de conseil et de développement logiciel personnalisé, incluant l\'intégration d\'apprentissage automatique, la protection de la cybersécurité, les applications et la production multimédia pour transformer vos idées en solutions numériques pilotées par l\'IA scalables qui se classent haut dans les recherches et l\'engagement des utilisateurs.',
                     'free-audit': 'Audit de 30 Min Gratuit →',
                     'services-title': 'Nos Principaux Services Tech',
@@ -2199,7 +2194,7 @@
             emailjs.init("DVlpv6WkJuRl2RWLZ");
             // Ultra-smooth multi-step modal with validation + glow progress
             const modal = document.getElementById('getStartedModal');
-            const openBtn = document.querySelector('.open-modal');
+            const openBtns = document.querySelectorAll('.open-modal');
             const closeBtn = document.querySelector('.close-button');
             const steps = document.querySelectorAll('.step');
             const progressFill = document.querySelector('.progress-fill');
@@ -2229,10 +2224,12 @@
                 });
                 return valid;
             }
-            openBtn.addEventListener('click', () => {
-                modal.classList.add('active');
-                showStep(1);
-                form.reset();
+            openBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    modal.classList.add('active');
+                    showStep(1);
+                    form.reset();
+                });
             });
             closeBtn.addEventListener('click', () => modal.classList.remove('active'));
             modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
@@ -2308,7 +2305,7 @@
                 hamburger.classList.toggle('active');
                 hamburger.setAttribute('aria-expanded', !isActive);
                 mobileNav.classList.toggle('active');
-         
+        
                 // Close on outside click (optional enhancement)
                 if (!isActive) {
                     document.addEventListener('click', closeMenuOnOutsideClick);

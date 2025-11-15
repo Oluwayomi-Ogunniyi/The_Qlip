@@ -169,7 +169,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            padding-left: -0vw;
+            padding-left: 0;
             padding-right: 55vw;
         }
         .hero h1 {
@@ -690,12 +690,12 @@
                 padding: 12px 24px;
                 font-size: 0.95rem;
             }
-            .services-container { 
-                grid-template-columns: 1fr; 
-                gap: 24px; 
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
             }
-            .service-card { 
-                padding: 40px 24px; 
+            .service-card {
+                padding: 40px 24px;
             }
             .footer-bottom {
                 flex-direction: column;
@@ -760,8 +760,8 @@
             .services-grid {
                 padding: 60px 12px 40px;
             }
-            .service-card { 
-                padding: 32px 20px; 
+            .service-card {
+                padding: 32px 20px;
             }
             .social-icons {
                 gap: 12px;
@@ -976,9 +976,48 @@
             margin-top: 20px;
         }
         @media (max-width: 540px) {
-            .modal-content { padding: 48px 32px; }
+            .modal {
+                padding: 10px;
+            }
+            .modal-content { 
+                padding: 48px 32px; 
+                max-width: 95vw;
+            }
             .modal h2 { font-size: 2.2rem; }
             .modal-btns { flex-direction: column; }
+        }
+        @media (max-width: 480px) {
+            .modal-content { 
+                padding: 32px 20px; 
+                border-radius: 20px;
+            }
+            .modal h2 { font-size: 1.8rem; }
+            .modal .form-group input,
+            .modal .form-group select,
+            .modal .form-group textarea {
+                padding: 12px 14px;
+                font-size: 0.95rem;
+            }
+            .modal-btns {
+                gap: 12px;
+            }
+            .prev-btn, .next-btn, .submit-btn {
+                padding: 14px;
+            }
+        }
+        @media (max-width: 768px) {
+            .mobile-nav ul {
+                gap: clamp(16px, 4vw, 20px);
+            }
+            .mobile-nav a {
+                font-size: clamp(1.3rem, 6vw, 1.5rem);
+                padding: clamp(12px, 3vw, 16px) 0;
+            }
+            .modal-content {
+                margin: 16px; /* Add margin for small screens */
+                max-height: 90vh;
+                overflow-y: auto;
+            }
         }
     </style>
 </head>
@@ -2150,6 +2189,12 @@
             return valid;
         }
         openBtns.forEach(btn => btn.addEventListener('click', () => {
+            // Close mobile nav if open for better UX
+            const mobileNav = document.querySelector('.mobile-nav');
+            const hamburger = document.querySelector('.hamburger');
+            if (mobileNav.classList.contains('active')) {
+                hamburger.click();
+            }
             modal.classList.add('active');
             showStep(1);
             form.reset();
@@ -2173,9 +2218,9 @@
                 submitBtn.textContent = 'Sending...';
                 emailjs.sendForm("service_grblnof", "template_vw26jo9", form)
                     .then((result) => {
-                        alert('🎉 Project submitted! Thanks for reaching out—we\'ll connect within 24 hours.');
-                        form.reset();
-                        modal.classList.remove('active');
+                        form.style.display = 'none';
+                        modalSuccess.style.display = 'block';
+                        progressFill.style.width = '100%';
                     }, (error) => {
                         console.error('EmailJS Error:', error);
                         alert('Oops! Something went wrong. Please try again or email us directly at hello@theqlip.com');
@@ -2240,7 +2285,7 @@
             hamburger.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', !isActive);
             mobileNav.classList.toggle('active');
-          
+         
             // Close on outside click (optional enhancement)
             if (!isActive) {
                 document.addEventListener('click', closeMenuOnOutsideClick);

@@ -723,12 +723,12 @@
                 padding: 14px 24px; /* Slightly larger for touch */
                 font-size: 0.95rem;
             }
-            .values-grid { 
-                grid-template-columns: repeat(2, 1fr); 
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
                 gap: 24px;
             }
-            .mission-vision { 
-                grid-template-columns: 1fr; 
+            .mission-vision {
+                grid-template-columns: 1fr;
                 gap: 32px;
             }
             .about-story, .values-section, .team-section {
@@ -804,7 +804,7 @@
             .about-story, .values-section, .team-section {
                 padding: 60px 12px 40px;
             }
-            .values-grid { 
+            .values-grid {
                 grid-template-columns: 1fr; /* Single column for tiny screens */
                 gap: 20px;
             }
@@ -828,19 +828,24 @@
                 font-size: 0.9rem;
                 min-height: 44px;
             }
-            .modal-content { 
-                padding: 40px 24px; /* Adjusted for small screens */
-                border-radius: 16px;
+            .modal-content {
+                padding: 24px 16px;
+                margin: 0 5px;
             }
-            .modal h2 { 
-                font-size: 2rem; 
+            .modal h2 {
+                font-size: 1.8rem;
             }
-            .modal-btns { 
-                flex-direction: column; 
+            .modal .form-group input,
+            .modal .form-group select,
+            .modal .form-group textarea {
+                padding: 12px 14px;
+                font-size: 0.95rem;
+            }
+            .modal-btns {
                 gap: 12px;
             }
             .prev-btn, .next-btn, .submit-btn {
-                min-height: 48px; /* Extra touch-friendly */
+                padding: 14px;
             }
             .footer-container {
                 grid-template-columns: 1fr; /* Stack all footer columns */
@@ -1808,7 +1813,7 @@
         emailjs.init("DVlpv6WkJuRl2RWLZ");
         // Ultra-smooth multi-step modal with validation + glow progress
         const modal = document.getElementById('getStartedModal');
-        const openBtn = document.querySelector('.open-modal');
+        const openBtns = document.querySelectorAll('.open-modal');
         const closeBtn = document.querySelector('.close-button');
         const steps = document.querySelectorAll('.step');
         const progressFill = document.querySelector('.progress-fill');
@@ -1838,10 +1843,16 @@
             });
             return valid;
         }
-        openBtn.addEventListener('click', () => {
-            modal.classList.add('active');
-            showStep(1);
-            form.reset();
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('active');
+                showStep(1);
+                form.reset();
+                // If opened from mobile nav, close the mobile menu for better UX
+                if (btn.closest('.mobile-nav')) {
+                    document.querySelector('.hamburger').click();
+                }
+            });
         });
         closeBtn.addEventListener('click', () => modal.classList.remove('active'));
         modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
@@ -1896,7 +1907,7 @@
             hamburger.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', !isActive);
             mobileNav.classList.toggle('active');
-         
+        
             // Close on outside click (optional enhancement)
             if (!isActive) {
                 document.addEventListener('click', closeMenuOnOutsideClick);
