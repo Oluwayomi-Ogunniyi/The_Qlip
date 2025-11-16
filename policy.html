@@ -3,7 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for The Qlip: Learn how we collect, use, and protect your personal data in compliance with GDPR, CCPA, and NDPA 2023. Founded in Lagos, Nigeria.">
     <title data-i18n="policy-title-seo">Privacy Policy | The Qlip</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Privacy Policy | The Qlip - Protecting Your Data with Excellence">
+    <meta property="og:description" content="Discover The Qlip's Privacy Policy: Committed to safeguarding your information under global standards like GDPR, CCPA, and NDPA.">
+    <meta property="og:image" content="https://theqlip.digital/images/policy-hero.jpg">
+    <meta property="og:url" content="https://theqlip.digital/policy.html">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | The Qlip - Protecting Your Data with Excellence">
+    <meta name="twitter:description" content="Discover The Qlip's Privacy Policy: Committed to safeguarding your information under global standards like GDPR, CCPA, and NDPA.">
+    <meta name="twitter:image" content="https://theqlip.digital/images/policy-hero.jpg">
+    <link rel="canonical" href="https://theqlip.digital/policy.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PrivacyPolicy",
+      "name": "Privacy Policy - The Qlip",
+      "description": "The Qlip's Privacy Policy outlining data collection, usage, and protection practices compliant with GDPR, CCPA, and NDPA 2023.",
+      "url": "https://theqlip.digital/policy.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "The Qlip",
+        "description": "Technology company specializing in software engineering, AI, cybersecurity, and multimedia solutions.",
+        "foundingDate": "2025",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Lagos, Nigeria"
+        },
+        "url": "https://theqlip.digital",
+        "logo": "https://theqlip.digital/images/The Qlip.png",
+        "sameAs": [
+          "https://x.com/the_qlip",
+          "https://github.com/theqlip"
+        ]
+      }
+    }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
@@ -129,10 +167,19 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .header-btn:hover {
             background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
             transform: translateY(-2px);
+        }
+        .mobile-right {
+            display: none;
+            align-items: center;
+            gap: 12px;
         }
         .policy-hero {
             position: relative;
@@ -144,7 +191,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: scroll, fixed;
-            min-height: 60vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -152,30 +199,40 @@
         .policy-hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         .policy-hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 900;
             letter-spacing: 2px;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
             text-transform: uppercase;
             color: #ffffff;
-            line-height: 1.1;
+            line-height: 1.0;
+        }
+        .policy-hero h1 span {
+            display: block;
+            font-size: 0.85em;
+            letter-spacing: 4px;
+            color: hsl(162, 100%, 59%);
         }
         .policy-hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            margin-bottom: 48px;
             opacity: 0.9;
             font-weight: 400;
             letter-spacing: 0.5px;
+            max-width: 700px;
         }
         .policy-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 120px 20px;
         }
         .policy-section {
             margin-bottom: 60px;
-            padding: 40px;
+            padding: 48px 24px;
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(45, 254, 192, 0.15);
@@ -188,7 +245,7 @@
         }
         .policy-section h2 {
             font-size: 2.2rem;
-            font-weight: 700;
+            font-weight: 900;
             margin-bottom: 24px;
             color: hsl(162, 100%, 59%);
             letter-spacing: 0.5px;
@@ -324,6 +381,7 @@
             font-size: 0.95rem;
             outline: none;
             transition: all 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
         }
         .newsletter-form input[type="email"]:focus {
             border-color: hsl(162, 100%, 59%);
@@ -342,6 +400,10 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .newsletter-form button:hover {
             background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
@@ -374,6 +436,9 @@
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
         }
         .footer-bottom-links a:hover {
             color: hsl(162, 100%, 59%);
@@ -418,12 +483,12 @@
         .mobile-nav {
             position: fixed;
             top: 0;
-            left: 0;
-            width: 100%;
+            right: 0;
+            width: 47%;
             height: 100vh;
             background: rgba(10, 10, 26, 0.98);
             backdrop-filter: blur(20px);
-            transform: translateX(-100%);
+            transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 1000;
             display: flex;
@@ -436,6 +501,37 @@
         .mobile-nav.active {
             transform: translateX(0);
         }
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .mobile-nav-close:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .mobile-nav-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-height: 65vh;
+            overflow-y: auto;
+        }
         .mobile-nav ul {
             list-style: none;
             display: flex;
@@ -447,13 +543,17 @@
         .mobile-nav a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 500;
             opacity: 0.9;
             transition: all 0.3s ease;
-            padding: 10px 0;
+            padding: 16px 0; /* Increased for touch */
             border-bottom: 1px solid rgba(45, 254, 192, 0.1);
             display: block;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .mobile-nav a:hover {
             opacity: 1;
@@ -466,6 +566,14 @@
             gap: 20px;
             align-items: center;
             opacity: 0.9;
+        }
+        .mobile-nav-extras .header-btn {
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            white-space: nowrap;
+            width: 100%;
+            justify-content: center;
         }
         /* Backdrop overlay for better UX (optional, adds dim on open) */
         .mobile-nav::before {
@@ -495,12 +603,15 @@
             }
         }
         @media (max-width: 1024px) {
-            .hamburger {
+            .mobile-right {
                 display: flex;
             }
             /* Hide desktop nav on tablet/mobile */
             .nav-container {
                 display: none;
+            }
+            .hamburger {
+                display: flex;
             }
             .newsletter-form {
                 flex-direction: column;
@@ -508,12 +619,13 @@
         }
         @media (max-width: 768px) {
             header {
-                padding: 0 16px;
-                justify-content: space-between;
+                padding: 0 clamp(12px, 4vw, 16px);
+                height: 70px; /* Slightly shorter for mobile */
             }
             .policy-hero {
-                padding: 180px 16px 80px;
-                text-align: left;
+                padding: clamp(120px, 30vh, 180px) clamp(12px, 4vw, 16px) clamp(60px, 15vh, 80px);
+                text-align: center;
+                background-attachment: scroll; /* Avoid fixed bg issues on mobile */
             }
             .policy-hero-content {
                 padding-left: 0;
@@ -527,10 +639,10 @@
                 font-size: 1.1rem;
             }
             .policy-content {
-                padding: 40px 16px;
+                padding: 80px 16px;
             }
             .policy-section {
-                padding: 24px;
+                padding: 32px 20px;
                 margin-bottom: 40px;
             }
             .policy-section h2 {
@@ -542,10 +654,11 @@
                 gap: 16px;
             }
             .mobile-nav ul {
-                gap: 15px;
+                gap: clamp(16px, 4vw, 20px);
             }
             .mobile-nav a {
-                font-size: 1.3rem;
+                font-size: clamp(1.1rem, 5vw, 1.2rem);
+                padding: clamp(12px, 3vw, 16px) 0;
             }
         }
         @media (max-width: 480px) {
@@ -561,15 +674,18 @@
                 margin-right: 8px;
             }
             .policy-hero {
-                padding: 140px 12px 60px;
+                padding: clamp(100px, 25vh, 140px) clamp(8px, 3vw, 12px) clamp(40px, 10vh, 60px);
+                min-height: 70vh;
             }
             .policy-hero h1 {
-                font-size: 2.2rem;
-                letter-spacing: 1px;
+                font-size: clamp(1.8rem, 12vw, 2.2rem);
+                letter-spacing: clamp(0.5px, 1vw, 1px);
+                margin-bottom: clamp(16px, 4vw, 24px);
             }
             .policy-hero p {
-                font-size: 1rem;
+                font-size: clamp(0.95rem, 4vw, 1rem);
                 max-width: 100%;
+                margin-bottom: clamp(32px, 6vw, 48px);
             }
             .policy-content {
                 padding: 60px 12px 40px;
@@ -578,23 +694,39 @@
                 padding: 24px 16px;
             }
             .policy-section h2 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             .newsletter-form input[type="email"] {
-                padding: 10px 12px;
+                padding: 12px 16px; /* Maintain touch */
                 font-size: 0.9rem;
             }
             .newsletter-form button {
-                padding: 10px 16px;
+                padding: 12px 16px;
                 font-size: 0.9rem;
             }
             .mobile-nav a {
-                font-size: 1.2rem;
-                padding: 8px 0;
+                font-size: clamp(1rem, 4vw, 1.1rem);
+                padding: clamp(8px, 2vw, 12px) 0;
             }
             .header-btn {
                 padding: 8px 20px;
                 font-size: 0.9rem;
+                min-height: 44px;
+            }
+            .footer-container {
+                grid-template-columns: 1fr; /* Stack all footer columns */
+                gap: 32px;
+            }
+        }
+        @media (max-width: 320px) {
+            .policy-hero h1 {
+                font-size: 1.9rem;
+            }
+            .policy-content h2, .policy-section h2 {
+                font-size: 1.4rem;
+            }
+            .policy-section {
+                padding: 20px 12px;
             }
         }
     </style>
@@ -637,24 +769,10 @@
             </div>
             <a href="index.html" class="header-btn" data-i18n="back-home">Back to Home</a>
         </div>
-        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-    <!-- Mobile menu overlay (hidden by default) -->
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="index.html" data-i18n="nav-home">Home</a></li>
-            <li><a href="index.html#services" data-i18n="nav-services">Services</a></li>
-            <li><a href="index.html#contact" data-i18n="nav-contact">Contact</a></li>
-        </ul>
-        <!-- Keep your lang-selector and header-btn here for mobile too -->
-        <div class="mobile-nav-extras">
+        <div class="mobile-right">
             <div class="lang-selector">
                 <i class="fas fa-globe"></i>
-                <select id="lang-select-mobile">
+                <select id="lang-select-mobile-header">
                     <option value="en">EN</option>
                     <option value="es">ES</option>
                     <option value="fr">FR</option>
@@ -664,13 +782,39 @@
                     <option value="ar">AR</option>
                 </select>
             </div>
-            <a href="index.html" class="header-btn" data-i18n="back-home">Back to Home</a>
+            <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile menu overlay (hidden by default) -->
+    <nav class="mobile-nav">
+        <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-nav-inner">
+            <ul>
+                <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                 <li><a href="about.html" data-i18n="nav-about">About</a></li>
+                <li><a href="index.html#services" data-i18n="nav-services">Services</a></li>
+                <li><a href="index.html#contact" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            <!-- Keep your header-btn here for mobile too -->
+            <div class="mobile-nav-extras">
+                <a href="index.html" class="header-btn" data-i18n="back-home">Back to Home</a>
+            </div>
         </div>
     </nav>
     <section class="policy-hero">
         <div class="policy-hero-content">
-            <h1 data-i18n="policy-title">Privacy Policy</h1>
-            <p data-i18n="policy-subtitle">Your trust is our priority. We protect your data with the highest standards.</p>
+            <h1 data-i18n="policy-title">
+                PRIVACY<br>
+                POLICY<br>
+                <span data-i18n="policy-subtitle">.</span>
+            </h1>
+            <p data-i18n="policy-desc">Your trust is our priority. We protect your data with the highest standards of security and compliance.</p>
         </div>
     </section>
     <div class="policy-content">
@@ -837,8 +981,9 @@
                 'nav-contact': 'Contact',
                 'back-home': 'Back to Home',
                 'policy-title-seo': 'Privacy Policy | The Qlip',
-                'policy-title': 'Privacy Policy',
-                'policy-subtitle': 'Your trust is our priority. We protect your data with the highest standards.',
+                'policy-title': 'PRIVACY<br>POLICY<br>',
+                'policy-subtitle': '.',
+                'policy-desc': 'Your trust is our priority. We protect your data with the highest standards of security and compliance.',
                 'last-updated': '<strong>Last Updated: November 14, 2025</strong>',
                 'intro-title': '1. Introduction',
                 'intro-p1': 'At The Qlip ("we," "us," or "our"), we are committed to protecting your privacy and ensuring the security of your personal information. As a leading technology company based in Lagos, Nigeria, specializing in software engineering, AI & robotics, cybersecurity, multimedia solutions, system testing, IT support, and training & consultancy, we process personal data responsibly in line with international standards including the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and Nigeria\'s Data Protection Act (NDPA) 2023.',
@@ -924,8 +1069,9 @@
                 'nav-contact': 'Contacto',
                 'back-home': 'Volver al Inicio',
                 'policy-title-seo': 'Política de Privacidad | The Qlip',
-                'policy-title': 'Política de Privacidad',
-                'policy-subtitle': 'Tu confianza es nuestra prioridad. Protegemos tus datos con los más altos estándares.',
+                'policy-title': 'POLÍTICA DE<br>PRIVACIDAD<br>',
+                'policy-subtitle': '.',
+                'policy-desc': 'Tu confianza es nuestra prioridad. Protegemos tus datos con los más altos estándares de seguridad y cumplimiento.',
                 'last-updated': '<strong>Última Actualización: 14 de noviembre de 2025</strong>',
                 'intro-title': '1. Introducción',
                 'intro-p1': 'En The Qlip ("nosotros", "nuestro" o "nos"), nos comprometemos a proteger tu privacidad y garantizar la seguridad de tu información personal. Como empresa líder en tecnología con sede en Lagos, Nigeria, especializada en ingeniería de software, IA y robótica, ciberseguridad, soluciones multimedia, pruebas de sistemas, soporte TI y capacitación y consultoría, procesamos datos personales de manera responsable en línea con estándares internacionales, incluyendo el Reglamento General de Protección de Datos (GDPR), la Ley de Privacidad del Consumidor de California (CCPA) y la Ley de Protección de Datos de Nigeria (NDPA) 2023.',
@@ -1011,8 +1157,9 @@
                 'nav-contact': 'Contact',
                 'back-home': 'Retour à l\'Accueil',
                 'policy-title-seo': 'Politique de Confidentialité | The Qlip',
-                'policy-title': 'Politique de Confidentialité',
-                'policy-subtitle': 'Votre confiance est notre priorité. Nous protégeons vos données avec les normes les plus élevées.',
+                'policy-title': 'POLITIQUE DE<br>CONFIDENTIALITÉ<br>',
+                'policy-subtitle': '.',
+                'policy-desc': 'Votre confiance est notre priorité. Nous protégeons vos données avec les normes les plus élevées de sécurité et de conformité.',
                 'last-updated': '<strong>Dernière Mise à Jour: 14 novembre 2025</strong>',
                 'intro-title': '1. Introduction',
                 'intro-p1': 'Chez The Qlip ("nous", "nos" ou "notre"), nous nous engageons à protéger votre vie privée et à assurer la sécurité de vos informations personnelles. En tant qu\'entreprise technologique leader basée à Lagos, au Nigeria, spécialisée en ingénierie logicielle, IA et robotique, cybersécurité, solutions multimédias, tests de systèmes, support IT et formation et conseil, nous traitons les données personnelles de manière responsable en conformité avec les normes internationales, y compris le Règlement Général sur la Protection des Données (GDPR), la California Consumer Privacy Act (CCPA) et la Nigeria Data Protection Act (NDPA) 2023.',
@@ -1098,8 +1245,9 @@
                 'nav-contact': 'Kontakt',
                 'back-home': 'Zurück zur Startseite',
                 'policy-title-seo': 'Datenschutzrichtlinie | The Qlip',
-                'policy-title': 'Datenschutzrichtlinie',
-                'policy-subtitle': 'Ihr Vertrauen hat Priorität. Wir schützen Ihre Daten mit höchsten Standards.',
+                'policy-title': 'DATENSCHUTZ-<br>RICHTLINIE<br>',
+                'policy-subtitle': '.',
+                'policy-desc': 'Ihr Vertrauen hat Priorität. Wir schützen Ihre Daten mit höchsten Standards von Sicherheit und Konformität.',
                 'last-updated': '<strong>Zuletzt Aktualisiert: 14. November 2025</strong>',
                 'intro-title': '1. Einführung',
                 'intro-p1': 'Bei The Qlip ("wir", "uns" oder "unser") sind wir bestrebt, Ihre Privatsphäre zu schützen und die Sicherheit Ihrer persönlichen Informationen zu gewährleisten. Als führendes Technologieunternehmen mit Sitz in Lagos, Nigeria, spezialisiert auf Software-Engineering, KI & Robotik, Cybersicherheit, Multimedia-Lösungen, Systemtests, IT-Support und Schulung & Beratung, verarbeiten wir personenbezogene Daten verantwortungsvoll im Einklang mit internationalen Standards, einschließlich der Datenschutz-Grundverordnung (GDPR), des California Consumer Privacy Act (CCPA) und des Nigeria Data Protection Act (NDPA) 2023.',
@@ -1185,8 +1333,9 @@
                 'nav-contact': '联系我们',
                 'back-home': '返回首页',
                 'policy-title-seo': '隐私政策 | The Qlip',
-                'policy-title': '隐私政策',
-                'policy-subtitle': '您的信任是我们优先考虑的事。我们以最高标准保护您的数据。',
+                'policy-title': '隐私<br>政策<br>',
+                'policy-subtitle': '.',
+                'policy-desc': '您的信任是我们优先考虑的事。我们以最高标准的安全性和合规性保护您的数据。',
                 'last-updated': '<strong>最后更新: 2025年11月14日</strong>',
                 'intro-title': '1. 引言',
                 'intro-p1': '在 The Qlip ("我们"、"我们的" 或 "我们")，我们致力于保护您的隐私并确保您的个人信息安全。作为总部位于尼日利亚拉各斯的领先技术公司，专注于软件工程、AI 和机器人技术、网络安全、多媒体解决方案、系统测试、IT 支持以及培训和咨询，我们按照包括通用数据保护条例 (GDPR)、加利福尼亚消费者隐私法 (CCPA) 和尼日利亚数据保护法 (NDPA) 2023 的国际标准负责任地处理个人信息。',
@@ -1272,8 +1421,9 @@
                 'nav-contact': 'Contato',
                 'back-home': 'Voltar para Casa',
                 'policy-title-seo': 'Política de Privacidade | The Qlip',
-                'policy-title': 'Política de Privacidade',
-                'policy-subtitle': 'Sua confiança é nossa prioridade. Protegemos seus dados com os mais altos padrões.',
+                'policy-title': 'POLÍTICA DE<br>PRIVACIDADE<br>',
+                'policy-subtitle': '.',
+                'policy-desc': 'Sua confiança é nossa prioridade. Protegemos seus dados com os mais altos padrões de segurança e conformidade.',
                 'last-updated': '<strong>Última Atualização: 14 de novembro de 2025</strong>',
                 'intro-title': '1. Introdução',
                 'intro-p1': 'Na The Qlip ("nós", "nosso" ou "nós"), estamos comprometidos em proteger sua privacidade e garantir a segurança de suas informações pessoais. Como uma empresa líder em tecnologia sediada em Lagos, Nigéria, especializada em engenharia de software, IA e robótica, cibersegurança, soluções multimídia, testes de sistema, suporte TI e treinamento e consultoria, processamos dados pessoais de forma responsável em conformidade com padrões internacionais, incluindo o Regulamento Geral de Proteção de Dados (GDPR), a California Consumer Privacy Act (CCPA) e a Nigeria Data Protection Act (NDPA) 2023.',
@@ -1359,8 +1509,9 @@
                 'nav-contact': 'اتصال',
                 'back-home': 'العودة إلى الصفحة الرئيسية',
                 'policy-title-seo': 'سياسة الخصوصية | The Qlip',
-                'policy-title': 'سياسة الخصوصية',
-                'policy-subtitle': 'ثقتك هي أولويتنا. نحمي بياناتك بأعلى المعايير.',
+                'policy-title': 'سياسة<br>الخصوصية<br>',
+                'policy-subtitle': '.',
+                'policy-desc': 'ثقتك هي أولويتنا. نحمي بياناتك بأعلى معايير الأمان والامتثال.',
                 'last-updated': '<strong>آخر تحديث: 14 نوفمبر 2025</strong>',
                 'intro-title': '1. المقدمة',
                 'intro-p1': 'في The Qlip ("نحن"، "لنا" أو "نحن")، نحن ملتزمون بحماية خصوصيتك وضمان أمان معلوماتك الشخصية. كشركة تكنولوجيا رائدة مقرها في لاغوس، نيجيريا، متخصصة في هندسة البرمجيات، الذكاء الاصطناعي والروبوتات، الأمن السيبراني، حلول الوسائط المتعددة، اختبار الأنظمة، دعم تكنولوجيا المعلومات، والتدريب والاستشارات، نعالج البيانات الشخصية بمسؤولية وفقًا للمعايير الدولية بما في ذلك اللائحة العامة لحماية البيانات (GDPR)، قانون خصوصية المستهلك في كاليفورنيا (CCPA)، وقانون حماية البيانات في نيجيريا (NDPA) 2023.',
@@ -1460,11 +1611,11 @@
                 const langData = translations[lang];
                 document.title = langData['policy-title-seo'] || document.title;
                 const metaDesc = document.querySelector('meta[name="description"]');
-                if (metaDesc) metaDesc.setAttribute('content', langData['policy-subtitle'] || metaDesc.getAttribute('content'));
+                if (metaDesc) metaDesc.setAttribute('content', langData['policy-desc'] || metaDesc.getAttribute('content'));
                 const ogTitle = document.querySelector('meta[property="og:title"]');
                 if (ogTitle) ogTitle.setAttribute('content', langData['policy-title-seo'] || ogTitle.getAttribute('content'));
                 const ogDesc = document.querySelector('meta[property="og:description"]');
-                if (ogDesc) ogDesc.setAttribute('content', langData['policy-subtitle'] || ogDesc.getAttribute('content'));
+                if (ogDesc) ogDesc.setAttribute('content', langData['policy-desc'] || ogDesc.getAttribute('content'));
                 const twitterTitle = document.querySelector('meta[name="twitter:title"]');
                 if (twitterTitle) twitterTitle.setAttribute('content', ogTitle ? ogTitle.getAttribute('content') : twitterTitle.getAttribute('content'));
                 const twitterDesc = document.querySelector('meta[name="twitter:description"]');
@@ -1481,20 +1632,20 @@
             const urlParams = new URLSearchParams(window.location.search);
             const savedLang = localStorage.getItem('preferredLang') || urlParams.get('lang') || navigator.language.split('-')[0] || 'en';
             document.getElementById('lang-select').value = savedLang;
-            document.getElementById('lang-select-mobile').value = savedLang;
+            document.getElementById('lang-select-mobile-header').value = savedLang;
             setLanguage(savedLang);
         });
         document.getElementById('lang-select').addEventListener('change', (e) => {
             setLanguage(e.target.value);
-            document.getElementById('lang-select-mobile').value = e.target.value;
+            document.getElementById('lang-select-mobile-header').value = e.target.value;
         });
-        document.getElementById('lang-select-mobile').addEventListener('change', (e) => {
+        document.getElementById('lang-select-mobile-header').addEventListener('change', (e) => {
             setLanguage(e.target.value);
             document.getElementById('lang-select').value = e.target.value;
         });
         // Initialize EmailJS
         emailjs.init("DVlpv6WkJuRl2RWLZ");
-        // Newsletter form submission
+        // Newsletter form handler
         const newsletterForm = document.getElementById('newsletter-form');
         newsletterForm.addEventListener('submit', e => {
             e.preventDefault();
@@ -1504,32 +1655,34 @@
                 return;
             }
             emailInput.style.borderColor = 'rgba(45, 254, 192, 0.3)';
-            // Send via EmailJS - Use the same service ID but a different template ID for newsletters
-            // Replace 'YOUR_NEWSLETTER_TEMPLATE_ID' with your actual newsletter template ID (e.g., template_xyz123)
+            // Send via EmailJS - Newsletter Template (replace with your newsletter template ID)
             emailjs.sendForm("service_grblnof", "template_vw26jo9", newsletterForm)
                 .then((result) => {
-                    alert('🎉 Subscribed! Thanks for joining our updates.');
+                    alert('🎉 Subscribed! Get exclusive SEO tips for 2025.');
                     newsletterForm.reset();
                 }, (error) => {
-                    alert('Oops! Subscription failed. Please try again.');
+                    alert('Subscription failed. Please try again.');
                     console.log('EmailJS Newsletter Error:', error);
                 });
         });
         // Hamburger Toggle
         const hamburger = document.querySelector('.hamburger');
         const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
         hamburger.addEventListener('click', () => {
             const isActive = hamburger.classList.contains('active');
             hamburger.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', !isActive);
             mobileNav.classList.toggle('active');
-     
             // Close on outside click (optional enhancement)
             if (!isActive) {
                 document.addEventListener('click', closeMenuOnOutsideClick);
             } else {
                 document.removeEventListener('click', closeMenuOnOutsideClick);
             }
+        });
+        mobileNavClose.addEventListener('click', () => {
+            hamburger.click();
         });
         function closeMenuOnOutsideClick(e) {
             if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {

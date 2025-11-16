@@ -206,10 +206,19 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .header-btn:hover {
             background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
             transform: translateY(-2px);
+        }
+        .mobile-right {
+            display: none;
+            align-items: center;
+            gap: 12px;
         }
         .hero {
             position: relative;
@@ -274,6 +283,10 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .btn-outline-teal:hover {
             background: hsl(162, 100%, 59%);
@@ -404,17 +417,9 @@
             transition: width 0.6s ease;
             box-shadow: 0 0 20px hsl(162, 100%, 59%);
         }
-        .step {
-            display: none;
-            animation: fadeSlide 0.6s ease;
-        }
-        .step.active {
-            display: block;
-        }
-        @keyframes fadeSlide {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .step { display: none; animation: fadeSlide 0.6s ease; }
+        .step.active { display: block; }
+        @keyframes fadeSlide { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .contact-form-card .form-group {
             margin-bottom: 24px;
         }
@@ -437,6 +442,7 @@
             font-size: 1rem;
             transition: all 0.3s ease;
             font-family: inherit;
+            min-height: 44px; /* Touch-friendly */
         }
         .contact-form-card .form-group select {
             appearance: none;
@@ -457,10 +463,7 @@
         .contact-form-card .form-group textarea::placeholder {
             color: rgba(255, 255, 255, 0.4);
         }
-        .contact-form-card .form-group textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
+        .contact-form-card .form-group textarea { min-height: 140px; resize: vertical; }
         .contact-form-card .form-group select {
             background-color: rgba(10, 18, 26, 0.95);
         }
@@ -494,6 +497,10 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .prev-btn {
             border: 2px solid rgba(45, 254, 192, 0.5);
@@ -596,6 +603,7 @@
             font-size: 0.95rem;
             outline: none;
             transition: all 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
         }
         .newsletter-form input[type="email"]:focus {
             border-color: hsl(162, 100%, 59%);
@@ -614,6 +622,10 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .newsletter-form button:hover {
             background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
@@ -646,53 +658,56 @@
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
         }
         .footer-bottom-links a:hover {
             color: hsl(162, 100%, 59%);
         }
         /* WhatsApp Float */
-      .whatsapp-float {
-          position: fixed;
-          bottom: 40px;
-          right: 20px;
-          z-index: 1000;
-          display: flex;
-          flex-direction: row-reverse;
-          align-items: center;
-          gap: 12px;
-          padding: 12px 16px;
-          background: rgba(37, 211, 102, 0.1);
-          border: 1px solid rgba(37, 211, 102, 0.3);
-          border-radius: 25px;
-          transition: all 0.3s ease;
-      }
-      .whatsapp-float:hover {
-          background: rgba(37, 211, 102, 0.2);
-          transform: translateY(-2px);
-      }
-      .whatsapp-float span {
-          font-size: 0.9rem;
-          opacity: 0.8;
-          font-weight: 300;
-      }
-      .whatsapp-float-icon {
-          width: 28px; /* Touch-friendly */
-          height: 28px;
-          background: #25D366;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #fff;
-          font-size: 1.2rem;
-          text-decoration: none;
-          transition: all 0.3s ease;
-      }
-      .whatsapp-float-icon:hover {
-          background: #128C7E;
-          transform: translateY(-2px) scale(1.05);
-          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-      }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: rgba(37, 211, 102, 0.1);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background: rgba(37, 211, 102, 0.2);
+            transform: translateY(-2px);
+        }
+        .whatsapp-float span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+        .whatsapp-float-icon {
+            width: 28px; /* Touch-friendly */
+            height: 28px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float-icon:hover {
+            background: #128C7E;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        }
         /* Hamburger Button */
         .hamburger {
             display: none;
@@ -733,12 +748,12 @@
         .mobile-nav {
             position: fixed;
             top: 0;
-            left: 0;
-            width: 100%;
+            right: 0;
+            width: 47%;
             height: 100vh;
             background: rgba(10, 10, 26, 0.98);
             backdrop-filter: blur(20px);
-            transform: translateX(-100%);
+            transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 1000;
             display: flex;
@@ -751,6 +766,37 @@
         .mobile-nav.active {
             transform: translateX(0);
         }
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .mobile-nav-close:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .mobile-nav-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-height: 65vh;
+            overflow-y: auto;
+        }
         .mobile-nav ul {
             list-style: none;
             display: flex;
@@ -762,13 +808,17 @@
         .mobile-nav a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 500;
             opacity: 0.9;
             transition: all 0.3s ease;
-            padding: 10px 0;
+            padding: 16px 0; /* Increased for touch */
             border-bottom: 1px solid rgba(45, 254, 192, 0.1);
             display: block;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .mobile-nav a:hover {
             opacity: 1;
@@ -781,6 +831,14 @@
             gap: 20px;
             align-items: center;
             opacity: 0.9;
+        }
+        .mobile-nav-extras .header-btn {
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            white-space: nowrap;
+            width: 100%;
+            justify-content: center;
         }
         /* Backdrop overlay for better UX (optional, adds dim on open) */
         .mobile-nav::before {
@@ -810,25 +868,37 @@
             }
         }
         @media (max-width: 1024px) {
-            .hamburger {
+            .mobile-right {
                 display: flex;
             }
             /* Hide desktop nav on tablet/mobile */
             .nav-container {
                 display: none;
             }
+            .hamburger {
+                display: flex;
+            }
             .newsletter-form {
                 flex-direction: column;
+            }
+            .mobile-nav-extras .header-btn {
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 1rem;
+                white-space: nowrap;
+                width: 100%;
+                justify-content: center;
             }
         }
         @media (max-width: 768px) {
             header {
-                padding: 0 16px;
-                justify-content: space-between;
+                padding: 0 clamp(12px, 4vw, 16px);
+                height: 70px; /* Slightly shorter for mobile */
             }
             .hero {
-                padding: 180px 16px 80px;
+                padding: clamp(120px, 30vh, 180px) clamp(12px, 4vw, 16px) clamp(60px, 15vh, 80px);
                 text-align: left;
+                background-attachment: scroll; /* Avoid fixed bg issues on mobile */
             }
             .hero-content {
                 padding-left: 0;
@@ -846,10 +916,14 @@
                 gap: 16px;
             }
             .btn-outline-teal {
-                padding: 12px 24px;
+                padding: 14px 24px; /* Slightly larger for touch */
                 font-size: 0.95rem;
             }
-            .media-grid, .media-grid.reverse {
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .media-grid.reverse {
                 flex-direction: column;
                 gap: 48px;
             }
@@ -872,63 +946,69 @@
                 text-align: center;
                 gap: 16px;
             }
-          .whatsapp-float {
-              flex-direction: column;
-              gap: 8px;
-              text-align: center;
-              padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
-              bottom: 40px;
-              right: 16px;
-          }
-          .whatsapp-float span {
-              font-size: clamp(0.8rem, 3vw, 0.85rem);
-              white-space: normal;
-              text-align: center;
-          }
+            .whatsapp-float {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+                padding: 5px;
+                bottom: 22px;
+                right: 16px;
+            }
+            .whatsapp-float span {
+                font-size: 8px;
+                white-space: normal;
+                text-align: center;
+            }
             .mobile-nav ul {
-                gap: 15px;
+                gap: clamp(16px, 4vw, 20px);
             }
             .mobile-nav a {
-                font-size: 1.3rem;
+                font-size: clamp(1.1rem, 5vw, 1.2rem);
+                padding: clamp(12px, 3vw, 16px) 0;
             }
         }
         @media (max-width: 480px) {
             header {
-              padding: 0 clamp(8px, 3vw, 12px);
-              height: 60px;
-          }
-          .logo {
-              font-size: clamp(1.1rem, 5vw, 1.3rem);
-          }
-          .logo img {
-              height: clamp(32px, 6vw, 36px);
-              margin-right: 8px;
-          }
-          .hero {
-              padding: clamp(100px, 25vh, 140px) clamp(8px, 3vw, 12px) clamp(40px, 10vh, 60px);
-              min-height: 70vh;
-          }
-          .hero h1 {
-              font-size: clamp(1.8rem, 12vw, 2.2rem);
-              letter-spacing: clamp(0.5px, 1vw, 1px);
-              margin-bottom: clamp(16px, 4vw, 24px);
-          }
-          .hero p {
-              font-size: clamp(0.95rem, 4vw, 1rem);
-              max-width: 100%;
-              margin-bottom: clamp(32px, 6vw, 48px);
+                padding: 0 clamp(8px, 3vw, 12px);
+                height: 60px;
+            }
+            .logo {
+                font-size: clamp(1.1rem, 5vw, 1.3rem);
+            }
+            .logo img {
+                height: clamp(32px, 6vw, 36px);
+                margin-right: 8px;
+            }
+            .hero {
+                padding: clamp(100px, 25vh, 140px) clamp(8px, 3vw, 12px) clamp(40px, 10vh, 60px);
+                min-height: 70vh;
+            }
+            .hero h1 {
+                font-size: clamp(1.8rem, 12vw, 2.2rem);
+                letter-spacing: clamp(0.5px, 1vw, 1px);
+                margin-bottom: clamp(16px, 4vw, 24px);
+            }
+            .hero p {
+                font-size: clamp(0.95rem, 4vw, 1rem);
+                max-width: 100%;
+                margin-bottom: clamp(32px, 6vw, 48px);
             }
             .btn-outline-teal {
-                padding: 10px 20px;
+                padding: 12px 20px; /* Touch-optimized */
                 font-size: 0.9rem;
                 width: 100%;
                 text-align: center;
             }
             .hero-buttons {
                 gap: 12px;
+                flex-direction: column; /* Stack buttons on very small screens */
             }
             .media-section {
                 padding: 60px 12px 40px;
+            }
+            .media-grid {
+                grid-template-columns: 1fr; /* Single column for tiny screens */
+                gap: 20px;
             }
             .contact-details, .contact-form-card {
                 padding: 24px 16px;
@@ -954,20 +1034,36 @@
                 height: 16px;
             }
             .newsletter-form input[type="email"] {
-                padding: 10px 12px;
+                padding: 12px 16px; /* Maintain touch */
                 font-size: 0.9rem;
             }
             .newsletter-form button {
-                padding: 10px 16px;
+                padding: 12px 16px;
                 font-size: 0.9rem;
             }
             .mobile-nav a {
-                font-size: 1.2rem;
-                padding: 8px 0;
+                font-size: clamp(1rem, 4vw, 1.1rem);
+                padding: clamp(8px, 2vw, 12px) 0;
             }
             .header-btn {
                 padding: 8px 20px;
                 font-size: 0.9rem;
+                min-height: 44px;
+            }
+            .footer-container {
+                grid-template-columns: 1fr; /* Stack all footer columns */
+                gap: 32px;
+            }
+        }
+        @media (max-width: 320px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .media-section h2 {
+                font-size: 2.2rem;
+            }
+            .contact-details, .contact-form-card {
+                padding: 24px 16px;
             }
         }
     </style>
@@ -1011,25 +1107,10 @@
             </div>
             <a href="#contact-form" class="header-btn" data-i18n="start-project">Start a Project</a>
         </div>
-        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-    <!-- Mobile menu overlay (hidden by default) -->
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="index.html" data-i18n="nav-home">Home</a></li>
-            <li><a href="about.html" data-i18n="nav-about">About</a></li>
-            <li><a href="services.html" data-i18n="nav-services">Services</a></li>
-            <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
-        </ul>
-        <!-- Keep your lang-selector and header-btn here for mobile too -->
-        <div class="mobile-nav-extras">
+        <div class="mobile-right">
             <div class="lang-selector">
                 <i class="fas fa-globe"></i>
-                <select id="lang-select-mobile">
+                <select id="lang-select-mobile-header">
                     <option value="en">EN</option>
                     <option value="es">ES</option>
                     <option value="fr">FR</option>
@@ -1039,7 +1120,29 @@
                     <option value="ar">AR</option>
                 </select>
             </div>
-            <a href="#contact-form-card" class="header-btn" data-i18n="start-project">Start a Project</a>
+            <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile menu overlay (hidden by default) -->
+    <nav class="mobile-nav">
+        <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-nav-inner">
+            <ul>
+                <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav-about">About</a></li>
+                <li><a href="services.html" data-i18n="nav-services">Services</a></li>
+                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            <!-- Keep your header-btn here for mobile too -->
+            <div class="mobile-nav-extras">
+                <a href="#contact-form-card" class="header-btn" data-i18n="start-project">Start a Project</a>
+            </div>
         </div>
     </nav>
     <section class="hero">
@@ -1633,20 +1736,20 @@
             const urlParams = new URLSearchParams(window.location.search);
             const savedLang = localStorage.getItem('preferredLang') || urlParams.get('lang') || navigator.language.split('-')[0] || 'en';
             document.getElementById('lang-select').value = savedLang;
-            document.getElementById('lang-select-mobile').value = savedLang;
+            document.getElementById('lang-select-mobile-header').value = savedLang;
             setLanguage(savedLang);
         });
         document.getElementById('lang-select').addEventListener('change', (e) => {
             setLanguage(e.target.value);
-            document.getElementById('lang-select-mobile').value = e.target.value;
+            document.getElementById('lang-select-mobile-header').value = e.target.value;
         });
-        document.getElementById('lang-select-mobile').addEventListener('change', (e) => {
+        document.getElementById('lang-select-mobile-header').addEventListener('change', (e) => {
             setLanguage(e.target.value);
             document.getElementById('lang-select').value = e.target.value;
         });
         // Initialize EmailJS
         emailjs.init("DVlpv6WkJuRl2RWLZ");
-        // Multi-step form logic adapted for inline contact page
+        // Ultra-smooth multi-step form with validation + glow progress
         const steps = document.querySelectorAll('.step');
         const progressFill = document.querySelector('.progress-fill');
         const nextBtns = document.querySelectorAll('.next-btn');
@@ -1676,16 +1779,20 @@
             });
             return valid;
         }
-        nextBtns.forEach(btn => btn.addEventListener('click', () => {
-            if (validateCurrentStep() && currentStep < 3) showStep(currentStep + 1);
-        }));
-        prevBtns.forEach(btn => btn.addEventListener('click', () => {
-            if (currentStep > 1) showStep(currentStep - 1);
-        }));
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (validateCurrentStep() && currentStep < 3) showStep(currentStep + 1);
+            });
+        });
+        prevBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (currentStep > 1) showStep(currentStep - 1);
+            });
+        });
         form.addEventListener('submit', e => {
             e.preventDefault();
             if (validateCurrentStep()) {
-                // Send form data via EmailJS - Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+                // Send via EmailJS - Project Template
                 emailjs.sendForm("service_grblnof", "template_vw26jo9", form)
                     .then((result) => {
                         form.reset();
@@ -1693,14 +1800,14 @@
                         successDiv.style.display = 'block';
                         setTimeout(() => {
                             successDiv.style.display = 'none';
-                        }, 5000); // Auto-hide after 5 seconds
+                        }, 5000);
                     }, (error) => {
                         alert('Oops! Something went wrong. Please try again or contact us directly.');
                         console.log('EmailJS Error:', error);
                     });
             }
         });
-        // Newsletter form submission
+        // Newsletter form handler
         const newsletterForm = document.getElementById('newsletter-form');
         newsletterForm.addEventListener('submit', e => {
             e.preventDefault();
@@ -1710,32 +1817,34 @@
                 return;
             }
             emailInput.style.borderColor = 'rgba(45, 254, 192, 0.3)';
-            // Send via EmailJS - Use the same service ID but a different template ID for newsletters
-            // Replace 'YOUR_NEWSLETTER_TEMPLATE_ID' with your actual newsletter template ID (e.g., template_xyz123)
+            // Send via EmailJS - Newsletter Template (replace with your newsletter template ID)
             emailjs.sendForm("service_grblnof", "template_vw26jo9", newsletterForm)
                 .then((result) => {
-                    alert('🎉 Subscribed! Thanks for joining our updates.');
+                    alert('🎉 Subscribed! Get exclusive SEO tips for 2025.');
                     newsletterForm.reset();
                 }, (error) => {
-                    alert('Oops! Subscription failed. Please try again.');
+                    alert('Subscription failed. Please try again.');
                     console.log('EmailJS Newsletter Error:', error);
                 });
         });
         // Hamburger Toggle
         const hamburger = document.querySelector('.hamburger');
         const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
         hamburger.addEventListener('click', () => {
             const isActive = hamburger.classList.contains('active');
             hamburger.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', !isActive);
             mobileNav.classList.toggle('active');
-          
             // Close on outside click (optional enhancement)
             if (!isActive) {
                 document.addEventListener('click', closeMenuOnOutsideClick);
             } else {
                 document.removeEventListener('click', closeMenuOnOutsideClick);
             }
+        });
+        mobileNavClose.addEventListener('click', () => {
+            hamburger.click();
         });
         function closeMenuOnOutsideClick(e) {
             if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
@@ -1756,7 +1865,7 @@
         });
         // Smooth scroll to form with offset for fixed header (ensures perfect visibility on mobile/desktop)
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('a[href="#contact-form"]').forEach(anchor => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);

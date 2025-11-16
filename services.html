@@ -145,10 +145,19 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .header-btn:hover {
             background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
             transform: translateY(-2px);
+        }
+        .mobile-right {
+            display: none;
+            align-items: center;
+            gap: 12px;
         }
         .hero {
             position: relative;
@@ -169,7 +178,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            padding-left: 0;
+            padding-left: -0vw;
             padding-right: 55vw;
         }
         .hero h1 {
@@ -213,6 +222,10 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .btn-outline-teal:hover {
             background: hsl(162, 100%, 59%);
@@ -422,7 +435,7 @@
             height: 20px;
             fill: currentColor;
         }
-        /* Newsletter Styles (Adapted for Home Page Integration) */
+        /* Newsletter Styles */
         .newsletter-form {
             display: flex;
             gap: 12px;
@@ -438,6 +451,7 @@
             font-size: 0.95rem;
             outline: none;
             transition: all 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
         }
         .newsletter-form input[type="email"]:focus {
             border-color: hsl(162, 100%, 59%);
@@ -456,6 +470,10 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .newsletter-form button:hover {
             background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
@@ -488,6 +506,9 @@
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
         }
         .footer-bottom-links a:hover {
             color: hsl(162, 100%, 59%);
@@ -575,12 +596,12 @@
         .mobile-nav {
             position: fixed;
             top: 0;
-            left: 0;
-            width: 100%;
+            right: 0;
+            width: 47%;
             height: 100vh;
             background: rgba(10, 10, 26, 0.98);
             backdrop-filter: blur(20px);
-            transform: translateX(-100%);
+            transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 1000;
             display: flex;
@@ -593,6 +614,37 @@
         .mobile-nav.active {
             transform: translateX(0);
         }
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .mobile-nav-close:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .mobile-nav-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-height: 65vh;
+            overflow-y: auto;
+        }
         .mobile-nav ul {
             list-style: none;
             display: flex;
@@ -604,13 +656,17 @@
         .mobile-nav a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 500;
             opacity: 0.9;
             transition: all 0.3s ease;
-            padding: 10px 0;
+            padding: 16px 0; /* Increased for touch */
             border-bottom: 1px solid rgba(45, 254, 192, 0.1);
             display: block;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .mobile-nav a:hover {
             opacity: 1;
@@ -642,6 +698,7 @@
             opacity: 1;
             visibility: visible;
         }
+        /* Responsive Media Queries */
         @media (max-width: 1200px) {
             .nav-container {
                 gap: 20px;
@@ -651,25 +708,37 @@
             }
         }
         @media (max-width: 1024px) {
-            .hamburger {
+            .mobile-right {
                 display: flex;
             }
             /* Hide desktop nav on tablet/mobile */
             .nav-container {
                 display: none;
             }
+            .hamburger {
+                display: flex;
+            }
             .newsletter-form {
                 flex-direction: column;
+            }
+            .mobile-nav-extras .header-btn {
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 1rem;
+                white-space: nowrap;
+                width: 100%;
+                justify-content: center;
             }
         }
         @media (max-width: 768px) {
             header {
-                padding: 0 16px;
-                justify-content: space-between;
+                padding: 0 clamp(12px, 4vw, 16px);
+                height: 70px; /* Slightly shorter for mobile */
             }
             .hero {
-                padding: 180px 16px 80px;
+                padding: clamp(120px, 30vh, 180px) clamp(12px, 4vw, 16px) clamp(60px, 15vh, 80px);
                 text-align: left;
+                background-attachment: scroll; /* Avoid fixed bg issues on mobile */
             }
             .hero-content {
                 padding-left: 0;
@@ -687,12 +756,15 @@
                 gap: 16px;
             }
             .btn-outline-teal {
-                padding: 12px 24px;
+                padding: 14px 24px; /* Slightly larger for touch */
                 font-size: 0.95rem;
             }
             .services-container {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 24px;
+            }
+            .services-grid {
+                padding: 80px 16px;
             }
             .service-card {
                 padding: 40px 24px;
@@ -706,20 +778,26 @@
                 flex-direction: column;
                 gap: 8px;
                 text-align: center;
-                padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
-                bottom: 40px;
+                padding: 5px;
+                bottom: 22px;
                 right: 16px;
             }
             .whatsapp-float span {
-                font-size: clamp(0.8rem, 3vw, 0.85rem);
+                font-size: 8px;
                 white-space: normal;
                 text-align: center;
             }
             .mobile-nav ul {
-                gap: 15px;
+                gap: clamp(16px, 4vw, 20px);
             }
             .mobile-nav a {
-                font-size: 1.3rem;
+                font-size: clamp(1.1rem, 5vw, 1.2rem);
+                padding: clamp(12px, 3vw, 16px) 0;
+            }
+            .modal-content {
+                margin: 16px; /* Add margin for small screens */
+                max-height: 90vh;
+                overflow-y: auto;
             }
         }
         @media (max-width: 480px) {
@@ -749,46 +827,75 @@
                 margin-bottom: clamp(32px, 6vw, 48px);
             }
             .btn-outline-teal {
-                padding: 10px 20px;
+                padding: 12px 20px; /* Touch-optimized */
                 font-size: 0.9rem;
                 width: 100%;
                 text-align: center;
             }
             .hero-buttons {
                 gap: 12px;
+                flex-direction: column; /* Stack buttons on very small screens */
             }
             .services-grid {
                 padding: 60px 12px 40px;
             }
+            .services-container {
+                grid-template-columns: 1fr; /* Single column for tiny screens */
+                gap: 20px;
+            }
             .service-card {
                 padding: 32px 20px;
             }
-            .social-icons {
-                gap: 12px;
-            }
-            .social-icon {
-                width: 36px;
-                height: 36px;
-            }
-            .social-icon svg {
-                width: 16px;
-                height: 16px;
-            }
             .newsletter-form input[type="email"] {
-                padding: 10px 12px;
+                padding: 12px 16px; /* Maintain touch */
                 font-size: 0.9rem;
             }
             .newsletter-form button {
-                padding: 10px 16px;
+                padding: 12px 16px;
                 font-size: 0.9rem;
             }
             .mobile-nav a {
-                font-size: 1.2rem;
-                padding: 8px 0;
+                font-size: clamp(1rem, 4vw, 1.1rem);
+                padding: clamp(8px, 2vw, 12px) 0;
             }
             .header-btn {
                 padding: 8px 20px;
                 font-size: 0.9rem;
+                min-height: 44px;
+            }
+            .modal-content {
+                padding: 24px 16px;
+                margin: 0 5px;
+            }
+            .modal h2 {
+                font-size: 1.8rem;
+            }
+            .modal .form-group input,
+            .modal .form-group select,
+            .modal .form-group textarea {
+                padding: 12px 14px;
+                font-size: 0.95rem;
+            }
+            .modal-btns {
+                gap: 12px;
+            }
+            .prev-btn, .next-btn, .submit-btn {
+                padding: 14px;
+            }
+            .footer-container {
+                grid-template-columns: 1fr; /* Stack all footer columns */
+                gap: 32px;
+            }
+        }
+        @media (max-width: 320px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .services-grid h2 {
+                font-size: 2.2rem;
+            }
+            .service-card {
+                padding: 24px 16px;
             }
         }
         /* ===== TECH-SAVVY POPUP MODAL (GLASS + TEAL GLOW + MULTI-STEP) ===== */
@@ -814,7 +921,7 @@
             background: rgba(10, 18, 26, 0.88);
             backdrop-filter: blur(32px);
             border: 1px solid rgba(45, 254, 192, 0.35);
-            border-radius: 28px;
+            border-radius: 24px;
             padding: 56px 48px;
             max-width: 580px;
             width: 100%;
@@ -832,6 +939,12 @@
             cursor: pointer;
             color: rgba(255,255,255,0.6);
             transition: all 0.3s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
         }
         .close-button:hover {
             color: hsl(162, 100%, 59%);
@@ -889,6 +1002,7 @@
             color: #fff;
             font-size: 1rem;
             transition: all 0.3s ease;
+            min-height: 44px; /* Touch-friendly for inputs */
         }
         .modal .form-group select {
             appearance: none;
@@ -940,6 +1054,10 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .prev-btn {
             border: 2px solid rgba(45, 254, 192, 0.5);
@@ -959,65 +1077,10 @@
             transform: translateY(-3px);
             box-shadow: 0 15px 30px rgba(45, 254, 192, 0.4);
         }
-        .submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-        .modal-success {
-            background: rgba(45, 254, 192, 0.2);
-            border: 1px solid hsl(162, 100%, 59%);
-            color: hsl(162, 100%, 59%);
-            padding: 20px;
-            border-radius: 16px;
-            text-align: center;
-            font-size: 1.1rem;
-            display: none;
-            margin-top: 20px;
-        }
         @media (max-width: 540px) {
-            .modal {
-                padding: 10px;
-            }
-            .modal-content { 
-                padding: 48px 32px; 
-                max-width: 95vw;
-            }
+            .modal-content { padding: 48px 32px; }
             .modal h2 { font-size: 2.2rem; }
             .modal-btns { flex-direction: column; }
-        }
-        @media (max-width: 480px) {
-            .modal-content { 
-                padding: 32px 20px; 
-                border-radius: 20px;
-            }
-            .modal h2 { font-size: 1.8rem; }
-            .modal .form-group input,
-            .modal .form-group select,
-            .modal .form-group textarea {
-                padding: 12px 14px;
-                font-size: 0.95rem;
-            }
-            .modal-btns {
-                gap: 12px;
-            }
-            .prev-btn, .next-btn, .submit-btn {
-                padding: 14px;
-            }
-        }
-        @media (max-width: 768px) {
-            .mobile-nav ul {
-                gap: clamp(16px, 4vw, 20px);
-            }
-            .mobile-nav a {
-                font-size: clamp(1.3rem, 6vw, 1.5rem);
-                padding: clamp(12px, 3vw, 16px) 0;
-            }
-            .modal-content {
-                margin: 16px; /* Add margin for small screens */
-                max-height: 90vh;
-                overflow-y: auto;
-            }
         }
     </style>
 </head>
@@ -1060,25 +1123,10 @@
             </div>
             <a href="javascript:void(0)" class="header-btn open-modal" data-i18n="start-project">Start a Project</a>
         </div>
-        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-    <!-- Mobile menu overlay (hidden by default) -->
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="index.html" data-i18n="nav-home">Home</a></li>
-            <li><a href="about.html" data-i18n="nav-about">About</a></li>
-            <li><a href="services.html" data-i18n="nav-services">Services</a></li>
-            <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
-        </ul>
-        <!-- Keep your lang-selector and header-btn here for mobile too -->
-        <div class="mobile-nav-extras">
+        <div class="mobile-right">
             <div class="lang-selector">
                 <i class="fas fa-globe"></i>
-                <select id="lang-select-mobile">
+                <select id="lang-select-mobile-header">
                     <option value="en">EN</option>
                     <option value="es">ES</option>
                     <option value="fr">FR</option>
@@ -1088,7 +1136,29 @@
                     <option value="ar">AR</option>
                 </select>
             </div>
-            <a href="javascript:void(0)" class="header-btn open-modal" data-i18n="start-project">Start a Project</a>
+            <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile menu overlay (hidden by default) -->
+    <nav class="mobile-nav">
+        <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-nav-inner">
+            <ul>
+                <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav-about">About</a></li>
+                <li><a href="services.html" data-i18n="nav-services">Services</a></li>
+                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            <!-- Keep your header-btn here for mobile too -->
+            <div class="mobile-nav-extras">
+                <a href="javascript:void(0)" class="header-btn open-modal" data-i18n="start-project">Start a Project</a>
+            </div>
         </div>
     </nav>
     <section class="hero">
@@ -1238,13 +1308,13 @@
                 </a>
                 <p class="footer-tagline" data-i18n="tagline">Transforming ideas into powered digital excellence.</p>
                 <div class="social-icons">
-                    <a href="https://x.com/the_qlip" aria-label="X (Twitter)" class="social-icon" rel="noopener noreferrer">
+                    <a href="https://x.com/the_qlip" aria-label="X (Twitter)" class="social-icon" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
-                    <a href="https://www.instagram.com/the_qlip" aria-label="Instagram" class="social-icon" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/the_qlip" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441c0-.796-.645-1.441-1.441-1.441z"/></svg>
                     </a>
-                    <a href="https://www.tiktok.com/@the_qlip" aria-label="TikTok" class="social-icon" rel="noopener noreferrer">
+                    <a href="https://www.tiktok.com/@the_qlip" aria-label="TikTok" class="social-icon" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 448 512"><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
                     </a>
                 </div>
@@ -1261,7 +1331,7 @@
             <div class="footer-column">
                 <h4 data-i18n="hire-team">Hire A Team</h4>
                 <ul>
-                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Frontend%20Developer%20(Focus)" data-i18n="job1">Frontend Developer (Focus)</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Frontend%20Developer%20Focus" data-i18n="job1">Frontend Developer (Focus)</a></li>
                     <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Backend%20Developer" data-i18n="job2">Backend Developer</a></li>
                     <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Full-Stack%20Developer" data-i18n="job3">Full-Stack Developer</a></li>
                     <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-ML%20Engineer" data-i18n="job4">ML Engineer</a></li>
@@ -1270,7 +1340,7 @@
                     <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Video%20Editor" data-i18n="job7">Video Editor</a></li>
                     <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-DevOps%20Engineer" data-i18n="job8">DevOps Engineer</a></li>
                     <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Multimedia%20Specialist" data-i18n="job9">Multimedia Specialist</a></li>
-                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Project%20Manager%20(Projects)" data-i18n="job10">Project Manager (Projects)</a></li>
+                    <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Project%20Manager%20Projects" data-i18n="job10">Project Manager (Projects)</a></li>
                     <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Junior%20Engineer" data-i18n="job11">Junior Engineer</a></li>
                     <li><a href="mailto:theqlipglobal@gmail.com?subject=Hiring-Content%20Strategist" data-i18n="job12">Content Strategist</a></li>
                 </ul>
@@ -1330,10 +1400,10 @@
                         <label for="project_type" data-i18n="form-project-type">Project Type</label>
                         <select id="project_type" name="project_type" required>
                             <option value="">Select Project Type</option>
-                            <option value="Website Development">Web Development</option>
-                            <option value="Cybersecurity">Cybersecurity</option>
-                            <option value="UI/UX Design">UI/UX Design</option>
-                            <option value="Multimedia">Multimedia</option>
+                            <option value="Machine Learning Development">Machine Learning Development</option>
+                            <option value="Enhanced Cybersecurity">Enhanced Cybersecurity</option>
+                            <option value="UI/UX Design">UI/UX Design with Tools</option>
+                            <option value="Multimedia">Multimedia Production</option>
                             <option value="Branding">Branding</option>
                             <option value="Business Automation / Integration">Business Automation & Integration</option>
                             <option value="Virtual Assistance">Virtual Assistance</option>
@@ -1370,7 +1440,6 @@
                     </div>
                 </div>
             </form>
-            <div class="modal-success" id="modal-success">🎉 Project submitted! We'll reach out within 24 hours.</div>
         </div>
     </div>
     <!-- EmailJS SDK -->
@@ -1458,6 +1527,7 @@
                 'next-btn': 'Next →',
                 'prev-btn': '← Previous',
                 'submit-btn': 'Submit Project 🚀',
+                tagline: 'Transforming ideas into powered digital excellence.',
                 'quick-links': 'Quick Links',
                 'hire-team': 'Hire A Team',
                 job1: 'Frontend Developer (Focus)',
@@ -1478,8 +1548,7 @@
                 'copyright': '&copy; 2025 The Qlip. All rights reserved.',
                 'privacy': 'Privacy Policy',
                 'terms': 'Terms of Service',
-                'whatsapp-text': 'Need Help? Chat Now',
-                'tagline': 'Transforming ideas into powered digital excellence.'
+                'whatsapp-text': 'Need Help? Chat Now'
             },
             es: {
                 logo: 'The Qlip',
@@ -1561,6 +1630,7 @@
                 'next-btn': 'Siguiente →',
                 'prev-btn': '← Anterior',
                 'submit-btn': 'Enviar Proyecto 🚀',
+                tagline: 'Transformando ideas en excelencia digital impulsada.',
                 'quick-links': 'Enlaces Rápidos',
                 'hire-team': 'Contratar Un Equipo',
                 job1: 'Desarrollador Frontend (Enfoque)',
@@ -1574,15 +1644,14 @@
                 job9: 'Especialista en Multimedia',
                 job10: 'Gerente de Proyectos (Proyectos)',
                 job11: 'Ingeniero Junior',
-                job12: 'Estratega de Contenidos',
+                job12: 'Estratega de Contenido',
                 'stay-updated': 'Manténgase Actualizado en Tendencias',
                 'newsletter-desc': 'Obtenga consejos gratuitos, actualizaciones de aprendizaje automático y recomendaciones de SEO.',
                 'subscribe-btn': 'Suscribirse',
                 'copyright': '&copy; 2025 The Qlip. Todos los derechos reservados.',
                 'privacy': 'Política de Privacidad',
                 'terms': 'Términos de Servicio',
-                'whatsapp-text': '¿Necesita Ayuda? Chatee Ahora',
-                'tagline': 'Transformando ideas en excelencia digital impulsada.'
+                'whatsapp-text': '¿Necesita Ayuda? Chatee Ahora'
             },
             fr: {
                 logo: 'The Qlip',
@@ -1664,6 +1733,7 @@
                 'next-btn': 'Suivant →',
                 'prev-btn': '← Précédent',
                 'submit-btn': 'Soumettre Projet 🚀',
+                tagline: 'Transformer les idées en excellence numérique propulsée.',
                 'quick-links': 'Liens Rapides',
                 'hire-team': 'Engager Une Équipe',
                 job1: 'Développeur Frontend (Focus)',
@@ -1684,8 +1754,7 @@
                 'copyright': '&copy; 2025 The Qlip. Tous droits réservés.',
                 'privacy': 'Politique de Confidentialité',
                 'terms': 'Conditions d\'Utilisation',
-                'whatsapp-text': 'Besoin d\'Aide ? Discutez Maintenant',
-                'tagline': 'Transformer les idées en excellence numérique propulsée.'
+                'whatsapp-text': 'Besoin d\'Aide ? Discutez Maintenant'
             },
             de: {
                 logo: 'The Qlip',
@@ -1767,6 +1836,7 @@
                 'next-btn': 'Weiter →',
                 'prev-btn': '← Zurück',
                 'submit-btn': 'Projekt Einreichen 🚀',
+                tagline: 'Ideen in digitale Exzellenz verwandeln.',
                 'quick-links': 'Schnelle Links',
                 'hire-team': 'Ein Team Einstellen',
                 job1: 'Frontend-Entwickler (Fokus)',
@@ -1779,7 +1849,7 @@
                 job8: 'DevOps-Ingenieur',
                 job9: 'Multimedia-Spezialist',
                 job10: 'Projektmanager (Projekte)',
-                job11: 'Junior-Ingenieur',
+                job11: 'Junior Ingenieur',
                 job12: 'Content-Stratege',
                 'stay-updated': 'Bleiben Sie Über Trends Auf Dem Laufenden',
                 'newsletter-desc': 'Erhalten Sie kostenlose Tipps, Machine-Learning-Updates und SEO-Empfehlungen.',
@@ -1787,8 +1857,7 @@
                 'copyright': '&copy; 2025 The Qlip. Alle Rechte vorbehalten.',
                 'privacy': 'Datenschutzrichtlinie',
                 'terms': 'Nutzungsbedingungen',
-                'whatsapp-text': 'Hilfe Benötigt? Jetzt Chatten',
-                'tagline': 'Ideen in digitale Exzellenz umwandeln, die angetrieben wird.'
+                'whatsapp-text': 'Hilfe Benötigt? Jetzt Chatten'
             },
             zh: {
                 logo: 'The Qlip',
@@ -1870,6 +1939,7 @@
                 'next-btn': '下一步 →',
                 'prev-btn': '← 上一步',
                 'submit-btn': '提交项目 🚀',
+                tagline: '将想法转化为数字卓越。',
                 'quick-links': '快速链接',
                 'hire-team': '雇佣一个团队',
                 job1: '前端开发人员 (重点)',
@@ -1890,8 +1960,7 @@
                 'copyright': '&copy; 2025 The Qlip。保留所有权利。',
                 'privacy': '隐私政策',
                 'terms': '服务条款',
-                'whatsapp-text': '需要帮助？立即聊天',
-                'tagline': '将想法转化为驱动数字卓越。'
+                'whatsapp-text': '需要帮助？立即聊天'
             },
             pt: {
                 logo: 'The Qlip',
@@ -1973,6 +2042,7 @@
                 'next-btn': 'Próximo →',
                 'prev-btn': '← Anterior',
                 'submit-btn': 'Enviar Projeto 🚀',
+                tagline: 'Transformando ideias em excelência digital impulsionada.',
                 'quick-links': 'Links Rápidos',
                 'hire-team': 'Contratar uma Equipe',
                 job1: 'Desenvolvedor Frontend (Foco)',
@@ -1993,8 +2063,7 @@
                 'copyright': '&copy; 2025 The Qlip. Todos os direitos reservados.',
                 'privacy': 'Política de Privacidade',
                 'terms': 'Termos de Serviço',
-                'whatsapp-text': 'Precisa de Ajuda? Converse Agora',
-                'tagline': 'Transformando ideias em excelência digital impulsionada.'
+                'whatsapp-text': 'Precisa de Ajuda? Converse Agora'
             },
             ar: {
                 logo: 'The Qlip',
@@ -2076,6 +2145,7 @@
                 'next-btn': 'التالي →',
                 'prev-btn': '← السابق',
                 'submit-btn': 'إرسال المشروع 🚀',
+                tagline: 'تحويل الأفكار إلى التميز الرقمي المُدار.',
                 'quick-links': 'روابط سريعة',
                 'hire-team': 'توظيف فريق',
                 job1: 'مطور Frontend (التركيز)',
@@ -2096,8 +2166,7 @@
                 'copyright': '&copy; 2025 The Qlip. جميع الحقوق محفوظة.',
                 'privacy': 'سياسة الخصوصية',
                 'terms': 'شروط الخدمة',
-                'whatsapp-text': 'تحتاج مساعدة؟ دردش الآن',
-                'tagline': 'تحويل الأفكار إلى التميز الرقمي المدعوم.'
+                'whatsapp-text': 'تحتاج مساعدة؟ دردش الآن'
             }
         };
         function setLanguage(lang) {
@@ -2142,14 +2211,14 @@
             const urlParams = new URLSearchParams(window.location.search);
             const savedLang = localStorage.getItem('preferredLang') || urlParams.get('lang') || navigator.language.split('-')[0] || 'en';
             document.getElementById('lang-select').value = savedLang;
-            document.getElementById('lang-select-mobile').value = savedLang;
+            document.getElementById('lang-select-mobile-header').value = savedLang;
             setLanguage(savedLang);
         });
         document.getElementById('lang-select').addEventListener('change', (e) => {
             setLanguage(e.target.value);
-            document.getElementById('lang-select-mobile').value = e.target.value;
+            document.getElementById('lang-select-mobile-header').value = e.target.value;
         });
-        document.getElementById('lang-select-mobile').addEventListener('change', (e) => {
+        document.getElementById('lang-select-mobile-header').addEventListener('change', (e) => {
             setLanguage(e.target.value);
             document.getElementById('lang-select').value = e.target.value;
         });
@@ -2157,14 +2226,13 @@
         emailjs.init("DVlpv6WkJuRl2RWLZ");
         // Ultra-smooth multi-step modal with validation + glow progress
         const modal = document.getElementById('getStartedModal');
-        const openBtns = document.querySelectorAll('.open-modal'); // Only header button now
+        const openBtns = document.querySelectorAll('.open-modal');
         const closeBtn = document.querySelector('.close-button');
         const steps = document.querySelectorAll('.step');
         const progressFill = document.querySelector('.progress-fill');
         const nextBtns = document.querySelectorAll('.next-btn');
         const prevBtns = document.querySelectorAll('.prev-btn');
         const form = document.getElementById('get-started-form');
-        const modalSuccess = document.getElementById('modal-success');
         let currentStep = 1;
         function updateProgress() {
             progressFill.style.width = `${(currentStep / 3) * 100}%`;
@@ -2188,18 +2256,17 @@
             });
             return valid;
         }
-        openBtns.forEach(btn => btn.addEventListener('click', () => {
-            // Close mobile nav if open for better UX
-            const mobileNav = document.querySelector('.mobile-nav');
-            const hamburger = document.querySelector('.hamburger');
-            if (mobileNav.classList.contains('active')) {
-                hamburger.click();
-            }
-            modal.classList.add('active');
-            showStep(1);
-            form.reset();
-            modalSuccess.style.display = 'none';
-        }));
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('active');
+                showStep(1);
+                form.reset();
+                // If opened from mobile nav, close the mobile menu for better UX
+                if (btn.closest('.mobile-nav')) {
+                    document.querySelector('.hamburger').click();
+                }
+            });
+        });
         closeBtn.addEventListener('click', () => modal.classList.remove('active'));
         modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
         window.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('active'); });
@@ -2209,26 +2276,77 @@
         prevBtns.forEach(btn => btn.addEventListener('click', () => {
             if (currentStep > 1) showStep(currentStep - 1);
         }));
-        // EmailJS: Handle Project Form Submission
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', e => {
             e.preventDefault();
             if (validateCurrentStep()) {
-                const submitBtn = form.querySelector('.submit-btn');
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Sending...';
+                // Send via EmailJS - Project Template
                 emailjs.sendForm("service_grblnof", "template_vw26jo9", form)
                     .then((result) => {
-                        form.style.display = 'none';
-                        modalSuccess.style.display = 'block';
-                        progressFill.style.width = '100%';
+                        alert('🎉 Project submitted! We\'ll reach out within 24 hours with your free audit insights.');
+                        modal.classList.remove('active');
+                        form.reset();
+                        showStep(1);
                     }, (error) => {
-                        console.error('EmailJS Error:', error);
-                        alert('Oops! Something went wrong. Please try again or email us directly at hello@theqlip.com');
-                    })
-                    .finally(() => {
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Submit Project 🚀';
+                        alert('Oops! Something went wrong. Please try again or contact us directly.');
+                        console.log('EmailJS Error:', error);
                     });
+            }
+        });
+        // Newsletter form handler
+        const newsletterForm = document.getElementById('newsletter-form');
+        newsletterForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[name="email"]');
+            if (!emailInput.value.trim()) {
+                emailInput.style.borderColor = '#ff3366';
+                return;
+            }
+            emailInput.style.borderColor = 'rgba(45, 254, 192, 0.3)';
+            // Send via EmailJS - Newsletter Template (replace with your newsletter template ID)
+            emailjs.sendForm("service_grblnof", "template_vw26jo9", newsletterForm)
+                .then((result) => {
+                    alert('🎉 Subscribed! Get exclusive SEO tips for 2025.');
+                    newsletterForm.reset();
+                }, (error) => {
+                    alert('Subscription failed. Please try again.');
+                    console.log('EmailJS Newsletter Error:', error);
+                });
+        });
+        // Hamburger Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
+        hamburger.addEventListener('click', () => {
+            const isActive = hamburger.classList.contains('active');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', !isActive);
+            mobileNav.classList.toggle('active');
+  
+            // Close on outside click (optional enhancement)
+            if (!isActive) {
+                document.addEventListener('click', closeMenuOnOutsideClick);
+            } else {
+                document.removeEventListener('click', closeMenuOnOutsideClick);
+            }
+        });
+        mobileNavClose.addEventListener('click', () => {
+            hamburger.click();
+        });
+        function closeMenuOnOutsideClick(e) {
+            if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+                hamburger.click();
+            }
+        }
+        // Close menu on link click
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.click();
+            });
+        });
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                hamburger.click();
             }
         });
         // Service card expansion toggles
@@ -2251,64 +2369,6 @@
                     cta.textContent = 'Read Less';
                 }
             });
-        });
-        // EmailJS: Handle Newsletter Form Submission
-        const newsletterForm = document.getElementById('newsletter-form');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const submitBtn = newsletterForm.querySelector('button[type="submit"]');
-                const email = newsletterForm.querySelector('input[name="email"]').value;
-                if (email) {
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'Subscribing...';
-                    emailjs.sendForm("service_grblnof", "template_vw26jo9", newsletterForm)
-                        .then((result) => {
-                            alert('🎉 Subscribed! Thanks for joining our updates.');
-                            newsletterForm.reset();
-                        }, (error) => {
-                            console.error('EmailJS Error:', error);
-                            alert('Oops! Something went wrong. Please try again.');
-                        })
-                        .finally(() => {
-                            submitBtn.disabled = false;
-                            submitBtn.textContent = 'Subscribe';
-                        });
-                }
-            });
-        }
-        // Hamburger Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const mobileNav = document.querySelector('.mobile-nav');
-        hamburger.addEventListener('click', () => {
-            const isActive = hamburger.classList.contains('active');
-            hamburger.classList.toggle('active');
-            hamburger.setAttribute('aria-expanded', !isActive);
-            mobileNav.classList.toggle('active');
-         
-            // Close on outside click (optional enhancement)
-            if (!isActive) {
-                document.addEventListener('click', closeMenuOnOutsideClick);
-            } else {
-                document.removeEventListener('click', closeMenuOnOutsideClick);
-            }
-        });
-        function closeMenuOnOutsideClick(e) {
-            if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
-                hamburger.click();
-            }
-        }
-        // Close menu on link click
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.click();
-            });
-        });
-        // Close on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
-                hamburger.click();
-            }
         });
     </script>
 </body>

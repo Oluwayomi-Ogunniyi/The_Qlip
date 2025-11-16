@@ -176,6 +176,11 @@
             background: linear-gradient(135deg, hsl(162, 100%, 15%) 0%, hsl(162, 100%, 10%) 100%);
             transform: translateY(-2px);
         }
+        .mobile-right {
+            display: none;
+            align-items: center;
+            gap: 12px;
+        }
         .hero {
             position: relative;
             padding: 200px 20px 120px;
@@ -602,12 +607,12 @@
         .mobile-nav {
             position: fixed;
             top: 0;
-            left: 0;
-            width: 100%;
+            right: 0;
+            width: 47%;
             height: 100vh;
             background: rgba(10, 10, 26, 0.98);
             backdrop-filter: blur(20px);
-            transform: translateX(-100%);
+            transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 1000;
             display: flex;
@@ -620,6 +625,37 @@
         .mobile-nav.active {
             transform: translateX(0);
         }
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .mobile-nav-close:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .mobile-nav-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-height: 65vh;
+            overflow-y: auto;
+        }
         .mobile-nav ul {
             list-style: none;
             display: flex;
@@ -631,7 +667,7 @@
         .mobile-nav a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 500;
             opacity: 0.9;
             transition: all 0.3s ease;
@@ -683,15 +719,26 @@
             }
         }
         @media (max-width: 1024px) {
-            .hamburger {
+            .mobile-right {
                 display: flex;
             }
             /* Hide desktop nav on tablet/mobile */
             .nav-container {
                 display: none;
             }
+            .hamburger {
+                display: flex;
+            }
             .newsletter-form {
                 flex-direction: column;
+            }
+            .mobile-nav-extras .header-btn {
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 1rem;
+                white-space: nowrap;
+                width: 100%;
+                justify-content: center;
             }
         }
         @media (max-width: 768px) {
@@ -743,12 +790,12 @@
                 flex-direction: column;
                 gap: 8px;
                 text-align: center;
-                padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
-                bottom: 40px;
+                padding: 5px;
+                bottom: 22px;
                 right: 16px;
             }
             .whatsapp-float span {
-                font-size: clamp(0.8rem, 3vw, 0.85rem);
+                font-size: 8px;
                 white-space: normal;
                 text-align: center;
             }
@@ -756,7 +803,7 @@
                 gap: clamp(16px, 4vw, 20px);
             }
             .mobile-nav a {
-                font-size: clamp(1.3rem, 6vw, 1.5rem);
+                font-size: clamp(1.1rem, 5vw, 1.2rem);
                 padding: clamp(12px, 3vw, 16px) 0;
             }
             .modal-content {
@@ -820,7 +867,7 @@
                 font-size: 0.9rem;
             }
             .mobile-nav a {
-                font-size: clamp(1.1rem, 5vw, 1.2rem);
+                font-size: clamp(1rem, 4vw, 1.1rem);
                 padding: clamp(8px, 2vw, 12px) 0;
             }
             .header-btn {
@@ -1088,25 +1135,10 @@
             </div>
             <a href="javascript:void(0)" class="header-btn open-modal" data-i18n="start-project">Start a Project</a>
         </div>
-        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-    <!-- Mobile menu overlay (hidden by default) -->
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="index.html" data-i18n="nav-home">Home</a></li>
-            <li><a href="about.html" data-i18n="nav-about">About</a></li>
-            <li><a href="services.html" data-i18n="nav-services">Services</a></li>
-            <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
-        </ul>
-        <!-- Keep your lang-selector and header-btn here for mobile too -->
-        <div class="mobile-nav-extras">
+        <div class="mobile-right">
             <div class="lang-selector">
                 <i class="fas fa-globe"></i>
-                <select id="lang-select-mobile">
+                <select id="lang-select-mobile-header">
                     <option value="en">EN</option>
                     <option value="es">ES</option>
                     <option value="fr">FR</option>
@@ -1116,7 +1148,29 @@
                     <option value="ar">AR</option>
                 </select>
             </div>
-            <a href="javascript:void(0)" class="header-btn open-modal" data-i18n="start-project">Start a Project</a>
+            <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile menu overlay (hidden by default) -->
+    <nav class="mobile-nav">
+        <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-nav-inner">
+            <ul>
+                <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav-about">About</a></li>
+                <li><a href="services.html" data-i18n="nav-services">Services</a></li>
+                <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            <!-- Keep your header-btn here for mobile too -->
+            <div class="mobile-nav-extras">
+                <a href="javascript:void(0)" class="header-btn open-modal" data-i18n="start-project">Start a Project</a>
+            </div>
         </div>
     </nav>
     <section class="hero">
@@ -1798,14 +1852,14 @@
             const urlParams = new URLSearchParams(window.location.search);
             const savedLang = localStorage.getItem('preferredLang') || urlParams.get('lang') || navigator.language.split('-')[0] || 'en';
             document.getElementById('lang-select').value = savedLang;
-            document.getElementById('lang-select-mobile').value = savedLang;
+            document.getElementById('lang-select-mobile-header').value = savedLang;
             setLanguage(savedLang);
         });
         document.getElementById('lang-select').addEventListener('change', (e) => {
             setLanguage(e.target.value);
-            document.getElementById('lang-select-mobile').value = e.target.value;
+            document.getElementById('lang-select-mobile-header').value = e.target.value;
         });
-        document.getElementById('lang-select-mobile').addEventListener('change', (e) => {
+        document.getElementById('lang-select-mobile-header').addEventListener('change', (e) => {
             setLanguage(e.target.value);
             document.getElementById('lang-select').value = e.target.value;
         });
@@ -1902,18 +1956,22 @@
         // Hamburger Toggle
         const hamburger = document.querySelector('.hamburger');
         const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
         hamburger.addEventListener('click', () => {
             const isActive = hamburger.classList.contains('active');
             hamburger.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', !isActive);
             mobileNav.classList.toggle('active');
-        
+   
             // Close on outside click (optional enhancement)
             if (!isActive) {
                 document.addEventListener('click', closeMenuOnOutsideClick);
             } else {
                 document.removeEventListener('click', closeMenuOnOutsideClick);
             }
+        });
+        mobileNavClose.addEventListener('click', () => {
+            hamburger.click();
         });
         function closeMenuOnOutsideClick(e) {
             if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
