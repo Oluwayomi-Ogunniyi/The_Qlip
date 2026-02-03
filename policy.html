@@ -1626,6 +1626,25 @@
             const url = new URL(window.location);
             url.searchParams.set('lang', lang);
             window.history.replaceState({}, '', url);
+            updateDynamicDates();
+        }
+        function updateDynamicDates() {
+            const now = new Date();
+            // Update copyright year dynamically (preserves language structure)
+            const copyrightEls = document.querySelectorAll('p[data-i18n="copyright"]');
+            copyrightEls.forEach(el => {
+                el.innerHTML = el.innerHTML.replace(/\d{4}/, now.getFullYear());
+            });
+            // Update last updated dynamically (month, date, year)
+            const lastUpdated = document.querySelector('.last-updated');
+            if (lastUpdated) {
+                const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                const month = monthNames[now.getMonth()];
+                const day = now.getDate();
+                const year = now.getFullYear();
+                const formatted = `${month} ${day}, ${year}`;
+                lastUpdated.innerHTML = `<strong>Last Updated: ${formatted}</strong>`;
+            }
         }
         // Initialize language
         document.addEventListener('DOMContentLoaded', () => {
