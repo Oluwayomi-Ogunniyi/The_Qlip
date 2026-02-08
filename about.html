@@ -46,6 +46,8 @@
       }
     }
     </script>
+        <!-- LinkedIn Public Profile Badge loader script (only once per site) -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -1099,6 +1101,11 @@
             .modal h2 { font-size: 2.2rem; }
             .modal-btns { flex-direction: column; }
         }
+        .footer .LI-profile-badge {
+            margin-top: 12px;
+            transform: scale(0.8); /* makes it ~10% smaller without changing code */
+            transform-origin: left top;
+        }        
     </style>
     </head>
     <body>
@@ -1258,6 +1265,17 @@
                             <svg viewBox="0 0 448 512"><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
                         </a>
                     </div>
+                        <br>
+                    <!-- Add the LinkedIn badge here -->
+                    <div class="badge-base LI-profile-badge" 
+                        data-locale="en_US" 
+                        data-size="small" 
+                        data-theme="dark" 
+                        data-type="HORIZONTAL" 
+                        data-vanity="oluwayomi-favour-ogunniyi-5178161a4" 
+                        data-version="v1">
+                    <a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/oluwayomi-favour-ogunniyi-5178161a4?trk=profile-badge">Oluwayomi Favour Ogunniyi</a>
+                    </div>                   
                 </div>
                 <div class="footer-column">
                     <h4 data-i18n="quick-links">Quick Links</h4>
